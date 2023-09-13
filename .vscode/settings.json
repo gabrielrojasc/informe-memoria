@@ -1,9 +1,17 @@
 {
   "files.autoSave": "afterDelay",
   "typst-lsp.exportPdf": "never",
-  "typst-lsp.experimentalFormatterMode": "on",
+  "typst-lsp.experimentalFormatterMode": "off",
   "languageToolLinter.enabled": false,
   "languageToolLinter.serviceType": "public",
   "languageToolLinter.languageTool.language": "es",
-  "languageToolLinter.plainText.languageIds": ["plaintext", "typst", "bibtex"]
+  "languageToolLinter.plainText.languageIds": ["plaintext", "typst", "bibtex"],
+  "languageToolLinter.languageTool.ignoredWordsInWorkspace": ["sgsi"],
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typst": false
+  }
 }
