@@ -57,7 +57,7 @@
             align(bottom+left, box(width: 1.35cm, image(logos.escudo))),
             align(bottom+left, stack(dir: ttb, spacing: 5pt,
                 text("UNIVERSIDAD DE CHILE"),
-                text("FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS"),
+                text("FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS"), 
                 text("DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN"),
                 v(5pt),
                 ),
