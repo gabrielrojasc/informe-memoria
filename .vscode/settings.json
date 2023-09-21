@@ -11,6 +11,8 @@
         "bibtex"
     ],
     "languageToolLinter.languageTool.ignoredWordsInWorkspace": [
+        "gapps",
+        "magnet",
         "mylenio",
         "sgsi"
     ],
@@ -20,5 +22,6 @@
         "markdown": false,
         "scminput": false,
         "typst": false
-    }
+    },
+    "editor.occurrencesHighlight": false
 }
