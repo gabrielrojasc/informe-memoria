@@ -2,20 +2,20 @@
 // Discutir las soluciones o recursos existentes relacionados con el problema. Justificar por qué es necesario un trabajo novedoso.
 // [1-2 páginas]
 
-Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayoría de estos programas son soluciones SaaS, pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio, solución SaaS, y Gapps, solución de código abierto.
+Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayoría de estos programas son soluciones de software como servicio (SaaS, por sus siglas en inglés), pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio y Gapps.
 
 == MyLenio
 Entre las opciones SaaS, se encuentra MyLenio, una plataforma la cual se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad". El módulo de "cumplimiento y seguridad" es el de mayor interés, ya que, es el que proporciona ayuda para el cumplimiento de un SGSI.
 
 === Organización del equipo @my-lenio-team
-El módulo de organización del equipo permite organizar equipos en roles y grupos, permitiendo asignarles en la plataforma
+El módulo de organización del equipo permite organizar equipos en roles y grupos, permitiendo asignarles en la plataforma:
 - Formación
 - Documentos
 - Tareas a realizar
 - Permisos automáticos a otras aplicaciones SaaS
 
 === Recursos Humano @my-lenio-human-resources
-El módulo de recursos humanos proporciona ayuda en varios temas relacionados con esto. Entre estos temas se encuentra
+El módulo de recursos humanos proporciona ayuda en varios temas relacionados con esto. Entre estos temas se encuentran:
 - Reclutamiento
 - Incorporación de nuevos empleados
 - Compromiso de los empleados
@@ -35,7 +35,7 @@ Este submódulo permite manejar el inventario de la empresa. Los elementos del i
 Este módulo permite modelar flujos existentes y monitorear su progreso.
 
 ==== Eventos recurrentes y automatización de cumplimiento
-Este módulo permite asignar flujos, documentos, tareas y formación al equipo de manera automatizada. Estos puede ser fechas o acciones que se deban realizar cada cierta cantidad de tiempo.
+Este módulo permite asignar flujos, documentos, tareas y formación al equipo de manera automatizada. Estos puede ser fechas o acciones que se deban realizar cada cierto tiempo.
 
 ==== Manejo de riesgos
 Este módulo permite hacer un seguimiento de todos los riesgos de la empresa, por medio del establecimiento de activos, amenazas y vulnerabilidades.
@@ -46,4 +46,4 @@ Gapps es una plataforma de cumplimiento de seguridad que facilita el seguimiento
 Al momento de la lectura, Gapps cuenta con soporte para más de 10 marcos de cumplimiento de seguridad, entre ellos ISO27001. Además, cuenta con más de 2000 controles y 30 políticas, permitiendo recolectar la evidencia para luego poder visualizarla en un dashboard @gapps-website.
 
 == Necesidad de un trabajo novedoso
-Esta necesidad surge debido a la falta de un software que se adecue a las necesidades de Magnet. Principalmente, el depender de un software de un externo, teniendo que pagar mensualidades y sin tener la certeza de que el software se seguirá manteniendo y no se tenga que migrar toda la información múltiples veces.
+Esta necesidad surge debido a la falta de un software que se adecue a las necesidades de Magnet. Principalmente, el depender de un software de un externo, teniendo que pagar mensualidades y sin tener la certeza de que el software se seguirá manteniendo y no se tenga que migrar la información entre distintos proveedores.
