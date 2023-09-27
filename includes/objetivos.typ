@@ -9,7 +9,7 @@
 // Un resumen conciso (no más de un párrafo) de la meta principal del trabajo, es decir, qué quieres lograr con el trabajo (o qué significa “éxito” en el contexto del trabajo).
 // El objetivo debería ser específico, medible, alcanzable, relevante al problema, y acotado en tiempo.
 // (“Titularse” no es una repuesta válida. :)) [1 párrafo]
-Durante este trabajo se desea construir un software que permita auditar el cumplimiento de SGSI. Este software será la plataforma donde se registraran documentos, activos y riesgos y flujos asociados a los diferentes controles de seguridad de ISO27001.
+Durante este trabajo se desea construir un software que permita auditar el cumplimiento de SGSI. Este software será la plataforma donde se registraran documentos, activos, riesgos y flujos asociados a los diferentes controles de seguridad de ISO27001.
 
 == Objetivos Específicos
 // Una lista de los hitos principales que se quieren lograr para (intentar) cumplir con el objetivo general. Divide el objetivo general en varios hitos que formarán las etapas del trabajo.
@@ -27,4 +27,4 @@ Por último, se agregará un motor de procesos para manejar flujos de los distin
 == Evaluación
 // Describe cómo vas a poder evaluar el trabajo en términos de cuán bien cumple con los objetivos planteados. Se pueden discutir los datos, las medidas, los usuarios, las técnicas, etc., utilizables para la evaluación.
 // [1–2 párrafos]
-Para evaluar el desempeño del sistema frente a los objetivos mencionados se usarán principalmente encuestas de satisfacción y usabilidad. Además, se intentará que expertos en seguridad usen la plataforma y den su opinión y sugieran posibles mejoras.
+Para evaluar el desempeño del sistema frente a los objetivos mencionados se usarán principalmente encuestas de satisfacción y usabilidad. Además, se intentará que expertos en seguridad usen la plataforma, den su opinión y sugieran posibles mejoras.
