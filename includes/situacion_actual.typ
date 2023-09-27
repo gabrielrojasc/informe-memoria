@@ -7,14 +7,14 @@ Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayo
 == MyLenio
 Entre las opciones SaaS, se encuentra MyLenio, una plataforma la cual se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad". El módulo de "cumplimiento y seguridad" es el de mayor interés, ya que, es el que proporciona ayuda para el cumplimiento de un SGSI.
 
-=== Organización del equipo @my-lenio-team
+=== Organización del equipo #footnote("https://www.mylenio.com/team-organization")
 El módulo de organización del equipo permite organizar equipos en roles y grupos, permitiendo asignarles en la plataforma:
 - Formación
 - Documentos
 - Tareas a realizar
 - Permisos automáticos a otras aplicaciones SaaS
 
-=== Recursos Humano @my-lenio-human-resources
+=== Recursos Humano #footnote("https://www.mylenio.com/human-resources-hr")
 El módulo de recursos humanos proporciona ayuda en varios temas relacionados con esto. Entre estos temas se encuentran:
 - Reclutamiento
 - Incorporación de nuevos empleados
@@ -22,7 +22,7 @@ El módulo de recursos humanos proporciona ayuda en varios temas relacionados co
 - Información de los empleados
 - Modelar procesos de recursos humanos
 
-=== Cumplimiento y Seguridad @my-lenio-compliance-and-security
+=== Cumplimiento y Seguridad #footnote("https://www.mylenio.com/compliance-and-security")
 El módulo de cumplimiento y seguridad se puede separar en varios submódulos.
 
 ==== Reporte de cumplimiento en tiempo real
@@ -41,9 +41,9 @@ Este módulo permite asignar flujos, documentos, tareas y formación al equipo d
 Este módulo permite hacer un seguimiento de todos los riesgos de la empresa, por medio del establecimiento de activos, amenazas y vulnerabilidades.
 
 == Gapps
-Gapps es una plataforma de cumplimiento de seguridad que facilita el seguimiento de su progreso frente a varios marcos de seguridad. Actualmente, el principal contribuidor al proyecto desincentiva su uso en ambientes de producción @gapps-github.
+Gapps es una plataforma de cumplimiento de seguridad que facilita el seguimiento de su progreso frente a varios marcos de seguridad. Actualmente, el principal contribuidor al proyecto desincentiva su uso en ambientes de producción #footnote("https://github.com/bmarsh9/gapps").
 
-Al momento de la lectura, Gapps cuenta con soporte para más de 10 marcos de cumplimiento de seguridad, entre ellos ISO27001. Además, cuenta con más de 2000 controles y 30 políticas, permitiendo recolectar la evidencia para luego poder visualizarla en un dashboard @gapps-website.
+Al momento de la lectura, Gapps cuenta con soporte para más de 10 marcos de cumplimiento de seguridad, entre ellos ISO27001. Además, cuenta con más de 2000 controles y 30 políticas, permitiendo recolectar la evidencia para luego poder visualizarla en un dashboard #footnote("https://web-gapps.pages.dev/").
 
 == Necesidad de un trabajo novedoso
 Esta necesidad surge debido a la falta de un software que se adecue a las necesidades de Magnet. Principalmente, el depender de un software de un externo, teniendo que pagar mensualidades y sin tener la certeza de que el software se seguirá manteniendo y no se tenga que migrar la información entre distintos proveedores.

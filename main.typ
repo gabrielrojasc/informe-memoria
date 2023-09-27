@@ -1,6 +1,6 @@
 #import "conf.typ": conf, pronombre
 #show: conf.with(
-    titulo: "Plataforma para auditoria de cumplimiento de Sistema General de Seguridad de Información",
+    titulo: "Plataforma para auditoria de cumplimiento de Sistema de Gestión de Seguridad de la Información",
     autor: (nombre: "Gabriel Rojas Chamorro", pronombre: pronombre.el),
     profesores: ((nombre: "Eduardo Godoy Vega", pronombre: pronombre.el),),
     supervisor: (nombre: "Mauricio Castro García", pronombre: pronombre.el),

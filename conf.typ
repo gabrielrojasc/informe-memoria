@@ -19,7 +19,7 @@
 
 #let conf(
     titulo: none,
-    autor: none, // diccionario con nombre y pronombre, (nombre: "", pronombre: pronombre.<el/ella/elle>) 
+    autor: none, // diccionario con nombre y pronombre, (nombre: "", pronombre: pronombre.<el/ella/elle>)
     informe: false, // false para propuesta, true para informe
     codigo: "CC6908", // CC6908 para malla v3, CC6907 para malla v5
     modalidad: "Memoria", // puede ser Memoria, Práctica Extendida, Doble Titulación con Magíster,Doble Titulación de Dos Especialidades
@@ -57,7 +57,7 @@
             align(bottom+left, box(width: 1.35cm, image(logos.escudo))),
             align(bottom+left, stack(dir: ttb, spacing: 5pt,
                 text("UNIVERSIDAD DE CHILE"),
-                text("FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS"), 
+                text("FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS"),
                 text("DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN"),
                 v(5pt),
                 ),
@@ -68,7 +68,7 @@
     let _propuesta = "PROPUESTA DE TEMA DE MEMORIA"
     let _informe = "INFORME FINAL DE " + codigo
     let _documento = [
-        #if informe [#_informe] else [#_propuesta] 
+        #if informe [#_informe] else [#_propuesta]
         PARA OPTAR AL TÍTULO DE \ INGENIER#autor.pronombre.titulo CIVIL EN COMPUTACIÓN]
     let _modalidad = [MODALIDAD: \ #modalidad]
     let _guia(gen: pronombre.el) = [PROFESOR#gen.guia GUÍA]
@@ -85,11 +85,11 @@
             0.5fr,
             _documento,
             espaciado_titulo,
-            upper(autor.nombre),
+            autor.nombre,
             espaciado_titulo,
             _modalidad,
             if profesores.len() == 0 [#none]
-            else if profesores.len() == 1 
+            else if profesores.len() == 1
                 [#_guia(gen: profesores.at(0).pronombre): \ #profesores.at(0).nombre]
             else
                 [#_guia(gen: profesores.at(0).pronombre): \ #profesores.at(0).nombre \
@@ -97,7 +97,7 @@
             if coguias.len() == 0 [#none]
             else if coguias.len() == 1
                 [#_coguia(gen: coguias.at(0).pronombre): \ #coguias.at(0).nombre]
-            else 
+            else
                 [#_coguia(gen: coguias.at(0).pronombre): \ #coguias.at(0).nombre \
                 #_coguia(gen: coguias.at(1).pronombre) 2: \ #coguias.at(1).nombre],
             if supervisor == none [#none]
