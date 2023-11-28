@@ -5,12 +5,12 @@
     profesores: ((nombre: "Eduardo Godoy Vega", pronombre: pronombre.el),),
     supervisor: (nombre: "Mauricio Castro García", pronombre: pronombre.el),
     modalidad: "Práctica Extendida",
-    informe: false,
+    informe: true,
+    codigo: "CC6907", // CC6908 para malla v3, CC6907 para malla v5
 )
 
 #include "includes/introduccion.typ"
 #include "includes/situacion_actual.typ"
-#pagebreak()
 #include "includes/objetivos.typ"
 #include "includes/solucion.typ"
 #include "includes/plan_de_trabajo.typ"

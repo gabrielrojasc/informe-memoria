@@ -5,14 +5,16 @@
 Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayoría de estos programas son soluciones de software como servicio (SaaS, por sus siglas en inglés), pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio y Gapps.
 
 == MyLenio
-Entre las opciones SaaS, se encuentra MyLenio, una plataforma la cual se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad". El módulo de "cumplimiento y seguridad" es el de mayor interés, ya que, es el que proporciona ayuda para el cumplimiento de un SGSI.
+Entre las opciones SaaS, se encuentra MyLenio, una plataforma la cual se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad".
 
 === Organización del equipo #footnote(link("https://www.mylenio.com/team-organization"))
-El módulo de organización del equipo permite organizar equipos en roles y grupos, permitiendo asignarles en la plataforma:
-- Formación
-- Documentos
-- Tareas a realizar
-- Permisos automáticos a otras aplicaciones SaaS
+El módulo de organización del equipo permite asignar a cada empleado a los equipos a los cuales pertenece. Los equipos son la unidad básica de organización de MyLenio, estos también permiten asignar roles a cada empleado, para obtener mayor granularidad. Al tener organizado a cada empleado dentro de un equipo, esto permite tener mayor visibilidad de como se componen estos mismos dentro de la empresa, incluso ofreciendo un organigrama de los roles de cada proyecto.
+
+==== Manejo de permisos
+Dentro de cada equipo se puede se pueden crear, editar y remover permisos a distintos SaaS. Estos permisos se pueden asignar tanto a nivel de equipo, rol o empleado, pudiendo así manejar todos los permisos de diferentes SaaS desde un único lugar. Cuando se agregan nuevos integrantes a estos equipos, también se le asignan todos los permisos a las aplicaciones SaaS configuradas, haciendo más facil el proceso de incorporación de nuevos miembros a los equipos. Entre los SaaS se encuentran Bitbucket, DocuSign, GitHub, GitLab, Google G-Suite, Jira, Keeper password, Office 365, Slack y Trello.
+
+==== Documentos, capacitaciones y tareas
+A cada uno de los miembros de un equipo se les puede asignar documentos, capacitaciones o tareas. Asignar documentos por este medio permite el cumplimiento del sistema de seguridad de la información y le facilita a los empleados firmar, de ser necesario. Asimismo, permite asignar capacitaciones y mostrar el progreso de estas, pudiendo notificar a los empleados que aún no la han completado. Análogamente, se le pueden asignar tareas a los empleados y notificarlos para que las terminen.
 
 === Recursos Humano #footnote(link("https://www.mylenio.com/human-resources-hr"))
 El módulo de recursos humanos proporciona ayuda en varios temas relacionados con esto. Entre estos temas se encuentran:
