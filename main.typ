@@ -10,9 +10,13 @@
 )
 
 #include "includes/introduccion.typ"
+#pagebreak()
 #include "includes/situacion_actual.typ"
+#pagebreak()
 #include "includes/objetivos.typ"
+#pagebreak()
 #include "includes/solucion.typ"
+#pagebreak()
 #include "includes/plan_de_trabajo.typ"
 
 #pagebreak()
