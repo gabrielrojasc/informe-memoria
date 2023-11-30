@@ -30,38 +30,20 @@ Dentro del área de recursos humanos se entrega una herramienta para darle segui
 ==== Información de los empleados
 La información de cada empleado es guardad en G-Suite u Office 365, así facilitando su visualización, además se puede manejar la edición de esta información desde la aplicación. De ser necesario también se tiene una vista con toda la información del empleado, sus documentos, tareas, capacitaciones, etc.
 
-// === Cumplimiento y Seguridad #footnote(link("https://www.mylenio.com/compliance-and-security"))
-// El módulo de cumplimiento y seguridad se puede separar en varios submódulos.
-
-// ==== Reporte de cumplimiento en tiempo real
-// Este módulo proporciona la habilidad para saber quién firmo los documentos, el progreso de las formaciones y por último el estado en que se encuentran las tareas y flujos asignados al equipo.
-
-// ==== Manejo de inventario
-// Este submódulo permite manejar el inventario de la empresa. Los elementos del inventario luego se le pueden asignar a los miembros del equipo.
-
-// ==== Modelamiento de procesos
-// Este módulo permite modelar flujos existentes y monitorear su progreso.
-
-// ==== Eventos recurrentes y automatización de cumplimiento
-// Este módulo permite asignar flujos, documentos, tareas y formación al equipo de manera automatizada. Estos puede ser fechas o acciones que se deban realizar cada cierto tiempo.
-
-// ==== Manejo de riesgos
-// Este módulo permite hacer un seguimiento de todos los riesgos de la empresa, por medio del establecimiento de activos, amenazas y vulnerabilidades.
-
 === Cumplimiento y Seguridad #footnote(link("https://www.mylenio.com/compliance-and-security"))
 El módulo de cumplimiento y seguridad de MyLenio puede ser dividido en varios submódulos, cada uno con su propia funcionalidad y propósito.
 
 ==== Reporte de Cumplimiento en Tiempo Real
-Este submódulo proporciona una visión completa de la empresa con múltiples paneles que muestran todo lo que está sucediendo en la compañía. Permite saber exactamente quién ha firmado los documentos, cómo está progresando la formación y ver todas las tareas y flujos pendientes de un vistazo.
+Este submódulo proporciona una visión completa de la empresa con múltiples paneles que muestran todo lo que está sucediendo en la compañía. Permite saber exactamente quién ha firmado los documentos, cómo está progresando la formación y ver todas las tareas y flujos pendientes.
 
 ==== Manejo de Inventario
-Este submódulo permite manejar el inventario de la empresa en un solo lugar. Se pueden crear elementos como computadoras, monitores, etc., y asignar esos activos a los empleados. De esta manera, se puede hacer un seguimiento de quién está en posesión de los activos y saber exactamente dónde se encuentra todo en este momento.
+Este submódulo permite manejar el inventario de la empresa en un solo lugar. Se pueden crear elementos como computadores, monitores, etc., y asignar esos activos a los empleados. De esta manera, se puede hacer un seguimiento de quién está en posesión de los activos y saber exactamente dónde se encuentra todo en este momento.
 
 ==== Modelamiento de Procesos
 El módulo de Flujos permite modelar los procesos existentes en un sistema robusto donde se puede hacer un seguimiento del progreso, ver quién tiene algo pendiente y cómo avanzan los procesos en tiempo real. Al modelar los flujos, se puede poner el conocimiento sobre cómo se hacen las cosas en el departamento en un sistema, facilitando el crecimiento del equipo.
 
 ==== Eventos Recurrentes y Automatización de Cumplimiento
-MyLenio permite programar Flujos, Documentos, Tareas y Formaciones en un sistema de programación robusto que permite establecer cosas recurrentes que suceden en la empresa, como la firma de documentos cada año, asignar formación cada 6 meses a los empleados, etc. De esta manera, se pueden automatizar los procesos, ahorrar tiempo y dinero, y encaminarse hacia el cumplimiento de SOC2, PCI, HIPAA.
+MyLenio permite programar Flujos, Documentos, Tareas y Formaciones en un sistema que permite establecer cosas recurrentes que suceden en la empresa, como la firma de documentos cada año, asignar formación cada 6 meses a los empleados, etc. De esta manera, se pueden automatizar los procesos, ahorrar tiempo y dinero, y encaminarse hacia el cumplimiento de diversas certificaciones.
 
 ==== Manejo de Riesgos
 Este módulo permite hacer un seguimiento de todos los riesgos de la empresa, estableciendo los activos, amenazas y vulnerabilidades. También permite gestionar los proveedores y establecer el personal de BCDR (Business Continuity and Disaster Recovery).
