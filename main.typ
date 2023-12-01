@@ -18,6 +18,8 @@
 #include "includes/solucion.typ"
 #pagebreak()
 #include "includes/plan_de_trabajo.typ"
+#pagebreak()
+#include "includes/trabajo_adelantado.typ"
 
 #pagebreak()
 
