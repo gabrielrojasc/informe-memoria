@@ -48,14 +48,14 @@ MyLenio permite programar Flujos, Documentos, Tareas y Formaciones en un sistema
 ==== Manejo de Riesgos
 Este módulo permite hacer un seguimiento de todos los riesgos de la empresa, estableciendo los activos, amenazas y vulnerabilidades. También permite gestionar los proveedores y establecer el personal de BCDR (Business Continuity and Disaster Recovery).
 
-== Gapps
-Gapps es una plataforma de cumplimiento de seguridad que facilita el seguimiento de su progreso en relación con varios marcos de seguridad. Actualmente, el principal contribuyente al proyecto desaconseja su uso en entornos de producción #footnote(link("https://github.com/bmarsh9/gapps")).
+== Gapps #footnote(link("https://github.com/bmarsh9/gapps"))
+Gapps es una plataforma de cumplimiento de seguridad que facilita el seguimiento de su progreso en relación con varios marcos de seguridad. Actualmente, el proyecto se encuentra en modo Alfa, lo que significa que, aunque funciona bien, puede haber algunos cambios importantes a medida que evoluciona. El principal contribuyente al proyecto, Brendan Marshall, desaconseja su uso en entornos de producción.
 
-En el momento de la lectura, Gapps ofrece soporte para más de 10 marcos de cumplimiento de seguridad, incluyendo ISO27001. Además, cuenta con más de 2000 controles y 30 políticas, lo que permite recopilar evidencia para luego visualizarla en un panel de control #footnote(link("https://web-gapps.pages.dev/")).
+Gapps ofrece soporte para más de 10 marcos de cumplimiento de seguridad, incluyendo SOC2, CMMC, ASVS, ISO27001, HIPAA, NIST CSF, NIST CSF, NIST 800-53, CSC CIS 18, PCI DSS. Además, cuenta con más de 1500 controles y más de 25 políticas, lo que permite recopilar evidencia para luego visualizarla en un panel de control.
+
+Una característica destacada de Gapps es su capacidad para agregar controles y políticas personalizados. También ofrece un editor de contenido WYSIWYG (What You See Is What You Get, lo que ves es lo que obtienes) y cuestionarios para proveedores. Además, Gapps ha introducido recientemente la capacidad de añadir evidencia directamente a la plataforma.
 
 Es importante destacar que, aunque Gapps es una herramienta poderosa para el seguimiento del cumplimiento de seguridad, su uso debe ser considerado cuidadosamente, especialmente en entornos de producción. Esto se debe a que el principal contribuyente al proyecto ha expresado su preocupación sobre su uso en tales entornos.
-
-Con más de 2000 controles y 30 políticas disponibles, Gapps ofrece una amplia gama de opciones para ayudar a las organizaciones a seguir su progreso en el cumplimiento de la seguridad. Estos controles y políticas pueden ser utilizados para recopilar evidencia, que luego puede ser visualizada en un panel de control.
 
 En resumen, Gapps es una plataforma de cumplimiento de seguridad que ofrece una amplia gama de herramientas para ayudar a las organizaciones a seguir su progreso en el cumplimiento de la seguridad. Sin embargo, su uso debe ser considerado cuidadosamente, especialmente en entornos de producción.
 

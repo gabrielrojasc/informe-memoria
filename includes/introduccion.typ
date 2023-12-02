@@ -11,7 +11,7 @@ La empresa Magnet, con más de una década de experiencia en proporcionar soluci
 
 El proyecto en cuestión se propone crear una "Plataforma para Auditoría de Cumplimiento del Sistema de Gestión de Seguridad de la Información", abordando así los desafíos específicos que Magnet y otras organizaciones enfrentan en este dominio. Esta plataforma no solo aspira a cumplir con los requisitos de auditoría, sino que se concibe como un habilitador estratégico que otorga autonomía a Magnet en la gestión de su certificación ISO 27001. Además, plantea la posibilidad de escalar y adaptar la solución para otras organizaciones con necesidades similares.
 
-La solución propuesta contempla un enfoque integral, incorporando módulos para la gestión eficiente de documentos, activos, riesgos y flujos asociados a los controles de ISO 27001. A través de tecnologías sólidas como Django, PostgreSQL y Typescript, se busca ofrecer no solo eficiencia operativa sino también una base sólida para el desarrollo y la escalabilidad futura.
+La solución propuesta contempla un enfoque integral, incorporando módulos para la gestión eficiente de documentos, activos, riesgos y flujos asociados a los controles de ISO 27001. A través de tecnologías sólidas como Django, PostgreSQL y Typescript, se busca ofrecer no solo eficiencia operativa, sino también una base sólida para el desarrollo y la escalabilidad futura.
 
 El plan de trabajo delineado abarca diversas fases, desde la preparación y planificación hasta la evaluación y refinamiento. Se establece un cronograma preliminar para guiar el desarrollo del proyecto a lo largo de 15 semanas, garantizando un enfoque estructurado y metódico.
 
