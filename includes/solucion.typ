@@ -15,7 +15,7 @@ Para abordar la experiencia del usuario durante el desarrollo, se planea mantene
 
 La estrategia de mantenimiento del software implica mantener todas las versiones en LTS (long term support), asegurando la obtención de actualizaciones de seguridad y la estabilidad a lo largo del tiempo. Se busca mantener un ciclo de vida de desarrollo continuo, priorizando la corrección de problemas y el desarrollo de nuevas funcionalidades, reconociendo que el tiempo invertido es un factor crítico.
 
-La elección de DigitalOcean como plataforma de implementación se basa en la experiencia previa y en consideraciones económicas, ya que se percibe como una opción más rentable entre los grandes proveedores de servicios en la nube. Aunque se ha considerado Amazon Web Services (AWS) debido a la experiencia previa, la decisión se inclina hacia DigitalOcean por razones monetarias.
+La elección de DigitalOcean como plataforma de despliegue se basa en la experiencia previa y en consideraciones económicas, ya que se percibe como una opción más rentable entre los grandes proveedores de servicios en la nube. Aunque se ha considerado Amazon Web Services (AWS) debido a la experiencia previa, la decisión se inclina hacia DigitalOcean por razones monetarias.
 
 La colaboración con expertos en seguridad se plantea actualmente como una posibilidad abierta. Se espera utilizar herramientas de código abierto, como las proporcionadas por OWASP, para analizar posibles vulnerabilidades en el sistema, y se está abierto a sugerencias específicas para facilitar la colaboración con expertos en seguridad.
 

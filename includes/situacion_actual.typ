@@ -6,6 +6,7 @@ Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayo
 == MyLenio
 Entre las opciones SaaS, se encuentra MyLenio, una plataforma la cual se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad".
 
+#pagebreak()
 === Organización del equipo #footnote(link("https://www.mylenio.com/team-organization"))
 El módulo de organización del equipo permite asignar a cada empleado a los equipos a los cuales pertenece. Los equipos son la unidad básica de organización de MyLenio, estos también permiten asignar roles a cada empleado, para obtener mayor granularidad. Al tener organizado a cada empleado dentro de un equipo, esto permite tener mayor visibilidad de como se componen estos mismos dentro de la empresa, incluso ofreciendo un organigrama de los roles de cada proyecto.
 
