@@ -20,10 +20,10 @@ El módulo de documentos se concibe como una herramienta fundamental para gestio
   - *Criterios de Aceptación:*
     - Cada documento tiene un historial de versiones.
     - Los cambios en un documento crean una nueva versión con un hash único.
-    - Los usuarios pueden ver y revertir a versiones anteriores del documento.
+    - Los usuarios pueden ver versiones anteriores del documento.
 
 4. Como usuario, quiero recibir notificaciones sobre cambios en los documentos:
-  - *Descripción:* Los usuarios deben ser notificados cuando hay cambios en los documentos de los que son responsables.
+  - *Descripción:* Los usuarios deben ser notificados cuando se hagan cambios a los documentos que tienen asignados que siguen.
   - *Criterios de Aceptación:*
     - Los usuarios reciben notificaciones sobre cambios en los documentos que se les han asignado o que siguen.
     - Las notificaciones incluyen información sobre la naturaleza del cambio.
