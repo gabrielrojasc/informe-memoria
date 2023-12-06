@@ -16,10 +16,9 @@
 #include "includes/plan_de_trabajo.typ"
 #include "includes/trabajo_adelantado.typ"
 
-#pagebreak()
-
-#bibliography(
-    "bibliography.bib",
-    title: "Referencias",
-    style: "ieee",
-)
+// #pagebreak()
+// #bibliography(
+//     "bibliography.bib",
+//     title: "Referencias",
+//     style: "ieee",
+// )

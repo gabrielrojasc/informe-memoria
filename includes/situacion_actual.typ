@@ -4,7 +4,7 @@
 Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayoría de estos programas son soluciones de software como servicio (SaaS, por sus siglas en inglés), pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio y Gapps.
 
 == MyLenio
-Entre las opciones SaaS, se encuentra MyLenio, una plataforma la cual se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad".
+Entre las opciones SaaS, se encuentra MyLenio, una plataforma que se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad".
 
 #pagebreak()
 === Organización del equipo #footnote(link("https://www.mylenio.com/team-organization"))
