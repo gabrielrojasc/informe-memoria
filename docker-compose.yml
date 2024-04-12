@@ -1,0 +1,5 @@
+services:
+    languatetool:
+        image: elestio/languagetool
+        ports:
+            - 8081:8010
