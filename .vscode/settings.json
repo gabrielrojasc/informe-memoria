@@ -3,7 +3,7 @@
     "typst-lsp.exportPdf": "never",
     "typst-lsp.experimentalFormatterMode": "off",
     "languageToolLinter.enabled": false,
-    "languageToolLinter.serviceType": "public",
+    "languageToolLinter.serviceType": "external",
     "languageToolLinter.languageTool.language": "es",
     "languageToolLinter.plainText.languageIds": [
         "plaintext",
@@ -16,6 +16,7 @@
         "mylenio",
         "sgsi"
     ],
+    "languageToolLinter.languageTool.disabledRules": "WHITESPACE_RULE,",
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
