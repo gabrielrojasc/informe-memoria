@@ -1,21 +1,21 @@
 = Situación Actual
 // Describe en más detalle la literatura, las técnicas, las soluciones existentes, etc., relacionadas con el tema del trabajo. Justificar por qué es necesario un trabajo novedoso.
 
-Hoy en día existen programas capaces de manejar la auditoria para SGSI, la mayoría de estos programas son soluciones de software como servicio (SaaS, por sus siglas en inglés), pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio y Gapps.
+Hoy en día existen programas capaces de manejar la auditoría para SGSI, la mayoría de estos programas son soluciones de software como servicio (SaaS, por sus siglas en inglés), pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio y Gapps, siendo respectivamente una solución de software y otra de código abierto.
 
 == MyLenio
 Entre las opciones SaaS, se encuentra MyLenio, una plataforma que se compone de 3 principales módulos, "organización del equipo", "recursos humanos" y "cumplimiento y seguridad".
 
-=== Organización del equipo #footnote(link("https://www.mylenio.com/team-organization"))
+=== Organización del equipo @mylenio-team-organization
 El módulo de organización del equipo permite asignar a cada empleado a los equipos a los cuales pertenece. Los equipos son la unidad básica de organización de MyLenio, estos también permiten asignar roles a cada empleado, para obtener mayor granularidad. Al tener organizado a cada empleado dentro de un equipo, esto permite tener mayor visibilidad de como se componen estos mismos dentro de la empresa, incluso ofreciendo un organigrama de los roles de cada proyecto.
 
 ==== Manejo de permisos
-Dentro de cada equipo se puede se pueden crear, editar y remover permisos a distintos SaaS. Estos permisos se pueden asignar tanto a nivel de equipo, rol o empleado, pudiendo así manejar todos los permisos de diferentes SaaS desde un único lugar. Cuando se agregan nuevos integrantes a estos equipos, también se le asignan todos los permisos a las aplicaciones SaaS configuradas, haciendo más facil el proceso de incorporación de nuevos miembros a los equipos. Entre los SaaS se encuentran Bitbucket, DocuSign, GitHub, GitLab, Google Google Workspace, Jira, Keeper password, Office 365, Slack y Trello.
+Dentro de cada equipo se puede se pueden crear, editar y remover permisos a distintos SaaS. Estos permisos se pueden asignar tanto a nivel de equipo, rol o empleado, pudiendo así manejar todos los permisos de diferentes SaaS desde un único lugar. Cuando se agregan nuevos integrantes a estos equipos, también se le asignan todos los permisos a las aplicaciones SaaS configuradas, haciendo más fácil el proceso de incorporación de nuevos miembros a los equipos. Entre los SaaS se encuentran Bitbucket, DocuSign, GitHub, GitLab, Google Google Workspace, Jira, Keeper password, Office 365, Slack y Trello.
 
 ==== Documentos, capacitaciones y tareas
 A cada uno de los miembros de un equipo se les puede asignar documentos, capacitaciones o tareas. Asignar documentos por este medio permite el cumplimiento del sistema de seguridad de la información y le facilita a los empleados firmar, de ser necesario. Asimismo, permite asignar capacitaciones y mostrar el progreso de estas, pudiendo notificar a los empleados que aún no la han completado. Análogamente, se le pueden asignar tareas a los empleados y notificarlos para que las terminen.
 
-=== Recursos Humanos #footnote(link("https://www.mylenio.com/human-resources-hr"))
+=== Recursos Humanos @mylenio-human-resources
 El módulo de recursos humanos proporciona herramientas para realizar las actividades diarias de forma organizada, ayudando al área de recursos humanos, valga la redundancia.
 
 ==== Incorporación de empleados
@@ -30,7 +30,7 @@ Dentro del área de recursos humanos se entrega una herramienta para darle segui
 ==== Información de los empleados
 La información de cada empleado es guardad en Google Workspace u Office 365, así facilitando su visualización, además se puede manejar la edición de esta información desde la aplicación. De ser necesario también se tiene una vista con toda la información del empleado, sus documentos, tareas, capacitaciones, etc.
 
-=== Cumplimiento y Seguridad #footnote(link("https://www.mylenio.com/compliance-and-security"))
+=== Cumplimiento y Seguridad @mylenio-compliance-and-security
 El módulo de cumplimiento y seguridad de MyLenio puede ser dividido en varios submódulos, cada uno con su propia funcionalidad y propósito.
 
 ==== Reporte de Cumplimiento en Tiempo Real
@@ -48,7 +48,7 @@ MyLenio permite programar Flujos, Documentos, Tareas y Formaciones en un sistema
 ==== Manejo de Riesgos
 Este módulo permite hacer un seguimiento de todos los riesgos de la empresa, estableciendo los activos, amenazas y vulnerabilidades. También permite gestionar los proveedores y establecer el personal de BCDR (Business Continuity and Disaster Recovery).
 
-== Gapps #footnote(link("https://github.com/bmarsh9/gapps"))
+== Gapps @gapps-github
 Gapps es una plataforma de cumplimiento de seguridad que facilita el seguimiento de su progreso en relación con varios marcos de seguridad. Actualmente, el proyecto se encuentra en modo Alfa, lo que significa que, aunque funciona bien, puede haber algunos cambios importantes a medida que evoluciona. El principal contribuyente al proyecto, Brendan Marshall, desaconseja su uso en entornos de producción.
 
 Gapps ofrece soporte para más de 10 marcos de cumplimiento de seguridad, incluyendo SOC2, CMMC, ASVS, ISO27001, HIPAA, NIST CSF, NIST CSF, NIST 800-53, CSC CIS 18, PCI DSS. Además, cuenta con más de 1500 controles y más de 25 políticas, lo que permite recopilar evidencia para luego visualizarla en un panel de control.
