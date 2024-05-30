@@ -163,7 +163,7 @@ La vista del listado de usuarios proporciona una tabla con información detallad
 
 #figure(
     image("../imagenes/modulos/users/list.png", width: 80%),
-    caption: [Vista de listado de usuario],
+    caption: [Vista de listado de usuarios],
 )
 
 ==== Detalle de usuarios
@@ -401,9 +401,319 @@ La evidencia se refiere a la documentación y pruebas tangibles que demuestran l
     caption: [Modelo entidad-relación módulo de documentos],
 )
 
-=== Interfaz de usuario
+=== Interfaz de Usuario
 
-...
+==== Listado de Controles
+
+La vista del listado de controles proporciona una tabla con información sobre cada control, incluyendo su nombre, categoría, fecha de actualización y el usuario que realizó la última actualización.
+
+*Acciones disponibles:*
+- *Añadir Control*: Permite a los administradores añadir nuevos controles.
+- *Actualizar Control*: Permite a los administradores editar la información de los controles existentes.
+- *Eliminar Control*: Permite a los administradores eliminar controles.
+
+#figure(
+    image("../imagenes/modulos/controls/list.png", width: 80%),
+    caption: [Vista de listado de controles],
+)
+
+==== Detalle de Controles
+
+La vista de detalle de controles permite a los administradores ver y gestionar información específica de cada control. Los campos más relevantes incluyen:
+
+- *Categoría*: Categoría a la que pertenece el control.
+- *Título*: Título del control.
+- *Descripción*: Descripción del control.
+- *Creado por*: Usuario que creó el control.
+- *Actualizado por*: Usuario que realizó la última actualización.
+
+Además, la vista muestra información sobre los documentos en los que está documentado el control, los riesgos relacionados y las evidencias asociadas.
+
+Botones de acción:
+- *Actualizar Control*: Permite editar la información del control.
+- *Eliminar Control*: Permite eliminar el control.
+
+#figure(
+    image("../imagenes/modulos/controls/detail.png", width: 80%),
+    caption: [Vista de detalle de controles],
+)
+
+==== Creación de Controles
+
+La vista de creación de controles permite a los administradores añadir nuevos controles al sistema. Esta interfaz incluye:
+
+- *Categoría (opcional)*: Selección de la categoría a la que pertenece el control.
+- *Título*: Campo para ingresar el título del control.
+- *Descripción (opcional)*: Campo para agregar una descripción del control.
+
+Botones de acción:
+- *Guardar*: Guarda el nuevo control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/controls/create.png", width: 80%),
+    caption: [Vista de creación de controles],
+)
+
+==== Actualización de Controles
+
+La vista de actualización de controles permite a los administradores editar la información de un control existente. Esta interfaz incluye:
+
+- *Categoría (opcional)*: Selección de la categoría a la que pertenece el control.
+- *Título*: Campo para editar el título del control.
+- *Descripción (opcional)*: Campo para agregar o modificar la descripción del control.
+
+Botones de acción:
+- *Guardar*: Guarda los cambios realizados en el control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/controls/update.png", width: 80%),
+    caption: [Vista de actualización de controles],
+)
+
+==== Eliminación de Controles
+
+La vista de eliminación de controles permite a los administradores eliminar un control específico de forma segura y definitiva.
+
+- *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar el control especificado, mostrando su nombre para asegurar que se está eliminando el control correcto.
+
+Botones de acción:
+- *Confirmar*: Elimina definitivamente el control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/controls/delete.png", width: 80%),
+    caption: [Vista de eliminación de controles],
+)
+
+==== Listado de Categorías de Controles
+
+La vista del listado de categorías de controles proporciona una tabla con información sobre cada categoría de control, incluyendo su nombre, fecha de actualización y el usuario que realizó la última actualización.
+
+*Acciones disponibles:*
+- *Añadir Categoría de Control*: Permite a los administradores añadir nuevas categorías de control.
+- *Actualizar Categoría de Control*: Permite a los administradores editar la información de las categorías de control existentes.
+- *Eliminar Categoría de Control*: Permite a los administradores eliminar categorías de control.
+
+#figure(
+    image("../imagenes/modulos/control-categories/list.png", width: 80%),
+    caption: [Vista de listado de categorías de controles],
+)
+
+==== Detalle de Categorías de Controles
+
+La vista de detalle de categorías de controles permite a los administradores ver y gestionar información específica de cada categoría de control. Los campos más relevantes incluyen:
+
+- *Nombre*: Nombre de la categoría de control.
+- *Creado por*: Usuario que creó la categoría de control.
+- *Actualizado por*: Usuario que realizó la última actualización.
+
+Además, la vista muestra los controles relacionados con esta categoría.
+
+Botones de acción:
+- *Actualizar Categoría de Control*: Permite editar la información de la categoría de control.
+- *Eliminar Categoría de Control*: Permite eliminar la categoría de control.
+
+#figure(
+    image("../imagenes/modulos/control-categories/detail.png", width: 80%),
+    caption: [Vista de detalle de categorías de controles],
+)
+
+==== Creación de Categorías de Controles
+
+La vista de creación de categorías de controles permite a los administradores añadir nuevas categorías de control al sistema. Esta interfaz incluye:
+
+- *Nombre*: Campo para ingresar el nombre de la categoría de control.
+
+Botones de acción:
+- *Guardar*: Guarda la nueva categoría de control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/control-categories/create.png", width: 80%),
+    caption: [Vista de creación de categorías de controles],
+)
+
+==== Actualización de Categorías de Controles
+
+La vista de actualización de categorías de controles permite a los administradores editar la información de una categoría de control existente. Esta interfaz incluye:
+
+- *Nombre*: Campo para editar el nombre de la categoría de control.
+
+Botones de acción:
+- *Guardar*: Guarda los cambios realizados en la categoría de control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/control-categories/update.png", width: 80%),
+    caption: [Vista de actualización de categorías de controles],
+)
+
+==== Eliminación de Categorías de Controles
+
+La vista de eliminación de categorías de controles permite a los administradores eliminar una categoría específica de control de forma segura y definitiva.
+
+- *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar la categoría de control especificada, mostrando su nombre para asegurar que se está eliminando la categoría correcta.
+
+Botones de acción:
+- *Confirmar*: Elimina definitivamente la categoría de control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/control-categories/delete.png", width: 80%),
+    caption: [Vista de eliminación de categorías de controles],
+)
+
+==== Listado de Documentos
+
+La vista del listado de documentos proporciona una tabla con información sobre cada documento, incluyendo su nombre, la última versión aprobada, la última versión, la fecha de actualización y el usuario que realizó la última actualización.
+
+*Acciones disponibles:*
+- *Añadir Documento*: Permite a los administradores añadir nuevos documentos.
+- *Editar Documento*: Permite a los administradores editar la información de los documentos existentes.
+- *Eliminar Documento*: Permite a los administradores eliminar documentos.
+
+#figure(
+    image("../imagenes/modulos/documents/list.png", width: 80%),
+    caption: [Vista de listado de documentos],
+)
+
+==== Detalle de Documentos
+
+La vista de detalle de documentos permite a los administradores ver y gestionar información específica de cada documento, incluyendo su título, código, descripción, fechas de creación y actualización, y los usuarios responsables.
+
+*Acciones disponibles:*
+- *Actualizar Documento*: Permite editar la información del documento.
+- *Eliminar Documento*: Permite eliminar el documento.
+
+La sección de versiones del documento proporciona información sobre cada versión, su estado de aprobación, y las fechas y usuarios de actualización.
+
+*Acciones en versiones:*
+- *Actualizar Versión*: Editar la versión del documento.
+- *Aprobar Versión*: Aprobar la versión del documento.
+- *Eliminar Versión*: Eliminar la versión del documento.
+
+#figure(
+    image("../imagenes/modulos/documents/detail.png", width: 80%),
+    caption: [Vista de detalle de documentos],
+)
+
+==== Adición de Documentos
+
+La vista de creación de documentos permite a los administradores añadir nuevos documentos al sistema. Esta interfaz incluye los siguientes campos:
+
+- *Título*: El título del documento.
+- *Código*: El código del documento.
+- *Descripción (opcional)*: Una breve descripción del documento.
+- *Controles documentados (opcional)*: Los controles que están documentados en el documento.
+
+Botones de acción:
+- *Guardar*: Guarda el nuevo documento.
+- *Cancelar*: Cancela la creación y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/documents/create.png", width: 80%),
+    caption: [Vista de creación de documentos],
+)
+
+==== Eliminación de Documentos
+
+La vista de eliminación de documentos permite a los administradores eliminar un documento específico de la aplicación de forma segura y definitiva.
+
+- *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar el documento especificado, mostrando su nombre para asegurar que se está eliminando el documento correcto.
+
+Botones de acción:
+- *Confirmar*: Elimina definitivamente el documento de la aplicación.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/documents/delete.png", width: 80%),
+    caption: [Vista de eliminación de documentos],
+)
+
+==== Detalle de Versión de Documentos
+
+La vista de detalle de versión de documentos permite a los administradores ver y gestionar información específica de cada versión de un documento. Los campos más relevantes incluyen:
+
+- *Documento*: Documento al cual pertenece la versión.
+- *Versión*: Número de la versión.
+- *Archivo*: Enlace al archivo de la versión.
+- *Aprobado*: Indica si la versión está aprobada.
+- *Creado por*: Usuario que creó la versión.
+- *Actualizado por*: Usuario que realizó la última actualización.
+
+Botones de acción:
+- *Marcar como leído*: Permite a los usuarios marcar la versión como leída.
+
+#figure(
+    image("../imagenes/modulos/documents/version_detail.png", width: 80%),
+    caption: [Vista de detalle de versión de documentos],
+)
+
+==== Creación de Versión de Documentos
+
+La vista de creación de versiones de documentos permite a los administradores añadir una nueva versión a un documento existente. Esta interfaz incluye:
+
+- *Archivo*: Campo para subir el archivo de la nueva versión.
+- *Comentario (opcional)*: Campo para agregar comentarios sobre la nueva versión.
+
+Botones de acción:
+- *Guardar*: Guarda la nueva versión del documento.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/documents/version_create.png", width: 80%),
+    caption: [Vista de creación de versiones de documentos],
+)
+
+==== Aprobación de Versión de Documentos
+
+La vista de aprobación de versiones de documentos permite a los administradores aprobar una versión específica de un documento. Esta interfaz incluye los siguientes campos opcionales:
+
+- *Archivo de evidencia*: Archivo con la evidencia de la aprobación.
+- *URL de evidencia*: Enlace a la evidencia de la aprobación.
+
+Botones de acción:
+- *Aprobar*: Aprueba la versión del documento.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/documents/version_approve.png", width: 80%),
+    caption: [Vista de aprobación de versiones de documentos],
+)
+
+==== Actualización de Versión de Documentos
+
+La vista de actualización de versiones de documentos permite a los administradores actualizar una versión específica de un documento. Esta interfaz incluye:
+
+- *Archivo actual*: Enlace al archivo de la versión actual.
+- *Cambiar archivo*: Opción para subir un nuevo archivo.
+- *Comentario (opcional)*: Campo para agregar comentarios sobre la actualización.
+
+Botones de acción:
+- *Guardar*: Guarda los cambios realizados en la versión del documento.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/documents/version_update.png", width: 80%),
+    caption: [Vista de actualización de versiones de documentos],
+)
+
+==== Eliminación de Versión de Documentos
+
+La vista de eliminación de versiones de documentos permite a los administradores eliminar una versión específica de un documento de forma segura y definitiva.
+
+- *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar la versión especificada del documento, mostrando su nombre para asegurar que se está eliminando la versión correcta.
+
+Botones de acción:
+- *Confirmar*: Elimina definitivamente la versión del documento.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/documents/version_delete.png", width: 80%),
+    caption: [Vista de eliminación de versiones de documentos],
+)
 
 
 == Módulo de Activos
