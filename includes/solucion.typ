@@ -757,6 +757,183 @@ Los activos son cualquier recurso que sea valioso para la organización y que ne
     caption: [Modelo entidad-relación módulo de activos],
 )
 
+=== Interfaz de usuario
+
+==== Listado de Tipos de Activos
+
+La vista del listado de tipos de activos proporciona una tabla con información sobre cada tipo de activo, incluyendo su nombre, fecha de actualización y el usuario que realizó la última actualización.
+
+*Acciones disponibles:*
+- *Añadir Tipo de Activo*: Permite a los administradores añadir nuevos tipos de activos.
+- *Actualizar Tipo de Activo*: Permite a los administradores editar la información de los tipos de activos existentes.
+- *Eliminar Tipo de Activo*: Permite a los administradores eliminar tipos de activos.
+
+#figure(
+    image("../imagenes/modulos/asset-types/list.png", width: 80%),
+    caption: [Vista de listado de tipos de activos],
+)
+
+==== Detalle de Tipos de Activos
+
+La vista de detalle de un tipo de activo muestra información específica sobre un tipo de activo en particular. Esta vista incluye los campos más relevantes:
+
+- *Nombre*: El nombre del tipo de activo.
+- *Creado el*: La fecha y hora en que se creó el tipo de activo.
+- *Creado por*: El usuario que creó el tipo de activo.
+- *Actualizado el*: La fecha y hora de la última actualización del tipo de activo.
+- *Actualizado por*: El usuario que realizó la última actualización del tipo de activo.
+
+*Acciones disponibles:*
+- *Actualizar Tipo de Activo*: Permite editar la información del tipo de activo.
+- *Eliminar Tipo de Activo*: Permite eliminar el tipo de activo.
+
+#figure(
+    image("../imagenes/modulos/asset-types/detail.png", width: 80%),
+    caption: [Vista de detalle de tipos de activos],
+)
+
+==== Creación de Tipos de Activos
+
+La vista de creación de tipos de activos permite a los administradores añadir nuevos tipos de activos al sistema. Esta interfaz incluye:
+
+- *Nombre*: Campo para ingresar el nombre del tipo de activo.
+
+Botones de acción:
+- *Guardar*: Guarda el nuevo tipo de activo.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/asset-types/create.png", width: 80%),
+    caption: [Vista de creación de tipos de activos],
+)
+
+==== Modificación de Tipos de Activos
+
+La vista de modificación de un tipo de activo permite al usuario actualizar la información existente sobre un tipo de activo específico. Esta vista incluye los siguientes campos:
+
+- *Nombre*: El nombre del tipo de activo.
+
+*Acciones disponibles:*
+- *Guardar*: Guarda los cambios realizados en el tipo de activo.
+- *Cancelar*: Cancela los cambios y regresa a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/asset-types/update.png", width: 80%),
+    caption: [Vista de modificación de tipos de activos],
+)
+
+==== Eliminación de Tipos de Activos
+
+La vista de eliminación de un tipo de activo confirma la eliminación del tipo de activo seleccionado. Esta vista presenta un mensaje de confirmación para asegurar que el usuario desea proceder con la acción de eliminación. Los elementos incluidos son:
+
+- *Mensaje de confirmación*: Pregunta al usuario si está seguro de querer eliminar el tipo de activo.
+- *Botón Confirmar*: Procede con la eliminación del tipo de activo.
+- *Botón Cancelar*: Cancela la acción de eliminación y regresa a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/asset-types/delete.png", width: 80%),
+    caption: [Vista de eliminación de tipos de activos],
+)
+
+==== Listado de Activos
+
+La vista de listado de activos muestra todos los activos registrados en el sistema. Los campos más relevantes que se presentan en esta vista incluyen:
+
+- *Código*: Identificador único del activo.
+- *Nombre*: Nombre del activo.
+- *Propietario*: Persona responsable del activo.
+- *Tipo*: Categoría o tipo de activo.
+- *Criticidad*: Nivel de importancia del activo.
+- *Clasificación*: Clasificación interna del activo.
+- *Archivado*: Indica si el activo está archivado o no.
+- *Actualizado en*: Fecha y hora de la última actualización del activo.
+- *Actualizado por*: Usuario que realizó la última actualización.
+
+Además, se proporcionan opciones para añadir un nuevo activo, actualizar un activo existente o archivar un activo.
+
+#figure(
+    image("../imagenes/modulos/asset-types/list.png", width: 80%),
+    caption: [Vista de listado de activos],
+)
+
+==== Detalle de Activos
+
+La vista de detalle de un activo muestra información específica sobre un activo en particular. Esta vista incluye los campos más relevantes:
+
+- *Código*: El identificador único del activo.
+- *Nombre*: El nombre del activo.
+- *Propietario*: El usuario responsable del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+*Acciones disponibles:*
+- *Archivar*: Permite archivar el activo.
+- *Actualizar Activo*: Permite editar la información del activo.
+
+#figure(
+    image("../imagenes/modulos/assets/detail.png", width: 80%),
+    caption: [Vista de detalle de activos],
+)
+
+==== Creación de Activos
+
+La vista de creación de un activo permite ingresar la información necesaria para registrar un nuevo activo en el sistema. Los campos requeridos son los siguientes:
+
+- *Nombre*: El nombre del activo.
+- *Código*: Un identificador único para el activo.
+- *Propietario*: El usuario responsable del activo.
+- *Descripción (opcional)*: Una descripción detallada del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+*Acciones disponibles:*
+- *Guardar*: Permite guardar el nuevo activo en el sistema.
+- *Cancelar*: Permite cancelar la creación del activo y regresar a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/assets/create.png", width: 80%),
+    caption: [Vista de creación de activos],
+)
+
+==== Modificación de Activos
+
+La vista de modificación de un activo permite editar la información existente de un activo registrado en el sistema. Los campos disponibles para la edición son los siguientes:
+
+- *Nombre*: El nombre del activo.
+- *Código*: Un identificador único para el activo.
+- *Propietario*: El usuario responsable del activo.
+- *Descripción (opcional)*: Una descripción detallada del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+*Acciones disponibles:*
+- *Guardar*: Permite guardar los cambios realizados en el activo.
+- *Cancelar*: Permite cancelar la edición y regresar a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/assets/update.png", width: 80%),
+    caption: [Vista de modificación de activos],
+)
+
+==== Archivado de Activos
+
+La vista de archivado de un activo permite confirmar la acción de archivar un activo específico. Los campos más relevantes y acciones disponibles son los siguientes:
+
+- *Mensaje de confirmación*: Indica si el usuario está seguro de querer archivar el activo seleccionado.
+- *Nombre del Activo*: Se muestra el nombre del activo a archivar.
+
+*Acciones disponibles:*
+- *Archivar*: Confirma la acción de archivar el activo.
+- *Cancelar*: Cancela la acción de archivado y regresa a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/assets/archive.png", width: 80%),
+    caption: [Vista de archivado de activos],
+)
+
 
 == Módulo de Riesgos
 
