@@ -970,7 +970,101 @@ Los riesgos sirven para relacionar a los activos con los controles. En los contr
 
 === Interfaz de usuario
 
-...
+==== Listado de Riesgos
+
+La vista de listado de riesgos muestra una tabla con los riesgos existentes en el sistema. Los campos más relevantes y las acciones disponibles en esta vista son:
+
+- *Nombre*: El nombre del riesgo.
+- *Actualizado el*: La fecha y hora de la última actualización del riesgo.
+- *Actualizado por*: El usuario que realizó la última actualización del riesgo.
+
+*Acciones disponibles:*
+- *Añadir Riesgo*: Permite agregar un nuevo riesgo al sistema.
+- *Actualizar Riesgo*: Permite editar la información de un riesgo existente.
+- *Eliminar Riesgo*: Permite eliminar un riesgo del sistema.
+
+#figure(
+    image("../imagenes/modulos/risks/list.png", width: 80%),
+    caption: [Vista de listado de riesgos],
+)
+
+==== Detalle de Riesgos
+
+La vista de detalle de un riesgo muestra información específica sobre un riesgo en particular. Esta vista incluye los campos más relevantes:
+
+- *Título*: El nombre del riesgo.
+- *Responsable*: El usuario responsable del riesgo.
+- *Severidad*: La severidad del riesgo.
+- *Probabilidad*: La probabilidad de que ocurra el riesgo.
+- *Tratamiento*: El tratamiento asignado al riesgo.
+- *Creado el*: La fecha y hora en que se creó el riesgo.
+- *Actualizado el*: La fecha y hora de la última actualización del riesgo.
+
+Además, se listan los activos, controles y riesgos residuales relacionados con el riesgo.
+
+*Acciones disponibles:*
+- *Actualizar Riesgo*: Permite editar la información del riesgo.
+- *Eliminar Riesgo*: Permite eliminar el riesgo del sistema.
+
+#figure(
+    image("../imagenes/modulos/risks/detail.png", width: 80%),
+    caption: [Vista de detalle de riesgos],
+)
+
+==== Crear Riesgo
+
+La vista para crear un nuevo riesgo permite ingresar los detalles necesarios para registrar un riesgo en el sistema. Los campos más relevantes incluyen:
+
+- *Activo*: Selección del activo asociado al riesgo.
+- *Control*: Selección del control asociado al riesgo.
+- *Título*: Nombre del riesgo.
+- *Responsable*: Usuario responsable del riesgo.
+- *Severidad*: Nivel de severidad del riesgo.
+- *Probabilidad*: Probabilidad de que ocurra el riesgo.
+- *Tratamiento*: Tratamiento asignado al riesgo.
+
+*Acciones disponibles:*
+- *Guardar*: Permite registrar el nuevo riesgo en el sistema.
+- *Cancelar*: Permite cancelar la creación del riesgo.
+
+#figure(
+    image("../imagenes/modulos/risks/create.png", width: 80%),
+    caption: [Vista de creación de riesgos],
+)
+
+==== Modificar Riesgo
+
+La vista para modificar un riesgo existente permite editar los detalles del riesgo registrado en el sistema. Los campos más relevantes incluyen:
+
+- *Activo*: Selección del activo asociado al riesgo.
+- *Control*: Selección del control asociado al riesgo.
+- *Título*: Nombre del riesgo.
+- *Responsable*: Usuario responsable del riesgo.
+- *Severidad*: Nivel de severidad del riesgo.
+- *Probabilidad*: Probabilidad de que ocurra el riesgo.
+- *Tratamiento*: Tratamiento asignado al riesgo.
+
+*Acciones disponibles:*
+- *Guardar*: Permite registrar los cambios realizados en el riesgo.
+- *Cancelar*: Permite cancelar la modificación del riesgo.
+
+#figure(
+    image("../imagenes/modulos/risks/update.png", width: 80%),
+    caption: [Vista de modificación de riesgos],
+)
+
+==== Eliminar Riesgo
+
+La vista para eliminar un riesgo permite confirmar la eliminación de un riesgo específico del sistema. Esta vista muestra un mensaje de confirmación con el nombre del riesgo a eliminar.
+
+*Acciones disponibles:*
+- *Confirmar*: Permite proceder con la eliminación del riesgo.
+- *Cancelar*: Permite cancelar la eliminación del riesgo.
+
+#figure(
+    image("../imagenes/modulos/risks/delete.png", width: 80%),
+    caption: [Vista de eliminación de riesgos],
+)
 
 
 == Módulo de Procesos
