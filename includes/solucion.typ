@@ -1,3 +1,5 @@
+#let screenshot_size = 50%
+
 = Solución
 
 El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo los estándares de la norma ISO 27001. Para lograr esto, se han definido varios módulos, cada uno con su conjunto de funcionalidades específicas. A continuación, se detalla la funcionalidad, historias de usuario y modelo de datos utilizado para cada uno de estos módulos: documentos, activos, riesgos y procesos.
@@ -50,7 +52,7 @@ La infraestructura de despliegue de DPT se basa en varios componentes containeri
 
 Estos componentes se comunican a través de una red configurada por Docker Compose, lo que permite una configuración coherente y un despliegue sencillo.
 
-==== Despliegue en DigitalOcean
+==== Despliegue
 
 Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean consiste en ejecutar todos los servicios en una sola instancia de Droplet. Esto incluye los siguientes elementos:
 
@@ -108,36 +110,6 @@ El módulo de usuarios es donde se guarda la información de los usuarios de la 
 1. Como administrador, deseo tener la capacidad de asignar grupos a los usuarios y, de igual manera, asignar usuarios a grupos.
 2. Como administrador, quiero poder crear, editar, ver y listar los usuarios de la plataforma.
 
-=== Modelo de datos
-
-1. *User*: guarda los datos de los usuarios registrados.
-    - `id`: identificador único del usuario.
-    - `email`: el email del usuario.
-    - `first_name`: el(los) nombre(s) del usuario.
-    - `last_name`: el(los) apellido(s) del usuario.
-    - `is_active`: indica si el usuario está activo en la aplicación.
-    - `is_staff`: indica si el usuario tiene la capacidad de loguearse al sitio de administración.
-    - `is_superuser`: indica si el usuario tiene todos los permisos, sin tener que asignarselos.
-    - `date_joined`: fecha en la cual el usuario fue registrado.
-    - `groups`: los grupos asignados al usuario.
-    - `user_permissions`: los permisos asignados al usuario.
-
-2. *Group*: guarda los datos de los grupos de la aplicación.
-    - `id`: identificador único del grupo.
-    - `name`: el nombre del grupo.
-    - `permissions`: los permisos asociados al grupo.
-
-3. *Permission*: guarda los datos de los permisos de la aplicación.
-    - `id`: identificador único del permiso.
-    - `content_type`: el tipo de contenido al cual está relacionado el permiso, donde estos son modelos de Django @django-content-type.
-    - `name`: el nombre del permiso.
-    - `codename`: el código del permiso.
-
-#figure(
-    image("../imagenes/models/users.png", width: 60%),
-    caption: [Modelo entidad-relación módulo de usuarios],
-)
-
 === Interfaz de usuario
 
 ==== Inicio de sesión
@@ -149,7 +121,7 @@ Sin embargo, la flexibilidad de la aplicación permite cambiar el método de aut
 Además, el registro de usuarios está estrictamente controlado. Solo los administradores de la aplicación pueden crear nuevas cuentas, lo que evita que usuarios externos se registren sin autorización. No obstante, el registro de usuarios externos también puede ser gestionado mediante variables de entorno, permitiendo configuraciones más abiertas si es necesario. Este enfoque garantiza un control preciso sobre quién puede acceder a la aplicación, mejorando la seguridad y la gestión de usuarios.
 
 #figure(
-    image("../imagenes/modulos/users/login.png", width: 80%),
+    image("../imagenes/modulos/users/login.png", width: screenshot_size),
     caption: [Vista de inicio de sesión],
 )
 
@@ -162,7 +134,7 @@ La vista del listado de usuarios proporciona una tabla con información detallad
 2. Botones de Creación, Edición, Detalle y Eliminación: La interfaz incluye botones que permiten a los administradores crear nuevos usuarios, editar la información de los existentes, ver detalles específicos de cada usuario y eliminar usuarios cuando sea necesario.
 
 #figure(
-    image("../imagenes/modulos/users/list.png", width: 80%),
+    image("../imagenes/modulos/users/list.png", width: screenshot_size),
     caption: [Vista de listado de usuarios],
 )
 
@@ -180,7 +152,7 @@ Además, la interfaz ofrece los siguientes botones de acción:
 - *Delete group*: Permite eliminar al usuario de un grupo específico.
 
 #figure(
-    image("../imagenes/modulos/users/detail.png", width: 80%),
+    image("../imagenes/modulos/users/detail.png", width: screenshot_size),
     caption: [Vista de detalle de usuario],
 )
 
@@ -199,7 +171,7 @@ Botones de acción:
 - *Cancel*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/users/create.png", width: 80%),
+    image("../imagenes/modulos/users/create.png", width: screenshot_size),
     caption: [Vista de creación de usuario],
 )
 
@@ -218,7 +190,7 @@ Botones de acción:
 - *Cancel*: Cancela la edición y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/users/update.png", width: 80%),
+    image("../imagenes/modulos/users/update.png", width: screenshot_size),
     caption: [Vista de actualización de usuario],
 )
 
@@ -236,7 +208,7 @@ La pantalla incluye una confirmación clara para evitar eliminaciones accidental
 Esta funcionalidad asegura que los administradores puedan gestionar y mantener la base de usuarios de manera efectiva, minimizando el riesgo de errores en el proceso de eliminación.
 
 #figure(
-    image("../imagenes/modulos/users/delete.png", width: 80%),
+    image("../imagenes/modulos/users/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de usuario],
 )
 
@@ -254,7 +226,7 @@ La interfaz también proporciona botones de acción:
 - *Delete group*: Permite eliminar un grupo, con confirmación para evitar eliminaciones accidentales.
 
 #figure(
-    image("../imagenes/modulos/groups/list.png", width: 80%),
+    image("../imagenes/modulos/groups/list.png", width: screenshot_size),
     caption: [Vista de listado de grupos],
 )
 
@@ -270,7 +242,7 @@ Botones de acción:
 - *Delete group*: Permite eliminar el grupo, con confirmación para evitar eliminaciones accidentales.
 
 #figure(
-    image("../imagenes/modulos/groups/detail.png", width: 80%),
+    image("../imagenes/modulos/groups/detail.png", width: screenshot_size),
     caption: [Vista de detalle de grupo],
 )
 
@@ -287,7 +259,7 @@ Botones de acción:
 - *Cancel*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/groups/create.png", width: 80%),
+    image("../imagenes/modulos/groups/create.png", width: screenshot_size),
     caption: [Vista de creación de grupo],
 )
 
@@ -303,7 +275,7 @@ Botones de acción:
 - *Cancel*: Cancela la operación y vuelve a la vista anterior sin guardar los cambios.
 
 #figure(
-    image("../imagenes/modulos/groups/update.png", width: 80%),
+    image("../imagenes/modulos/groups/update.png", width: screenshot_size),
     caption: [Vista de actualización de grupo],
 )
 
@@ -316,7 +288,7 @@ La vista de eliminación de grupo permite a los administradores eliminar un grup
   - *Cancel*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/groups/delete.png", width: 80%),
+    image("../imagenes/modulos/groups/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de grupo],
 )
 
@@ -337,6 +309,11 @@ Las categorías de controles son grupos de controles relacionados entre sí. Est
 
 Los documentos son información registrada que respalda la implementación y gestión del SGSI. Pueden incluir políticas de seguridad, procedimientos operativos, registros de auditoría, planes de continuidad del negocio y cualquier otra información necesaria para mantener y mejorar la seguridad de la información dentro de la organización. La correcta gestión de estos documentos es crucial para asegurar la conformidad con normas y regulaciones y para facilitar la revisión y mejora continua del SGSI.
 
+=== Tipos de documentos
+
+Los tipos de documentos son categorías utilizadas para organizar la información dentro del SGSI. Cada tipo cumple un propósito específico, facilitando la gestión y asegurando la conformidad con los estándares de seguridad. La correcta clasificación y gestión de estos documentos es crucial para la eficacia del SGSI y la conformidad con normas y regulaciones.
+
+
 === Evidencia
 
 La evidencia se refiere a la documentación y pruebas tangibles que demuestran la implementación y efectividad de los controles de seguridad. Puede incluir registros de auditoría, informes de incidentes, resultados de pruebas de seguridad, registros de capacitación del personal, entre otros. La recopilación y gestión adecuada de la evidencia es esencial para demostrar la conformidad con los requisitos del SGSI y para proporcionar una base sólida para auditorías internas y externas.
@@ -352,54 +329,10 @@ La evidencia se refiere a la documentación y pruebas tangibles que demuestran l
 7. Como usuario, quiero poder ver el listado de controles.
 8. Como usuario, quiero poder ver el detalle de cada control.
 9. Como usuario, quiero poder ver el detalle de cada documento.
-
-=== Modelo de Datos
-
-1. *ControlCategory*: guarda los datos de las categorías de controles.
-    - `id`: el identificador único de la categoría.
-    - `name`: el nombre de la categoría.
-
-2. *Control*: guarda los datos de los controles.
-    - `id`: el identificador único del control.
-    - `category`: la categoría del control.
-    - `title`: el título del control.
-    - `description`: la descripción del control.
-
-3. *Document*: guarda los datos de un documento.
-    - `id`: el identificador único del documento.
-    - `title`: el título del documento.
-    - `description`: la descripción del documento.
-    - `code`: el código del documento.
-    - `documented_controls`: los controles que se encuentran documentados en el documento.
-4. *DocumentVersion*: guarda los datos de las versiones de un documento.
-    - `id`: el identificador único de la versión de un documento.
-    - `document`: el documento al cual pertenece la versión.
-    - `version`: el número de la versión.
-    - `file`: el archivo de la versión.
-    - `shasum`: el hash (sha256) del archivo de la versión.
-    - `comment`: comentario de la versión.
-    - `is_approved`: booleano indicando si la versión se encuentra aprobada.
-    - `approval_evidence`: la evidencia de aprobación de la versión.
-    - `approved_at`: la fecha y hora en la cual fue aprobada la versión.
-    - `approved_by`: el usuario que aprobó la versión.
-    - `verification_code`: código utilizado para verificar la lectura de una versión.
-    - `read_by`: los usuarios que han marcado como leída la versión.
-
-5. *DocumentVersionReadByUser*: relaciona usuarios y versiones de documentos, marcando una versión de un documento como leída.
-    - `id`: el identificador único de la relación entre usuario y versión de documento.
-    - `document_version`: la versión leída por el usuario.
-    - `user`: el usuario que leyó la versión.
-
-6. *Evidence*: guarda los datos de una evidencia.
-    - `id`: el identificador único de la evidencia.
-    - `file`: archivo de la evidencia.
-    - `url`: URL de la evidencia.
-    - `shasum`: el hash (sha256) del archivo o hiperenlace de la evidencia.
-
-#figure(
-    image("../imagenes/models/documents.png", height: 40%),
-    caption: [Modelo entidad-relación módulo de documentos],
-)
+10. Como administrador, quiero poder ver el listado de tipos de documentos.
+11. Como administrador, quiero poder crear nuevos tipos de documentos.
+12. Como administrador, quiero poder editar los tipos de documentos existentes.
+13. Como administrador, quiero poder eliminar tipos de documentos que ya no son necesarios.
 
 === Interfaz de Usuario
 
@@ -413,7 +346,7 @@ La vista del listado de controles proporciona una tabla con información sobre c
 - *Eliminar Control*: Permite a los administradores eliminar controles.
 
 #figure(
-    image("../imagenes/modulos/controls/list.png", width: 80%),
+    image("../imagenes/modulos/controls/list.png", width: screenshot_size),
     caption: [Vista de listado de controles],
 )
 
@@ -434,7 +367,7 @@ Botones de acción:
 - *Eliminar Control*: Permite eliminar el control.
 
 #figure(
-    image("../imagenes/modulos/controls/detail.png", width: 80%),
+    image("../imagenes/modulos/controls/detail.png", width: screenshot_size),
     caption: [Vista de detalle de controles],
 )
 
@@ -451,7 +384,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/controls/create.png", width: 80%),
+    image("../imagenes/modulos/controls/create.png", width: screenshot_size),
     caption: [Vista de creación de controles],
 )
 
@@ -468,7 +401,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/controls/update.png", width: 80%),
+    image("../imagenes/modulos/controls/update.png", width: screenshot_size),
     caption: [Vista de actualización de controles],
 )
 
@@ -483,7 +416,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/controls/delete.png", width: 80%),
+    image("../imagenes/modulos/controls/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de controles],
 )
 
@@ -497,7 +430,7 @@ La vista del listado de categorías de controles proporciona una tabla con infor
 - *Eliminar Categoría de Control*: Permite a los administradores eliminar categorías de control.
 
 #figure(
-    image("../imagenes/modulos/control-categories/list.png", width: 80%),
+    image("../imagenes/modulos/control-categories/list.png", width: screenshot_size),
     caption: [Vista de listado de categorías de controles],
 )
 
@@ -516,7 +449,7 @@ Botones de acción:
 - *Eliminar Categoría de Control*: Permite eliminar la categoría de control.
 
 #figure(
-    image("../imagenes/modulos/control-categories/detail.png", width: 80%),
+    image("../imagenes/modulos/control-categories/detail.png", width: screenshot_size),
     caption: [Vista de detalle de categorías de controles],
 )
 
@@ -531,7 +464,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/control-categories/create.png", width: 80%),
+    image("../imagenes/modulos/control-categories/create.png", width: screenshot_size),
     caption: [Vista de creación de categorías de controles],
 )
 
@@ -546,7 +479,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/control-categories/update.png", width: 80%),
+    image("../imagenes/modulos/control-categories/update.png", width: screenshot_size),
     caption: [Vista de actualización de categorías de controles],
 )
 
@@ -561,7 +494,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/control-categories/delete.png", width: 80%),
+    image("../imagenes/modulos/control-categories/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de categorías de controles],
 )
 
@@ -575,7 +508,7 @@ La vista del listado de documentos proporciona una tabla con información sobre 
 - *Eliminar Documento*: Permite a los administradores eliminar documentos.
 
 #figure(
-    image("../imagenes/modulos/documents/list.png", width: 80%),
+    image("../imagenes/modulos/documents/list.png", width: screenshot_size),
     caption: [Vista de listado de documentos],
 )
 
@@ -595,7 +528,7 @@ La sección de versiones del documento proporciona información sobre cada versi
 - *Eliminar Versión*: Eliminar la versión del documento.
 
 #figure(
-    image("../imagenes/modulos/documents/detail.png", width: 80%),
+    image("../imagenes/modulos/documents/detail.png", width: screenshot_size),
     caption: [Vista de detalle de documentos],
 )
 
@@ -613,7 +546,7 @@ Botones de acción:
 - *Cancelar*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/documents/create.png", width: 80%),
+    image("../imagenes/modulos/documents/create.png", width: screenshot_size),
     caption: [Vista de creación de documentos],
 )
 
@@ -628,7 +561,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/delete.png", width: 80%),
+    image("../imagenes/modulos/documents/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de documentos],
 )
 
@@ -647,7 +580,7 @@ Botones de acción:
 - *Marcar como leído*: Permite a los usuarios marcar la versión como leída.
 
 #figure(
-    image("../imagenes/modulos/documents/version_detail.png", width: 80%),
+    image("../imagenes/modulos/documents/version_detail.png", width: screenshot_size),
     caption: [Vista de detalle de versión de documentos],
 )
 
@@ -663,7 +596,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_create.png", width: 80%),
+    image("../imagenes/modulos/documents/version_create.png", width: screenshot_size),
     caption: [Vista de creación de versiones de documentos],
 )
 
@@ -679,7 +612,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_approve.png", width: 80%),
+    image("../imagenes/modulos/documents/version_approve.png", width: screenshot_size),
     caption: [Vista de aprobación de versiones de documentos],
 )
 
@@ -696,7 +629,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_update.png", width: 80%),
+    image("../imagenes/modulos/documents/version_update.png", width: screenshot_size),
     caption: [Vista de actualización de versiones de documentos],
 )
 
@@ -711,8 +644,86 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_delete.png", width: 80%),
+    image("../imagenes/modulos/documents/version_delete.png", width: screenshot_size),
     caption: [Vista de eliminación de versiones de documentos],
+)
+
+
+==== Listado de Tipos de Documentos
+
+La vista de listado de tipos de documentos muestra una tabla con los tipos de documentos existentes en el sistema. Los campos más relevantes incluyen:
+
+- *Nombre*: El nombre del tipo de documento.
+- *Documentos relacionados*: La cantidad de documentos asociados a este tipo de documento.
+
+*Acciones disponibles:*
+- *Añadir Tipo de Documento*: Permite agregar un nuevo tipo de documento.
+- *Actualizar Tipo de Documento*: Permite editar la información de un tipo de documento existente.
+- *Eliminar Tipo de Documento*: Permite eliminar un tipo de documento existente.
+
+#figure(
+    image("../imagenes/modulos/document-types/list.png", width: screenshot_size),
+    caption: [Vista de listado de tipos de documentos],
+)
+
+==== Detalle de Tipos de Documentos
+
+La vista de detalle de un tipo de documento muestra información específica sobre un tipo de documento en particular. Esta vista incluye los campos más relevantes:
+
+- *Nombre*: El nombre del tipo de documento.
+
+*Acciones disponibles:*
+- *Actualizar Tipo de Documento*: Permite editar la información del tipo de documento.
+- *Eliminar Tipo de Documento*: Permite eliminar el tipo de documento.
+
+#figure(
+    image("../imagenes/modulos/document-types/detail.png", width: screenshot_size),
+    caption: [Vista de detalle de tipos de documentos],
+)
+
+==== Creación de Tipos de Documentos
+
+La vista de creación de tipos de documentos permite agregar un nuevo tipo de documento al sistema. Los campos más relevantes incluyen:
+
+- *Nombre*: El nombre del tipo de documento.
+
+*Acciones disponibles:*
+- *Guardar*: Permite guardar el nuevo tipo de documento.
+- *Cancelar*: Permite cancelar la creación del tipo de documento.
+
+#figure(
+    image("../imagenes/modulos/document-types/create.png", width: screenshot_size),
+    caption: [Vista de creación de tipos de documentos],
+)
+
+==== Actualización de Tipos de Documentos
+
+La vista de actualización de un tipo de documento permite editar la información del tipo de documento seleccionado. Esta vista incluye los campos más relevantes:
+
+- *Nombre*: Permite modificar el nombre del tipo de documento.
+
+*Acciones disponibles:*
+- *Guardar*: Permite guardar los cambios realizados.
+- *Cancelar*: Permite cancelar la actualización y volver a la vista anterior sin guardar los cambios.
+
+#figure(
+    image("../imagenes/modulos/document-types/update.png", width: screenshot_size),
+    caption: [Vista de actualización de tipos de documentos],
+)
+
+==== Eliminación de Tipos de Documentos
+
+La vista de eliminación de un tipo de documento permite confirmar la eliminación del tipo de documento seleccionado. Esta vista incluye la siguiente información relevante:
+
+- *Confirmación*: Se solicita la confirmación del usuario para eliminar el tipo de documento seleccionado.
+
+*Acciones disponibles:*
+- *Confirmar*: Permite confirmar la eliminación del tipo de documento.
+- *Cancelar*: Permite cancelar la eliminación y volver a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/document-types/delete.png", width: screenshot_size),
+    caption: [Vista de eliminación de tipos de documentos],
 )
 
 
@@ -734,29 +745,6 @@ Los activos son cualquier recurso que sea valioso para la organización y que ne
 2. Como usuario, quiero poder ver el listado de activos.
 3. Como usuario, quiero poder ver el detalle de cada activo.
 
-=== Modelo de Datos
-
-1. *AssetType*: guarda los datos de un tipo de activo.
-    - `id`: el identificador único.
-    - `name`: el nombre del tipo de activo.
-    - `description`: la descripción del tipo de activo.
-
-2. *Asset*: guarda los datos de un activo.
-    - `id`: el identificador único.
-    - `owner`: el dueño del activo.
-    - `code`: el código único del activo.
-    - `name`: el nombre del activo.
-    - `description`: la descripción del activo.
-    - `asset_type`: el tipo de activo.
-    - `criticality`: la criticidad del activo, que puede ser `muy baja`, `baja`, `media`, `alta` o `muy alta`.
-    - `classification`: la clasificación del activo, que puede ser `pública`, `interna` o `privada`.
-    - `is_archived`: indica si el activo está actualmente archivado.
-
-#figure(
-    image("../imagenes/models/assets.png", height: 30%),
-    caption: [Modelo entidad-relación módulo de activos],
-)
-
 === Interfaz de usuario
 
 ==== Listado de Tipos de Activos
@@ -769,7 +757,7 @@ La vista del listado de tipos de activos proporciona una tabla con información 
 - *Eliminar Tipo de Activo*: Permite a los administradores eliminar tipos de activos.
 
 #figure(
-    image("../imagenes/modulos/asset-types/list.png", width: 80%),
+    image("../imagenes/modulos/asset-types/list.png", width: screenshot_size),
     caption: [Vista de listado de tipos de activos],
 )
 
@@ -788,7 +776,7 @@ La vista de detalle de un tipo de activo muestra información específica sobre 
 - *Eliminar Tipo de Activo*: Permite eliminar el tipo de activo.
 
 #figure(
-    image("../imagenes/modulos/asset-types/detail.png", width: 80%),
+    image("../imagenes/modulos/asset-types/detail.png", width: screenshot_size),
     caption: [Vista de detalle de tipos de activos],
 )
 
@@ -803,7 +791,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/asset-types/create.png", width: 80%),
+    image("../imagenes/modulos/asset-types/create.png", width: screenshot_size),
     caption: [Vista de creación de tipos de activos],
 )
 
@@ -818,7 +806,7 @@ La vista de modificación de un tipo de activo permite al usuario actualizar la 
 - *Cancelar*: Cancela los cambios y regresa a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/asset-types/update.png", width: 80%),
+    image("../imagenes/modulos/asset-types/update.png", width: screenshot_size),
     caption: [Vista de modificación de tipos de activos],
 )
 
@@ -831,7 +819,7 @@ La vista de eliminación de un tipo de activo confirma la eliminación del tipo 
 - *Botón Cancelar*: Cancela la acción de eliminación y regresa a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/asset-types/delete.png", width: 80%),
+    image("../imagenes/modulos/asset-types/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de tipos de activos],
 )
 
@@ -852,7 +840,7 @@ La vista de listado de activos muestra todos los activos registrados en el siste
 Además, se proporcionan opciones para añadir un nuevo activo, actualizar un activo existente o archivar un activo.
 
 #figure(
-    image("../imagenes/modulos/asset-types/list.png", width: 80%),
+    image("../imagenes/modulos/asset-types/list.png", width: screenshot_size),
     caption: [Vista de listado de activos],
 )
 
@@ -872,7 +860,7 @@ La vista de detalle de un activo muestra información específica sobre un activ
 - *Actualizar Activo*: Permite editar la información del activo.
 
 #figure(
-    image("../imagenes/modulos/assets/detail.png", width: 80%),
+    image("../imagenes/modulos/assets/detail.png", width: screenshot_size),
     caption: [Vista de detalle de activos],
 )
 
@@ -893,7 +881,7 @@ La vista de creación de un activo permite ingresar la información necesaria pa
 - *Cancelar*: Permite cancelar la creación del activo y regresar a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/assets/create.png", width: 80%),
+    image("../imagenes/modulos/assets/create.png", width: screenshot_size),
     caption: [Vista de creación de activos],
 )
 
@@ -914,7 +902,7 @@ La vista de modificación de un activo permite editar la información existente 
 - *Cancelar*: Permite cancelar la edición y regresar a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/assets/update.png", width: 80%),
+    image("../imagenes/modulos/assets/update.png", width: screenshot_size),
     caption: [Vista de modificación de activos],
 )
 
@@ -930,7 +918,7 @@ La vista de archivado de un activo permite confirmar la acción de archivar un a
 - *Cancelar*: Cancela la acción de archivado y regresa a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/assets/archive.png", width: 80%),
+    image("../imagenes/modulos/assets/archive.png", width: screenshot_size),
     caption: [Vista de archivado de activos],
 )
 
@@ -949,25 +937,6 @@ Los riesgos sirven para relacionar a los activos con los controles. En los contr
 2. Como administrador, quiero poder ver el listado de riesgos.
 3. Como administrador, quiero poder ver el detalle de cada riesgo.
 
-=== Modelo de Datos
-
-1. *Risk*: guarda los datos de un riesgo.
-   - `id`: el identificador único.
-   - `assets`: los activos para el cual existe el riesgo.
-   - `controls`: los controles asociados al riesgo.
-   - `title`: el título del riesgo.
-   - `description`: la descripción del riesgo.
-   - `responsible`: el responsable del riesgo.
-   - `severity`: la gravedad del riesgo, que puede ser `muy baja`, `baja`, `media`, `alta` o `muy alta`.
-   - `likelihood`: la probabilidad de que se materialice el riesgo, que puede ser `muy baja`, `baja`, `media`, `alta` o `muy alta`.
-   - `treatment`: el tratamiento que se le dará al riesgo, que puede ser `mitigar`, `transferir`, `aceptar` o `eliminar`.
-   - `residual_risk`: el riesgo residual del riesgo.
-
-#figure(
-    image("../imagenes/models/risks.png", height: 35%),
-    caption: [Modelo entidad-relación módulo de riesgos],
-)
-
 === Interfaz de usuario
 
 ==== Listado de Riesgos
@@ -984,7 +953,7 @@ La vista de listado de riesgos muestra una tabla con los riesgos existentes en e
 - *Eliminar Riesgo*: Permite eliminar un riesgo del sistema.
 
 #figure(
-    image("../imagenes/modulos/risks/list.png", width: 80%),
+    image("../imagenes/modulos/risks/list.png", width: screenshot_size),
     caption: [Vista de listado de riesgos],
 )
 
@@ -1007,7 +976,7 @@ Además, se listan los activos, controles y riesgos residuales relacionados con 
 - *Eliminar Riesgo*: Permite eliminar el riesgo del sistema.
 
 #figure(
-    image("../imagenes/modulos/risks/detail.png", width: 80%),
+    image("../imagenes/modulos/risks/detail.png", width: screenshot_size),
     caption: [Vista de detalle de riesgos],
 )
 
@@ -1028,7 +997,7 @@ La vista para crear un nuevo riesgo permite ingresar los detalles necesarios par
 - *Cancelar*: Permite cancelar la creación del riesgo.
 
 #figure(
-    image("../imagenes/modulos/risks/create.png", width: 80%),
+    image("../imagenes/modulos/risks/create.png", width: screenshot_size),
     caption: [Vista de creación de riesgos],
 )
 
@@ -1049,7 +1018,7 @@ La vista para modificar un riesgo existente permite editar los detalles del ries
 - *Cancelar*: Permite cancelar la modificación del riesgo.
 
 #figure(
-    image("../imagenes/modulos/risks/update.png", width: 80%),
+    image("../imagenes/modulos/risks/update.png", width: screenshot_size),
     caption: [Vista de modificación de riesgos],
 )
 
@@ -1062,7 +1031,7 @@ La vista para eliminar un riesgo permite confirmar la eliminación de un riesgo 
 - *Cancelar*: Permite cancelar la eliminación del riesgo.
 
 #figure(
-    image("../imagenes/modulos/risks/delete.png", width: 80%),
+    image("../imagenes/modulos/risks/delete.png", width: screenshot_size),
     caption: [Vista de eliminación de riesgos],
 )
 
@@ -1086,53 +1055,242 @@ Las actividades son
 3. Como administrador, quiero poder asignar procesos a los usuarios directamente o indirectamente a través de grupos para generar evidencia de los controles.
 4. Como usuario, quiero ser notificado al tener un nuevo proceso asignado para poder completarlo rápidamente.
 
-=== Modelo de Datos
-
-1. *Process*: guarda los datos de un proceso.
-   - `id`: el identificador único.
-   - `name`: el nombre de la definición de un proceso.
-
-2. *ProcessVersion*: guarda los datos de una versión de un proceso.
-   - `id`: el identificador único.
-   - `process`: el proceso al cual pertenece la versión.
-   - `version`: el número de la versión del proceso.
-   - `defined_in`: el documento en el cual está definido el proceso.
-   - `controls`: los controles para los cuales se genera la evidencia al completar las actividades de la versión.
-   - `comment_label`: la etiqueta para el comentario de una instancia del proceso.
-   - `recurrency`: la periodicidad con la cual sé instancia el proceso, que puede ser `diariamente`, `semanalmente`, `mensualmente`, `trimestralmente`, `semi anualmente` o `anualmente`.
-   - `is_published`: indica si la versión está publicada.
-   - `published_at`: la fecha y hora en la cual se publicó la versión.
-   - `published_by`: el usuario que publico la versión.
-
-3. *ProcessActivity*: guarda los datos de una actividad.
-   - `id`: el identificador único.
-   - `process_version`: la versión del proceso a la cual pertenece la actividad.
-   - `order`: el orden respecto a otras actividades de una versión de un proceso.
-   - `description`: la descripción de la actividad a realizar.
-   - `asignee_group`: el grupo de usuarios entre los cuales se puede asignar la actividad cuando se inicia una instancia de esta.
-   - `email_to_notify`: el email al cual se debe notificar cuando se inicie una instancia de la actividad.
-
-4. *ProcessInstance*:
-   - `id`: el identificador único.
-   - `process_version`: la versión del proceso usada para su instancia.
-   - `comment`: el comentario con el cual se inició la instancia del proceso.
-   - `is_completed`: booleano que representa si la instance del proceso fue completada.
-   - `completed_at`: fecha y hora en la cual fue completada la instancia del proceso.
-
-5. *ProcessActivityInstance*:
-   - `id`: el identificador único.
-   - `process_instance`: la instancia de un proceso a la cual esta asociada la instancia de la actividad.
-   - `activity`: la actividad de la versión del proceso usada para su instancia.
-   - `asignee`: el usuario encargado de realizar la actividad.
-   - `is_completed`: booleano que representa si la actividad fue completada.
-   - `completed_at`: fecha y hora en la cual fue completada la actividad.
-   - `evidence`: la evidencia generada a partir de la actividad.
-
-#figure(
-    image("../imagenes/models/processes.png", height: 40%),
-    caption: [Modelo entidad-relación módulo de procesos],
-)
-
 === Interfaz de usuario
 
-...
+==== Listado de Procesos
+
+La vista de listado de procesos muestra una lista de todos los procesos existentes en el sistema. Los campos más relevantes presentados son:
+
+- *Nombre*: El nombre del proceso.
+- *Última versión publicada*: La versión más reciente del proceso que ha sido publicada.
+- *Última versión*: La última versión del proceso, independientemente de si ha sido publicada o no.
+- *Actualizado el*: La fecha y hora de la última actualización del proceso.
+- *Actualizado por*: El usuario que realizó la última actualización del proceso.
+
+*Acciones disponibles:*
+- *Iniciar Proceso*: Permite iniciar un nuevo proceso.
+- *Añadir Versión del Proceso*: Permite añadir una nueva versión del proceso.
+- *Actualizar Proceso*: Permite editar la información del proceso.
+- *Eliminar Proceso*: Permite eliminar el proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/list.png", width: screenshot_size),
+    caption: [Vista de listado de procesos],
+)
+
+==== Detalle de Proceso
+
+La vista de detalle de un proceso muestra información específica sobre un proceso en particular. Esta vista incluye los campos más relevantes:
+
+- *Nombre*: El nombre del proceso.
+- *Creado el*: La fecha y hora en que se creó el proceso.
+- *Creado por*: El usuario que creó el proceso.
+- *Actualizado el*: La fecha y hora de la última actualización del proceso.
+- *Actualizado por*: El usuario que realizó la última actualización del proceso.
+
+*Acciones disponibles:*
+- *Iniciar Proceso*: Permite iniciar el proceso.
+- *Actualizar Proceso*: Permite editar la información del proceso.
+- *Eliminar Proceso*: Permite eliminar el proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/detail.png", width: screenshot_size),
+    caption: [Vista de detalle de proceso],
+)
+
+==== Crear Proceso
+
+La vista de creación de un proceso permite a los usuarios añadir un nuevo proceso al sistema. Esta vista incluye los siguientes campos:
+
+- *Nombre*: El nombre del proceso.
+
+*Acciones disponibles:*
+- *Guardar*: Permite guardar el nuevo proceso.
+- *Cancelar*: Permite cancelar la creación del proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/create.png", width: screenshot_size),
+    caption: [Vista de creación de proceso],
+)
+
+==== Actualización de Proceso
+
+La vista de actualización de un proceso permite modificar la información existente de un proceso. Los campos más importantes disponibles para la actualización son:
+
+- *Nombre*: Permite editar el nombre del proceso.
+
+*Acciones disponibles:*
+- *Guardar*: Guarda los cambios realizados en el proceso.
+- *Cancelar*: Cancela la actualización y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/processes/update.png", width: screenshot_size),
+    caption: [Vista de actualización de proceso],
+)
+
+=== Eliminación de Proceso
+
+La vista de eliminación de un proceso permite confirmar la eliminación de un proceso existente. Los campos más importantes disponibles para esta acción son:
+
+- *Confirmación de eliminación*: Se muestra un mensaje de confirmación preguntando si realmente desea eliminar el proceso.
+
+*Acciones disponibles:*
+- *Confirmar*: Confirma y procede con la eliminación del proceso.
+- *Cancelar*: Cancela la eliminación y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/processes/delete.png", width: screenshot_size),
+    caption: [Vista de eliminación de proceso],
+)
+
+==== Creación de Versión de Proceso
+
+La vista de creación de una versión de proceso permite definir una nueva versión de un proceso existente. Los campos más importantes disponibles para esta acción son:
+
+- *Definido en*: Seleccione el documento en el que se define esta versión del proceso.
+- *Controles*: Asigne controles relevantes para esta versión del proceso.
+- *Etiqueta de comentarios (opcional)*: Proporcione una etiqueta para los comentarios relacionados con esta versión del proceso.
+- *Recurrencia (opcional)*: Defina la recurrencia para la ejecución del proceso.
+- *Correo para notificación de finalización (opcional)*: Ingrese una dirección de correo electrónico para recibir notificaciones de finalización.
+
+*Acciones disponibles:*
+- *Guardar*: Guarda la nueva versión del proceso.
+- *Cancelar*: Cancela la acción y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/processes/version_create.png", width: screenshot_size),
+    caption: [Vista de creación de versión de proceso],
+)
+
+==== Detalle de Versión de Proceso
+
+La vista de detalle de una versión de proceso muestra la información específica de una versión particular del proceso. Esta vista incluye los campos más relevantes:
+
+- *Proceso*: Nombre del proceso al que pertenece esta versión.
+- *Definido en*: Documento en el que se define esta versión del proceso.
+- *Publicado*: Indica si la versión está publicada.
+- *Recurrencia*: Frecuencia de la ejecución del proceso.
+- *Correo para notificación de finalización*: Dirección de correo para notificaciones de finalización.
+- *Creado el*: Fecha y hora de creación de esta versión.
+- *Creado por*: Usuario que creó esta versión.
+- *Actualizado el*: Fecha y hora de la última actualización.
+- *Actualizado por*: Usuario que realizó la última actualización.
+
+*Acciones disponibles:*
+- *Publicar*: Permite publicar la versión del proceso.
+- *Agregar actividad del proceso*: Añadir nuevas actividades a esta versión del proceso.
+- *Actualizar versión del proceso*: Permite editar la información de esta versión del proceso.
+- *Eliminar versión del proceso*: Permite eliminar esta versión del proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/version_detail.png", width: screenshot_size),
+    caption: [Vista de detalle de versión de proceso],
+)
+
+==== Actualización de Versión de Proceso
+
+La vista de actualización de una versión de proceso permite editar la información específica de una versión particular del proceso. Los campos más relevantes que se pueden actualizar incluyen:
+
+- *Definido en*: Documento en el que se define esta versión del proceso.
+- *Controles*: Controles asociados a esta versión del proceso.
+- *Etiqueta de comentario (opcional)*: Etiqueta para comentarios adicionales.
+- *Recurrencia (opcional)*: Frecuencia de ejecución del proceso.
+- *Correo para notificación de finalización (opcional)*: Dirección de correo para notificaciones de finalización.
+
+*Acciones disponibles:*
+- *Guardar*: Guarda los cambios realizados en la versión del proceso.
+- *Cancelar*: Cancela la operación de actualización y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/processes/version_update.png", width: screenshot_size),
+    caption: [Vista de actualización de versión de proceso],
+)
+
+==== Eliminación de Versión de Proceso
+
+La vista de eliminación de una versión de proceso permite confirmar la acción de eliminar una versión específica de un proceso. Esta vista incluye:
+
+- *Mensaje de confirmación*: Pregunta si está seguro de que desea eliminar la versión seleccionada del proceso.
+
+*Acciones disponibles:*
+- *Confirmar*: Elimina definitivamente la versión del proceso.
+- *Cancelar*: Cancela la operación de eliminación y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/processes/version_delete.png", width: screenshot_size),
+    caption: [Vista de eliminación de versión de proceso],
+)
+
+==== Creación de Actividad de Versión de Proceso
+
+La vista de creación de una actividad de versión de proceso permite definir una nueva actividad dentro de una versión específica de un proceso. Los campos más relevantes son:
+
+- *Título*: El nombre de la actividad.
+- *Descripción*: Una descripción detallada de la actividad.
+- *Entregables (opcional)*: Lista de entregables asociados a la actividad.
+- *Grupos asignados*: Grupos responsables de la actividad.
+- *Correo electrónico para notificaciones (opcional)*: Correo electrónico para recibir notificaciones de finalización.
+
+*Acciones disponibles:*
+- *Guardar*: Guarda la nueva actividad de la versión del proceso.
+- *Cancelar*: Cancela la creación de la actividad y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/processes/activity_create.png", width: screenshot_size),
+    caption: [Vista de creación de actividad de versión de proceso],
+)
+
+==== Detalle de Actividad de Versión de Proceso
+
+La vista de detalle de una actividad de versión de proceso muestra la información más relevante sobre una actividad específica dentro de una versión de un proceso. Los campos más importantes son:
+
+- *Versión del proceso*: La versión del proceso a la que pertenece la actividad.
+- *Descripción*: Una descripción detallada de la actividad.
+- *Entregables*: Elementos que deben ser entregados como resultado de la actividad.
+- *Grupos asignados*: Grupos responsables de ejecutar la actividad.
+- *Correo electrónico para notificaciones*: Correo electrónico para recibir notificaciones de finalización de la actividad.
+- *Creado el*: Fecha y hora en que se creó la actividad.
+- *Creado por*: Usuario que creó la actividad.
+- *Actualizado el*: Fecha y hora de la última actualización de la actividad.
+- *Actualizado por*: Usuario que realizó la última actualización de la actividad.
+
+*Acciones disponibles:*
+- *Actualizar actividad del proceso*: Permite editar la información de la actividad.
+- *Eliminar actividad del proceso*: Permite eliminar la actividad del proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/activity_detail.png", width: screenshot_size),
+    caption: [Vista de detalle de actividad de versión de proceso],
+)
+
+==== Actualización de Actividad de Versión de Proceso
+
+La vista de actualización de una actividad de versión de proceso permite editar la información de una actividad específica dentro de una versión de un proceso. Los campos más importantes que se pueden modificar son:
+
+- *Título*: El título de la actividad.
+- *Descripción*: Una descripción detallada de la actividad.
+- *Entregables*: Elementos que deben ser entregados como resultado de la actividad (opcional).
+- *Grupos asignados*: Grupos responsables de ejecutar la actividad.
+- *Correo electrónico para notificaciones*: Correo electrónico para recibir notificaciones de finalización de la actividad (opcional).
+
+*Acciones disponibles:*
+- *Guardar*: Guarda los cambios realizados en la actividad.
+- *Cancelar*: Cancela la edición y vuelve a la vista de detalle de la actividad.
+
+#figure(
+    image("../imagenes/modulos/processes/activity_update.png", width: screenshot_size),
+    caption: [Vista de actualización de actividad de versión de proceso],
+)
+
+==== Eliminación de Actividad de Versión de Proceso
+
+La vista de eliminación de una actividad de versión de proceso permite confirmar la eliminación de una actividad específica dentro de una versión de un proceso. Esta vista muestra un mensaje de confirmación para asegurar que realmente se desea eliminar la actividad.
+
+*Acciones disponibles:*
+- *Confirmar*: Confirma la eliminación de la actividad.
+- *Cancelar*: Cancela la acción de eliminación y vuelve a la vista de detalle de la actividad.
+
+#figure(
+    image("../imagenes/modulos/processes/activity_delete.png", width: screenshot_size),
+    caption: [Vista de eliminación de actividad de versión de proceso],
+)

@@ -18,6 +18,8 @@
 #include "includes/evaluacion.typ"
 #pagebreak()
 #include "includes/conclusion.typ"
+#pagebreak()
+#include "includes/anexo.typ"
 
 #pagebreak()
 #bibliography(
