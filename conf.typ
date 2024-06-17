@@ -29,6 +29,8 @@
     coguias: (), // si es solo un profesor co-guía, una lista de un elemento es ((nombre: "nombre apellido", pronombre: pronombre.<el/ella/elle>),)
     supervisor: none, // solo en caso de práctica extendida llenar esto, en otro caso none, (nombre: "nombre apellido", pronombre: pronombre.<el/ella/elle>)
     anno: none, // si no se especifica, se usa el año actual
+    auspicio: none,
+    espaciado_titulo: 1fr,
     doc,
 ) = {
     // Formato de página
@@ -100,42 +102,47 @@
     // let _modalidad = [MODALIDAD: \ #modalidad]
     let _modalidad = []
     let _guia(gen: pronombre.el) = [PROFESOR#gen.guia GUÍA]
-    let _comision(gen: pronombre.el) = [MIEMBROS DE LA#gen.guia COMISIÓN]
+    let _comision = "MIEMBROS DE LA COMISIÓN:"
     let _coguia(gen: pronombre.el) = [PROFESOR#gen.guia CO-GUÍA]
     let _supervisor(gen: pronombre.el) = [SUPERVISOR#gen.guia]
     let _ciudad = "SANTIAGO DE CHILE"
     let _anno = if anno != none [#anno] else [#datetime.today().year()]
 
     let portada = align(center)[
-        #stack(dir: ttb, spacing: 17mm,
-            v(2mm),
-            titulo,
+        #stack(dir: ttb, spacing: 1fr,
+            ..(
+            espaciado_titulo,
+            upper(titulo),
+            0.5fr,
             _documento,
-            // upper(autor.nombre),
-            autor.nombre,
-            _modalidad,
-            if profesores.len() == 0 [#v(-17mm)]
+            espaciado_titulo,
+            upper(autor.nombre),
+            espaciado_titulo,
+            if profesores.len() == 0 [#none]
             else if profesores.len() == 1
                 [#_guia(gen: profesores.at(0).pronombre): \ #profesores.at(0).nombre]
             else
                 [#_guia(gen: profesores.at(0).pronombre): \ #profesores.at(0).nombre \
                 #_guia(gen: profesores.at(1).pronombre) 2: \ #profesores.at(1).nombre],
-            if comision.len() == 0 [#v(-17mm)]
-            else if comision.len() == 1
-                [#_comision(gen: comision.at(0).pronombre): \ #comision.at(0).nombre]
-            else
-                [#_comision(gen: comision.at(0).pronombre): \ #comision.at(0).nombre \
-                #_comision(gen: comision.at(1).pronombre) 2: \ #comision.at(1).nombre],
-            if coguias.len() == 0 [#v(-17mm)]
+            if coguias.len() == 0 [#none]
             else if coguias.len() == 1
                 [#_coguia(gen: coguias.at(0).pronombre): \ #coguias.at(0).nombre]
             else
                 [#_coguia(gen: coguias.at(0).pronombre): \ #coguias.at(0).nombre \
                 #_coguia(gen: coguias.at(1).pronombre) 2: \ #coguias.at(1).nombre],
-            if supervisor == none [#v(-17mm)]
-            else [#v(34mm)#_supervisor(gen: supervisor.pronombre): \ #supervisor.nombre],
+            if supervisor == none [#none]
+            else [#_supervisor(gen: supervisor.pronombre): \ #supervisor.nombre],
+            if comision.len() == 0 [#none]
+            else if comision.len() == 1
+                [#_comision \ #comision.at(0)]
+            else if comision.len() == 2
+                [#_comision \ #comision.at(0) \ #comision.at(1)]
+            else
+                [#_comision \ #comision.at(0) \ #comision.at(1) \ #comision.at(2)],
+            if auspicio == none [#none] else [#_auspicio],
+            [#_ciudad \ #_anno],
+            ).filter(it => it != [#none]),
         )
-        #align(bottom,[#_ciudad \ #_anno])
     ]
     // Portada
     header

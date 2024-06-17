@@ -1,14 +1,14 @@
 #import "conf.typ": conf, guia, pronombre
 #let mostrar_guias = false
 #show: conf.with(
-    titulo: "Desarrollo de una plataforma para auditoría de cumplimiento de Sistema General de Seguridad de Información (SGSI)",
-    autor: (nombre: "Gabriel Rojas Chamorro", pronombre: pronombre.el),
-    profesores: ((nombre: "Eduardo Godoy Vega", pronombre: pronombre.el),),
-    supervisor: (nombre: "Mauricio Castro García", pronombre: pronombre.el),
+    titulo: "DESARROLLO DE UNA PLATAFORMA PARA AUDITORÍA DE CUMPLIMIENTO DE SISTEMA GENERAL DE SEGURIDAD DE INFORMACIÓN (SGSI)",
+    autor: (nombre: "GABRIEL ROJAS CHAMORRO", pronombre: pronombre.el),
+    profesores: ((nombre: "EDUARDO GODOY VEGA", pronombre: pronombre.el),),
+    supervisor: (nombre: "MAURICIO CASTRO GARCÍA", pronombre: pronombre.el),
     comision: (
-        (nombre: "Nombre Apellido I", pronombre: pronombre.el),
-        (nombre: "Nombre Apellido II", pronombre: pronombre.el),
-        (nombre: "Nombre Apellido III", pronombre: pronombre.el),
+        "NOMBRE APELLIDO I",
+        "NOMBRE APELLIDO II",
+        "NOMBRE APELLIDO III",
     ),
     anno: 2024,
 )
@@ -101,7 +101,7 @@
 
 #include "includes/conclusion.typ"
 
-
+#pagebreak()
 #[
     #show heading: it => [
         #set text(24pt)
