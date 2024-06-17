@@ -48,11 +48,11 @@ Django Project Template™ incorpora una variedad de tecnologías para garantiza
 
 La infraestructura de despliegue de DPT se basa en varios componentes containerizados que dependen entre sí. Esto facilita la escalabilidad, la mantenibilidad y el despliegue en entornos de nube. Los componentes principales son:
 
-1. *Nginx*: Actúa como servidor web y proxy inverso, manejando las solicitudes del usuario y redirigiéndolas a la aplicación Django.
-2. *Django*: Ejecuta la aplicación web a través del servidor WSGI de Gunicorn.
-3. *Redis*: Proporciona servicios de caché y broker de mensajes.
-4. *Celery*: Ejecuta tareas en segundo plano y programadas.
-5. *PostgreSQL*: Servidor de base de datos.
++ *Nginx*: Actúa como servidor web y proxy inverso, manejando las solicitudes del usuario y redirigiéndolas a la aplicación Django.
++ *Django*: Ejecuta la aplicación web a través del servidor WSGI de Gunicorn.
++ *Redis*: Proporciona servicios de caché y broker de mensajes.
++ *Celery*: Ejecuta tareas en segundo plano y programadas.
++ *PostgreSQL*: Servidor de base de datos.
 
 Estos componentes se comunican a través de una red configurada por Docker Compose, lo que permite una configuración coherente y un despliegue sencillo.
 
@@ -65,12 +65,12 @@ Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean con
 
 ==== Flujo de Trabajo del Despliegue
 
-1. *Usuario*: Los usuarios realizan solicitudes a la aplicación a través de HTTP/HTTPS.
-2. *Nginx*: Recibe las solicitudes y las redirige al servidor Django.
-3. *Django (Gunicorn)*: Procesa las solicitudes de la aplicación, interactuando con la base de datos PostgreSQL y utilizando Redis para el caché y la cola de tareas.
-4. *Celery*: Ejecuta tareas en segundo plano, comunicándose con Redis para gestionar las colas de tareas.
-5. *PostgreSQL*: Maneja las consultas de la base de datos provenientes de Django y Celery.
-6. *Amazon S3*: Almacena archivos de medios y recursos estáticos, accesibles tanto por la aplicación Django como directamente por los usuarios.
++ *Usuario*: Los usuarios realizan solicitudes a la aplicación a través de HTTP/HTTPS.
++ *Nginx*: Recibe las solicitudes y las redirige al servidor Django.
++ *Django (Gunicorn)*: Procesa las solicitudes de la aplicación, interactuando con la base de datos PostgreSQL y utilizando Redis para el caché y la cola de tareas.
++ *Celery*: Ejecuta tareas en segundo plano, comunicándose con Redis para gestionar las colas de tareas.
++ *PostgreSQL*: Maneja las consultas de la base de datos provenientes de Django y Celery.
++ *Amazon S3*: Almacena archivos de medios y recursos estáticos, accesibles tanto por la aplicación Django como directamente por los usuarios.
 
 ==== Ventajas de esta Arquitectura
 
@@ -87,9 +87,9 @@ Esta configuración es ideal para aplicaciones con una carga de tráfico moderad
 
 El perfil de colaborador está diseñado para los empleados de la empresa que deben seguir las directrices del SGSI. Los colaboradores tienen acceso para ver toda la información relevante en la aplicación, pero sus permisos de edición están limitados a ciertas acciones específicas como marcar como leídas las versiones de los documentos y participar en los procesos asignados.
 
-1. *Acceso a la Información:* Los colaboradores pueden ver toda la información del SGSI, incluyendo documentos, activos, riesgos y procesos.
-2. *Lectura de Documentos:* Los colaboradores pueden acceder y leer los documentos del SGSI. Pueden marcar las versiones de documentos como leídas, registrando que han revisado la información necesaria.
-3. *Participación en Procesos:* Los colaboradores pueden participar en los procesos asignados, realizando las actividades correspondientes y generando evidencia según sea necesario.
++ *Acceso a la Información:* Los colaboradores pueden ver toda la información del SGSI, incluyendo documentos, activos, riesgos y procesos.
++ *Lectura de Documentos:* Los colaboradores pueden acceder y leer los documentos del SGSI. Pueden marcar las versiones de documentos como leídas, registrando que han revisado la información necesaria.
++ *Participación en Procesos:* Los colaboradores pueden participar en los procesos asignados, realizando las actividades correspondientes y generando evidencia según sea necesario.
 
 En resumen, los colaboradores juegan un papel crucial en el cumplimiento del SGSI al mantenerse informados y participar activamente en los procesos, aunque sin permisos para editar o gestionar información del sistema.
 
@@ -97,13 +97,13 @@ En resumen, los colaboradores juegan un papel crucial en el cumplimiento del SGS
 
 El perfil de administrador está destinado a los encargados de implementar, mantener y gestionar el SGSI. Los administradores tienen permisos completos dentro del sistema, lo que incluye la creación y edición de documentos, la gestión de activos y riesgos, y la generación de evidencia. Además, los administradores también actúan como colaboradores, siguiendo las mismas directrices y participando en los procesos necesarios.
 
-1. *Gestión de Controles y Categorías:* Los administradores pueden crear y organizar controles de seguridad y sus respectivas categorías.
-2. *Subir y Versionar Documentos:* Los administradores pueden subir nuevos documentos, versionar documentos existentes y mantener un registro de las modificaciones.
-3. *Aprobar Documentos:* Los administradores tienen la capacidad de aprobar documentos, asegurando su validez y conformidad con los estándares del SGSI.
-4. *Gestión de Activos y Riesgos:* Los administradores pueden registrar y clasificar activos, asignar riesgos y definir los controles necesarios para mitigarlos.
-5. *Definir y Supervisar Procesos:* Los administradores pueden crear y gestionar procesos, asignar actividades a los colaboradores y supervisar el cumplimiento de los procesos definidos.
-6. *Generación y Gestión de Evidencia:* Los administradores pueden crear, modificar y gestionar la evidencia necesaria para demostrar la implementación y efectividad de los controles de seguridad.
-7. *Auditoría y Cumplimiento:* Los administradores pueden revisar la evidencia generada, asegurar la conformidad con las políticas de seguridad y preparar el SGSI para auditorías internas y externas.
++ *Gestión de Controles y Categorías:* Los administradores pueden crear y organizar controles de seguridad y sus respectivas categorías.
++ *Subir y Versionar Documentos:* Los administradores pueden subir nuevos documentos, versionar documentos existentes y mantener un registro de las modificaciones.
++ *Aprobar Documentos:* Los administradores tienen la capacidad de aprobar documentos, asegurando su validez y conformidad con los estándares del SGSI.
++ *Gestión de Activos y Riesgos:* Los administradores pueden registrar y clasificar activos, asignar riesgos y definir los controles necesarios para mitigarlos.
++ *Definir y Supervisar Procesos:* Los administradores pueden crear y gestionar procesos, asignar actividades a los colaboradores y supervisar el cumplimiento de los procesos definidos.
++ *Generación y Gestión de Evidencia:* Los administradores pueden crear, modificar y gestionar la evidencia necesaria para demostrar la implementación y efectividad de los controles de seguridad.
++ *Auditoría y Cumplimiento:* Los administradores pueden revisar la evidencia generada, asegurar la conformidad con las políticas de seguridad y preparar el SGSI para auditorías internas y externas.
 
 En resumen, los administradores desempeñan un papel integral en la gestión del SGSI, asegurando que todos los aspectos del sistema sean implementados y mantenidos de acuerdo con los estándares de seguridad establecidos. Además de sus amplias capacidades de gestión, también participan activamente como colaboradores en los procesos definidos.
 
@@ -115,8 +115,9 @@ Para más detalles sobre la estructura de la base de datos y la relación entre 
 
 === Historias de Usuario
 
-1. Como administrador, deseo tener la capacidad de asignar grupos a los usuarios y, de igual manera, asignar usuarios a grupos.
-2. Como administrador, quiero poder crear, editar, ver y listar los usuarios de la plataforma.
++ Como administrador, quiero poder crear, editar, ver y listar los usuarios de la plataforma.
++ Como administrador, quiero poder crear, editar, ver y listar los grupos de la plataforma.
++ Como administrador, deseo tener la capacidad de asignar grupos a los usuarios y, de igual manera, asignar usuarios a grupos.
 
 === Interfaz de usuario
 
@@ -149,13 +150,13 @@ La vista del listado de usuarios proporciona una tabla con información detallad
 
 La vista de creación de usuarios permite a los administradores añadir nuevos usuarios al sistema. Esta interfaz incluye los siguientes campos y opciones:
 
-- *Nombre (opcional)*: Ingrese el primer nombre del usuario.
+- *Nombre (opcional)*: Ingrese el nombre del usuario.
 - *Apellido (opcional)*: Ingrese el apellido del usuario.
-- *Correo electrónico*: Ingrese la dirección de correo electrónico del usuario.
+- *Dirección de correo electrónico*: Ingrese la dirección de correo electrónico del usuario.
 - *Activo*: Active o desactive la cuenta del usuario.
 - *Grupos (opcional)*: Asigne uno o más grupos al usuario.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda el nuevo usuario.
 - *Cancelar*: Cancela la creación y vuelve a la vista anterior.
 
@@ -168,15 +169,14 @@ Botones de acción:
 
 La vista de detalle de usuario permite a los administradores ver y gestionar información específica de cada usuario. Esta vista incluye:
 
-- *Información personal*: Muestra el primer nombre, apellido, correo electrónico y estado de actividad del usuario.
+- *Información personal*: Muestra el nombre, apellido, correo electrónico y estado de actividad del usuario.
 - *Grupos asignados*: Lista los grupos a los que pertenece el usuario, junto con el número de usuarios y permisos asociados a cada grupo.
 
-Además, la interfaz ofrece los siguientes botones de acción:
-
+_Botones de acción:_
 - *Actualizar usuario*: Permite editar la información del usuario.
 - *Eliminar usuario*: Permite eliminar al usuario de la aplicación.
 - *Actualizar grupo*: Permite modificar los detalles del grupo asignado.
-- *Eliminar grupo*: Permite eliminar al usuario de un grupo específico.
+- *Eliminar grupo*: Permite eliminar al grupo de la aplicación.
 
 #figure(
     image("../imagenes/modulos/users/detail.png", width: screenshot_width),
@@ -187,13 +187,13 @@ Además, la interfaz ofrece los siguientes botones de acción:
 
 La vista de actualización de usuario permite a los administradores editar la información de un usuario. Esta interfaz incluye:
 
-- *Nombre (opcional)*: Editar el primer nombre del usuario.
+- *Nombre (opcional)*: Editar el nombre del usuario.
 - *Apellido (opcional)*: Editar el apellido del usuario.
-- *Correo electrónico*: Editar la dirección de correo electrónico del usuario.
+- *Dirección de correo electrónico*: Editar la dirección de correo electrónico del usuario.
 - *Activo*: Activar o desactivar la cuenta del usuario.
 - *Grupos (opcional)*: Asignar o cambiar los grupos del usuario.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda los cambios.
 - *Cancelar*: Cancela la edición y vuelve a la vista anterior.
 
@@ -206,8 +206,7 @@ Botones de acción:
 
 La vista de eliminación de usuario permite a los administradores borrar una cuenta de usuario existente del sistema. Esta acción es crítica y debe realizarse con precaución, ya que la eliminación de un usuario no puede deshacerse.
 
-*Elementos de la vista:*
-- *Confirmación de Eliminación:* Un mensaje de advertencia que solicita confirmación para eliminar la cuenta de usuario seleccionada. Este paso es esencial para prevenir eliminaciones accidentales.
+*Confirmación de Eliminación*: Se muestra un mensaje de confirmación para asegurar que la eliminación del usuario es intencional y evitar la eliminación accidental de datos importantes.
 
 _Acciones disponibles:_
 - *Confirmar:* Permite proceder con la eliminación del usuario.
@@ -226,7 +225,7 @@ La vista de listado de grupos permite a los administradores gestionar los grupos
 - *Usuarios*: El número de usuarios en el grupo.
 - *Permisos*: El número de permisos asociados al grupo.
 
-La interfaz también proporciona botones de acción:
+_Botones de acción:_
 - *Añadir grupo*: Permite crear un nuevo grupo.
 - *Actualizar grupo*: Permite editar un grupo existente.
 - *Eliminar grupo*: Permite eliminar un grupo, con confirmación para evitar eliminaciones accidentales.
@@ -244,7 +243,7 @@ La vista de creación de grupos permite a los administradores añadir nuevos gru
 - *Usuarios (opcional)*: Asigne uno o más usuarios al grupo.
 - *Permisos (opcional)*: Asigne uno o más permisos al grupo.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda el nuevo grupo.
 - *Cancelar*: Cancela la creación y vuelve a la vista anterior.
 
@@ -260,7 +259,7 @@ La vista de detalle de grupo muestra información detallada sobre un grupo espec
 - *Usuarios*: Lista de usuarios que pertenecen al grupo, junto con su nombre y correo electrónico.
 - *Permisos asignados*: Una lista detallada de los permisos asignados al grupo, incluyendo el nombre del permiso, el nombre de código y la aplicación/modelo asociado.
 
-Botones de acción:
+_Botones de acción:_
 - *Actualizar grupo*: Permite editar la información del grupo.
 - *Eliminar grupo*: Permite eliminar el grupo, con confirmación para evitar eliminaciones accidentales.
 
@@ -277,7 +276,7 @@ La vista de actualización de grupo permite a los administradores editar la info
 - *Ususarios (opcional)*: Asignar o cambiar los usuarios que pertenecen al grupo.
 - *Permisos (opcional)*: Asignar o cambiar los permisos del grupo.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda los cambios realizados en el grupo.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin guardar los cambios.
 
@@ -327,21 +326,24 @@ La evidencia se refiere a la documentación y pruebas tangibles que demuestran l
 
 === Historias de Usuario
 
-1. Como administrador, quiero poder crear categorías de controles para agrupar controles relacionados.
-2. Como administrador, quiero poder crear controles para definir mi marco de SGSI.
-3. Como administrador, quiero poder cargar todas las categorías y controles de ISO 27001 a partir de una plantilla, para tener una base al momento de implementar cada control.
-4. Como administrador, quiero poder subir documentos a cada control, para definir mi implementación de dicho control.
-5. Como administrador, quiero que los documentos queden versionados, para saber qué versiones han sido leídas por los usuarios y mantener un registro de modificaciones.
-6. Como administrador, quiero poder aprobar documentos, para validar su contenido.
-7. Como usuario, quiero poder ver el listado de controles.
-8. Como usuario, quiero poder ver el detalle de cada control.
-9. Como usuario, quiero poder ver el detalle de cada documento.
-10. Como usuario, quiero poder marcar como leída una versión de un documento.
-11. Como administrador, necesito poder generar enlaces de solo lectura para las versiones de documentos utilizando el código del documento y su número de versión.
-12. Como usuario, quiero poder ver el listado de tipos de documentos.
-13. Como administrador, quiero poder crear nuevos tipos de documentos.
-14. Como administrador, quiero poder editar los tipos de documentos existentes.
-15. Como administrador, quiero poder eliminar tipos de documentos que ya no son necesarios.
++ Como administrador, quiero poder crear categorías de controles para agrupar controles relacionados.
++ Como administrador, quiero poder crear controles para definir mi marco de SGSI.
++ Como administrador, quiero poder cargar todas las categorías y controles de ISO 27001 a partir de una plantilla, para tener una base al momento de implementar cada control.
++ Como administrador, quiero poder subir documentos a cada control, para definir mi implementación de dicho control.
++ Como administrador, quiero que los documentos queden versionados, para saber qué versiones han sido leídas por los usuarios y mantener un registro de modificaciones.
++ Como administrador, quiero poder aprobar documentos, para validar su contenido.
++ Como usuario, quiero poder ver el listado de documentos.
++ Como usuario, quiero poder ver el detalle de cada documento.
++ Como usuario, quiero poder ver el listado de controles.
++ Como usuario, quiero poder ver el detalle de cada control.
++ Como usuario, quiero poder ver el detalle de cada documento.
++ Como usuario, quiero poder marcar como leída una versión de un documento.
++ Como administrador, necesito poder generar enlaces de solo lectura para las versiones de documentos utilizando el código del documento y su número de versión.
++ Como usuario, quiero poder ver el listado de tipos de documentos.
++ Como usuario, quiero poder ver el detalle de cada tipo de documento.
++ Como administrador, quiero poder crear nuevos tipos de documentos.
++ Como administrador, quiero poder editar los tipos de documentos existentes.
++ Como administrador, quiero poder eliminar tipos de documentos que ya no son necesarios.
 
 === Interfaz de Usuario
 
@@ -351,7 +353,7 @@ La vista de listado de controles permite visualizar todos los controles de segur
 
 - *Nombre*: Identifica el nombre del control.
 - *Categoría*: Indica la categoría a la que pertenece el control, permitiendo una mejor organización y agrupación de controles relacionados.
-- *Actualizado en*: Muestra la fecha y hora de la última actualización del control.
+- *Actualizado el*: Muestra la fecha y hora de la última actualización del control.
 - *Actualizado por*: Indica el nombre del usuario que realizó la última actualización.
 
 _Acciones disponibles:_
@@ -416,7 +418,7 @@ La vista de actualización de controles permite a los administradores editar la 
 - *Título*: Campo para editar el título del control.
 - *Descripción (opcional)*: Campo para agregar o modificar la descripción del control.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda los cambios realizados en el control.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -431,7 +433,7 @@ La vista de eliminación de controles permite a los administradores eliminar un 
 
 - *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar el control especificado, mostrando su nombre para asegurar que se está eliminando el control correcto.
 
-Botones de acción:
+_Botones de acción:_
 - *Confirmar*: Elimina definitivamente el control.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -460,7 +462,7 @@ La vista de creación de categorías de controles permite a los administradores 
 
 - *Nombre*: Campo para ingresar el nombre de la categoría de control.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda la nueva categoría de control.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -479,7 +481,7 @@ La vista de detalle de categorías de controles permite a los administradores ve
 
 Además, la vista muestra los controles relacionados con esta categoría.
 
-Botones de acción:
+_Botones de acción:_
 - *Actualizar Categoría de Control*: Permite editar la información de la categoría de control.
 - *Eliminar Categoría de Control*: Permite eliminar la categoría de control.
 
@@ -494,7 +496,7 @@ La vista de actualización de categorías de controles permite a los administrad
 
 - *Nombre*: Campo para editar el nombre de la categoría de control.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda los cambios realizados en la categoría de control.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -509,7 +511,7 @@ La vista de eliminación de categorías de controles permite a los administrador
 
 - *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar la categoría de control especificada, mostrando su nombre para asegurar que se está eliminando la categoría correcta.
 
-Botones de acción:
+_Botones de acción:_
 - *Confirmar*: Elimina definitivamente la categoría de control.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -534,15 +536,19 @@ _Acciones disponibles:_
 
 ==== Creación de Documentos
 
-La vista de creación de documentos permite a los administradores añadir nuevos documentos al sistema. Esta interfaz incluye los siguientes campos:
+La vista de creación de documentos permite a los administradores añadir nuevos documentos al sistema. Esta funcionalidad es crucial para mantener actualizado el SGSI con toda la documentación necesaria para asegurar la conformidad y la gestión adecuada de la información.
 
-- *Título*: El título del documento.
-- *Código*: El código del documento.
-- *Descripción (opcional)*: Una breve descripción del documento.
-- *Controles documentados (opcional)*: Los controles que están documentados en el documento.
+*Campos de la vista:*
 
-Botones de acción:
-- *Guardar*: Guarda el nuevo documento.
+- *Título*: Campo obligatorio para ingresar el nombre del documento.
+- *Código*: Campo obligatorio para ingresar un identificador único del documento. El código debe tener entre 3 y 20 caracteres en mayúsculas y ser único.
+- *Tipo de Documento (opcional)*: Permite seleccionar el tipo de documento, facilitando su organización y clasificación.
+- *Descripción (opcional)*: Campo para agregar una breve descripción del documento, detallando su propósito y contenido.
+- *Carpeta en Drive (opcional)*: Permite especificar una carpeta en Google Drive donde se almacenan las versiones del documento.
+- *Controles documentados (opcional)*: Campo para seleccionar los controles que están documentados en el documento.
+
+_Botones de acción:_
+- *Guardar*: Guarda el nuevo documento en el sistema.
 - *Cancelar*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
@@ -552,18 +558,31 @@ Botones de acción:
 
 ==== Detalle de Documentos
 
-La vista de detalle de documentos permite a los administradores ver y gestionar información específica de cada documento, incluyendo su título, código, descripción, fechas de creación y actualización, y los usuarios responsables.
+La vista de detalle de documentos permite a los administradores ver y gestionar información específica de cada documento. Esta funcionalidad es crucial para asegurar que toda la documentación del SGSI esté actualizada y correctamente gestionada.
+
+*Campos de la vista:*
+
+- *Título*: Muestra el nombre del documento.
+- *Código*: Identificador único del documento.
+- *Tipo de Documento*: Tipo de documento seleccionado.
+- *Descripción*: Breve descripción del documento.
+- *Carpeta en Drive*: Carpeta en Google Drive donde se almacenan las versiones del documento.
+- *Creado el*: Fecha y hora de creación del documento.
+- *Creado por*: Usuario que creó el documento.
+- *Actualizado el*: Fecha y hora de la última actualización del documento.
+- *Actualizado por*: Usuario que realizó la última actualización del documento.
 
 _Acciones disponibles:_
 - *Actualizar Documento*: Permite editar la información del documento.
-- *Eliminar Documento*: Permite eliminar el documento.
+- *Eliminar Documento*: Permite eliminar el documento del sistema.
 
-La sección de versiones del documento proporciona información sobre cada versión, su estado de aprobación, y las fechas y usuarios de actualización.
+Adicionalmente, la vista incluye secciones para mostrar las versiones del documento y los controles documentados:
 
-_Acciones en versiones:_
-- *Actualizar Versión*: Editar la versión del documento.
-- *Aprobar Versión*: Aprobar la versión del documento.
-- *Eliminar Versión*: Eliminar la versión del documento.
+*Versiones del Documento*:
+- Lista de versiones del documento con detalles sobre el autor, estado de aprobación y actualización.
+
+*Controles Documentados*:
+- Lista de controles relacionados con el documento, incluyendo su categoría y fecha de actualización.
 
 #figure(
     image("../imagenes/modulos/documents/detail.png", width: screenshot_width),
@@ -576,7 +595,7 @@ La vista de eliminación de documentos permite a los administradores eliminar un
 
 - *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar el documento especificado, mostrando su nombre para asegurar que se está eliminando el documento correcto.
 
-Botones de acción:
+_Botones de acción:_
 - *Confirmar*: Elimina definitivamente el documento de la aplicación.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -587,14 +606,19 @@ Botones de acción:
 
 ==== Creación de Versión de Documentos
 
-La vista de creación de versiones de documentos permite a los administradores añadir una nueva versión a un documento existente. Esta interfaz incluye:
+La vista de creación de versiones de documentos permite a los administradores añadir una nueva versión a un documento existente. Esta funcionalidad es crucial para mantener un registro actualizado y detallado de todas las versiones de los documentos en el SGSI.
 
-- *Archivo*: Campo para subir el archivo de la nueva versión.
-- *Comentario (opcional)*: Campo para agregar comentarios sobre la nueva versión.
+*Campos de la vista:*
 
-Botones de acción:
-- *Guardar*: Guarda la nueva versión del documento.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+- *Autor*: Selección del autor de la nueva versión.
+- *Archivo (opcional)*: Opción para subir un archivo que contenga la nueva versión del documento.
+- *URL del archivo (opcional)*: Campo para ingresar la URL del archivo de la nueva versión.
+- *Comentario (opcional)*: Campo para añadir comentarios sobre la nueva versión.
+
+_Acciones disponibles:_
+
+- *Guardar*: Guarda la nueva versión del documento con la información proporcionada.
+- *Cancelar*: Cancela la creación de la nueva versión y regresa a la vista anterior.
 
 #figure(
     image("../imagenes/modulos/documents/version_create.png", width: screenshot_width),
@@ -605,14 +629,27 @@ Botones de acción:
 
 La vista de detalle de versión de documentos permite a los administradores ver y gestionar información específica de cada versión de un documento. Los campos más relevantes incluyen:
 
-- *Documento*: Documento al cual pertenece la versión.
-- *Versión*: Número de la versión.
-- *Archivo*: Enlace al archivo de la versión.
-- *Aprobado*: Indica si la versión está aprobada.
-- *Creado por*: Usuario que creó la versión.
-- *Actualizado por*: Usuario que realizó la última actualización.
+- *Documento*: Nombre del documento al cual pertenece esta versión.
+- *Autor*: Autor de la versión del documento.
+- *Versión*: Número de la versión del documento.
+- *Comentario*: Comentarios adicionales sobre la versión (si los hay).
+- *Archivo*: Enlace al archivo de la versión del documento.
+- *URL para marcar como leído*: Enlace para que los usuarios puedan marcar la versión como leída.
+- *sha256sum*: Suma de verificación SHA-256 del archivo, para asegurar su integridad.
+- *Está aprobado*: Indica si la versión del documento está aprobada.
+- *Aprobado el*: Fecha y hora en que se aprobó la versión.
+- *Aprobado por*: Usuario que aprobó la versión.
+- *Evidencia de aprobación*: Enlace a la evidencia de aprobación de la versión del documento.
+- *Creado el*: Fecha y hora en que se creó la versión del documento.
+- *Creado por*: Usuario que creó la versión del documento.
+- *Actualizado el*: Fecha y hora de la última actualización de la versión del documento.
+- *Actualizado por*: Usuario que realizó la última actualización de la versión del documento.
 
-Botones de acción:
+_Leído por:_
+- *Nombre*: Lista de usuarios que han leído la versión del documento.
+- *Correo Electrónico*: Correo electrónico de los usuarios que han leído la versión del documento.
+
+_Botones de acción:_
 - *Marcar como leído*: Permite a los usuarios marcar la versión como leída.
 
 #figure(
@@ -622,35 +659,38 @@ Botones de acción:
 
 ==== Aprobación de Versión de Documentos
 
-La vista de aprobación de versiones de documentos permite a los administradores aprobar una versión específica de un documento. Esta interfaz incluye los siguientes campos opcionales:
+La vista de aprobación de versiones de documentos permite a los administradores aprobar una versión específica de un documento. Los campos más relevantes incluyen:
 
-- *Archivo de evidencia*: Archivo con la evidencia de la aprobación.
-- *URL de evidencia*: Enlace a la evidencia de la aprobación.
+- *Archivo de evidencia (opcional)*: Permite subir un archivo como evidencia de la aprobación.
+- *URL de evidencia (opcional)*: Permite ingresar una URL que sirva como evidencia de la aprobación.
+- *Texto (opcional)*: Campo para ingresar un texto que sirva como evidencia de la aprobación.
 
-Botones de acción:
-- *Aprobar*: Aprueba la versión del documento.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+_Botones de acción:_
+- *Aprobar*: Permite aprobar la versión del documento con la evidencia proporcionada.
+- *Cancelar*: Permite cancelar la operación de aprobación y volver a la vista anterior sin realizar cambios.
 
 #figure(
     image("../imagenes/modulos/documents/version_approve.png", width: screenshot_width),
-    caption: [Vista de aprobación de versiones de documentos],
+    caption: [Vista de aprobación de versión de documentos],
 )
 
 ==== Actualización de Versión de Documentos
 
-La vista de actualización de versiones de documentos permite a los administradores actualizar una versión específica de un documento. Esta interfaz incluye:
+La vista de actualización de versiones de documentos permite a los administradores actualizar la información de una versión específica de un documento. Los campos más relevantes incluyen:
 
-- *Archivo actual*: Enlace al archivo de la versión actual.
-- *Cambiar archivo*: Opción para subir un nuevo archivo.
-- *Comentario (opcional)*: Campo para agregar comentarios sobre la actualización.
+- *Autor*: Autor de la versión del documento.
+- *Archivo actual*: Enlace al archivo de la versión actual del documento.
+- *Cambiar archivo*: Opción para subir un nuevo archivo si es necesario.
+- *URL del archivo (opcional)*: Enlace opcional al archivo de la versión del documento.
+- *Comentario (opcional)*: Campo para agregar comentarios sobre la actualización de la versión del documento.
 
-Botones de acción:
-- *Guardar*: Guarda los cambios realizados en la versión del documento.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+_Botones de acción:_
+- *Guardar*: Permite guardar los cambios realizados en la versión del documento.
+- *Cancelar*: Permite cancelar la operación de actualización y volver a la vista anterior sin realizar cambios.
 
 #figure(
     image("../imagenes/modulos/documents/version_update.png", width: screenshot_width),
-    caption: [Vista de actualización de versiones de documentos],
+    caption: [Vista de actualización de versión de documentos],
 )
 
 ==== Eliminación de Versión de Documentos
@@ -659,7 +699,7 @@ La vista de eliminación de versiones de documentos permite a los administradore
 
 - *Confirmación*: Se presenta un mensaje claro preguntando si realmente se desea eliminar la versión especificada del documento, mostrando su nombre para asegurar que se está eliminando la versión correcta.
 
-Botones de acción:
+_Botones de acción:_
 - *Confirmar*: Elimina definitivamente la versión del documento.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -747,15 +787,15 @@ _Acciones disponibles:_
 
 == Módulo de Activos
 
-El módulo de activos es donde se preserva un inventario con todos los activos de la empresa pertinentes a la seguridad de la información. Su principal componente son los activos y los tipos de activos.
-
-=== Tipos de activos
-
-Los tipos de activos son para poder clasificar a los activos por su tipo, por ejemplo, aplicaciones, equipos informáticos, oficinas, entre otros.
+El módulo de activos es donde se preserva un inventario con todos los activos de la empresa pertinentes a la seguridad de la información. Su principal componente son los activos y los roles de los activos.
 
 === Activos
 
 Los activos son cualquier recurso que sea valioso para la organización y que necesite protección. Pueden incluir hardware, software, datos, personas, instalaciones y cualquier otro elemento que pueda tener un impacto en la seguridad de la información.
+
+=== Tipos de activos
+
+Los tipos de activos son para poder clasificar a los activos por su tipo, por ejemplo, aplicaciones, equipos informáticos, oficinas, entre otros.
 
 === Roles de Activos
 
@@ -763,11 +803,119 @@ Los roles de activos son asignaciones específicas que definen las responsabilid
 
 === Historias de Usuario
 
-1. Como administrador, quiero poder registrar activos de la empresa, para luego definir su riesgo asociado.
-2. Como usuario, quiero poder ver el listado de activos.
-3. Como usuario, quiero poder ver el detalle de cada activo.
++ Como administrador, quiero poder registrar activos de la empresa, para luego definir su riesgo asociado.
++ Como administrador, quiero poder editar activos.
++ Como usuario, quiero poder ver el listado de activos.
++ Como usuario, quiero poder ver el detalle de cada activo.
++ Como administrador, quiero poder crear tipos de activos.
++ Como administrador, quiero poder editar tipos de activos.
++ Como usuario, quiero poder ver el listado de tipos de activos.
++ Como usuario, quiero poder ver el detalle de cada tipo de activo.
++ Como administrador, quiero poder crear roles de activos.
++ Como administrador, quiero poder editar roles de activos.
++ Como usuario, quiero poder ver el listado de roles de activos.
++ Como usuario, quiero poder ver el detalle de cada rol de activo.
 
 === Interfaz de usuario
+
+==== Listado de Activos
+
+La vista de listado de activos muestra todos los activos registrados en el sistema. Los campos más relevantes que se presentan en esta vista incluyen:
+
+- *Código*: Identificador único del activo.
+- *Nombre*: Nombre del activo.
+- *Propietario*: Persona responsable del activo.
+- *Tipo*: Categoría o tipo de activo.
+- *Criticidad*: Nivel de importancia del activo.
+- *Clasificación*: Clasificación interna del activo.
+- *Archivado*: Indica si el activo está archivado o no.
+- *Actualizado el*: Fecha y hora de la última actualización del activo.
+- *Actualizado por*: Usuario que realizó la última actualización.
+
+Además, se proporcionan opciones para añadir un nuevo activo, actualizar un activo existente o archivar un activo.
+
+#figure(
+    image("../imagenes/modulos/assets/list.png", width: screenshot_width),
+    caption: [Vista de listado de activos],
+)
+
+==== Creación de Activos
+
+La vista de creación de un activo permite ingresar la información necesaria para registrar un nuevo activo en el sistema. Los campos requeridos son los siguientes:
+
+- *Nombre*: El nombre del activo.
+- *Código*: Un identificador único para el activo.
+- *Propietario*: El usuario responsable del activo.
+- *Descripción (opcional)*: Una descripción detallada del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+_Acciones disponibles:_
+- *Guardar*: Permite guardar el nuevo activo en el sistema.
+- *Cancelar*: Permite cancelar la creación del activo y regresar a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/assets/create.png", width: screenshot_width),
+    caption: [Vista de creación de activos],
+)
+
+==== Detalle de Activos
+
+La vista de detalle de un activo muestra información específica sobre un activo en particular. Esta vista incluye los campos más relevantes:
+
+- *Código*: El identificador único del activo.
+- *Nombre*: El nombre del activo.
+- *Propietario*: El usuario responsable del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+_Acciones disponibles:_
+- *Archivar*: Permite archivar el activo.
+- *Actualizar Activo*: Permite editar la información del activo.
+
+#figure(
+    image("../imagenes/modulos/assets/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de activos],
+)
+
+==== Modificación de Activos
+
+La vista de modificación de un activo permite editar la información existente de un activo registrado en el sistema. Los campos disponibles para la edición son los siguientes:
+
+- *Nombre*: El nombre del activo.
+- *Código*: Un identificador único para el activo.
+- *Propietario*: El usuario responsable del activo.
+- *Descripción (opcional)*: Una descripción detallada del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+_Acciones disponibles:_
+- *Guardar*: Permite guardar los cambios realizados en el activo.
+- *Cancelar*: Permite cancelar la edición y regresar a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/assets/update.png", width: screenshot_width),
+    caption: [Vista de modificación de activos],
+)
+
+==== Archivado de Activos
+
+La vista de archivado de un activo permite confirmar la acción de archivar un activo específico. Los campos más relevantes y acciones disponibles son los siguientes:
+
+- *Mensaje de confirmación*: Indica si el usuario está seguro de querer archivar el activo seleccionado.
+- *Nombre del Activo*: Se muestra el nombre del activo a archivar.
+
+_Acciones disponibles:_
+- *Archivar*: Confirma la acción de archivar el activo.
+- *Cancelar*: Cancela la acción de archivado y regresa a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/assets/archive.png", width: screenshot_width),
+    caption: [Vista de archivado de activos],
+)
 
 ==== Listado de Tipos de Activos
 
@@ -789,7 +937,7 @@ La vista de creación de tipos de activos permite a los administradores añadir 
 
 - *Nombre*: Campo para ingresar el nombre del tipo de activo.
 
-Botones de acción:
+_Botones de acción:_
 - *Guardar*: Guarda el nuevo tipo de activo.
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
@@ -843,27 +991,6 @@ La vista de eliminación de un tipo de activo confirma la eliminación del tipo 
 #figure(
     image("../imagenes/modulos/asset-types/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de tipos de activos],
-)
-
-==== Listado de Activos
-
-La vista de listado de activos muestra todos los activos registrados en el sistema. Los campos más relevantes que se presentan en esta vista incluyen:
-
-- *Código*: Identificador único del activo.
-- *Nombre*: Nombre del activo.
-- *Propietario*: Persona responsable del activo.
-- *Tipo*: Categoría o tipo de activo.
-- *Criticidad*: Nivel de importancia del activo.
-- *Clasificación*: Clasificación interna del activo.
-- *Archivado*: Indica si el activo está archivado o no.
-- *Actualizado en*: Fecha y hora de la última actualización del activo.
-- *Actualizado por*: Usuario que realizó la última actualización.
-
-Además, se proporcionan opciones para añadir un nuevo activo, actualizar un activo existente o archivar un activo.
-
-#figure(
-    image("../imagenes/modulos/assets/list.png", width: screenshot_width),
-    caption: [Vista de listado de activos],
 )
 
 ==== Listado de Roles de Activos
@@ -948,83 +1075,6 @@ _Acciones disponibles:_
     caption: [Vista de eliminación de roles de activos],
 )
 
-==== Creación de Activos
-
-La vista de creación de un activo permite ingresar la información necesaria para registrar un nuevo activo en el sistema. Los campos requeridos son los siguientes:
-
-- *Nombre*: El nombre del activo.
-- *Código*: Un identificador único para el activo.
-- *Propietario*: El usuario responsable del activo.
-- *Descripción (opcional)*: Una descripción detallada del activo.
-- *Tipo*: El tipo al que pertenece el activo.
-- *Criticidad*: El nivel de criticidad del activo.
-- *Clasificación*: La clasificación del activo según su sensibilidad.
-
-_Acciones disponibles:_
-- *Guardar*: Permite guardar el nuevo activo en el sistema.
-- *Cancelar*: Permite cancelar la creación del activo y regresar a la vista anterior.
-
-#figure(
-    image("../imagenes/modulos/assets/create.png", width: screenshot_width),
-    caption: [Vista de creación de activos],
-)
-
-==== Detalle de Activos
-
-La vista de detalle de un activo muestra información específica sobre un activo en particular. Esta vista incluye los campos más relevantes:
-
-- *Código*: El identificador único del activo.
-- *Nombre*: El nombre del activo.
-- *Propietario*: El usuario responsable del activo.
-- *Tipo*: El tipo al que pertenece el activo.
-- *Criticidad*: El nivel de criticidad del activo.
-- *Clasificación*: La clasificación del activo según su sensibilidad.
-
-_Acciones disponibles:_
-- *Archivar*: Permite archivar el activo.
-- *Actualizar Activo*: Permite editar la información del activo.
-
-#figure(
-    image("../imagenes/modulos/assets/detail.png", width: screenshot_width),
-    caption: [Vista de detalle de activos],
-)
-
-==== Modificación de Activos
-
-La vista de modificación de un activo permite editar la información existente de un activo registrado en el sistema. Los campos disponibles para la edición son los siguientes:
-
-- *Nombre*: El nombre del activo.
-- *Código*: Un identificador único para el activo.
-- *Propietario*: El usuario responsable del activo.
-- *Descripción (opcional)*: Una descripción detallada del activo.
-- *Tipo*: El tipo al que pertenece el activo.
-- *Criticidad*: El nivel de criticidad del activo.
-- *Clasificación*: La clasificación del activo según su sensibilidad.
-
-_Acciones disponibles:_
-- *Guardar*: Permite guardar los cambios realizados en el activo.
-- *Cancelar*: Permite cancelar la edición y regresar a la vista anterior.
-
-#figure(
-    image("../imagenes/modulos/assets/update.png", width: screenshot_width),
-    caption: [Vista de modificación de activos],
-)
-
-==== Archivado de Activos
-
-La vista de archivado de un activo permite confirmar la acción de archivar un activo específico. Los campos más relevantes y acciones disponibles son los siguientes:
-
-- *Mensaje de confirmación*: Indica si el usuario está seguro de querer archivar el activo seleccionado.
-- *Nombre del Activo*: Se muestra el nombre del activo a archivar.
-
-_Acciones disponibles:_
-- *Archivar*: Confirma la acción de archivar el activo.
-- *Cancelar*: Cancela la acción de archivado y regresa a la vista anterior.
-
-#figure(
-    image("../imagenes/modulos/assets/archive.png", width: screenshot_width),
-    caption: [Vista de archivado de activos],
-)
 
 == Módulo de Riesgos
 
@@ -1036,9 +1086,10 @@ Los riesgos sirven para relacionar a los activos con los controles. En los contr
 
 === Historias de Usuario
 
-1. Como administrador, quiero poder asignar un riesgo a cada uno de los activos.
-2. Como administrador, quiero poder ver el listado de riesgos.
-3. Como administrador, quiero poder ver el detalle de cada riesgo.
++ Como administrador, quiero poder asignar un riesgo a cada uno de los activos.
++ Como administrador, quiero poder editar un riesgo.
++ Como usuario, quiero poder ver el listado de riesgos.
++ Como usuario, quiero poder ver el detalle de cada riesgo.
 
 === Interfaz de usuario
 
@@ -1152,10 +1203,10 @@ Las actividades son
 
 === Historias de Usuario
 
-1. Como administrador, quiero poder definir procesos manuales para generar evidencia de cierto control.
-2. Como administrador, quiero poder definir procesos recurrentes para generar evidencia de cierto control de manera periódica.
-3. Como administrador, quiero poder asignar procesos a los usuarios directamente o indirectamente a través de grupos para generar evidencia de los controles.
-4. Como usuario, quiero ser notificado al tener un nuevo proceso asignado para poder completarlo rápidamente.
++ Como administrador, quiero poder definir procesos manuales para generar evidencia de cierto control.
++ Como administrador, quiero poder definir procesos recurrentes para generar evidencia de cierto control de manera periódica.
++ Como administrador, quiero poder asignar procesos a los usuarios directamente o indirectamente a través de grupos para generar evidencia de los controles.
++ Como usuario, quiero ser notificado al tener un nuevo proceso asignado para poder completarlo rápidamente.
 
 === Interfaz de usuario
 
@@ -1452,9 +1503,9 @@ La vista de detalle de la instancia de un proceso muestra la información releva
 
 - *Versión del Proceso*: Muestra la versión del proceso de la cual se ha creado la instancia.
 - *Comentario*: Comentario opcional añadido al crear la instancia.
-- *Creado en*: Fecha y hora de creación de la instancia.
+- *Creado el*: Fecha y hora de creación de la instancia.
 - *Creado por*: Usuario que creó la instancia.
-- *Actualizado en*: Fecha y hora de la última actualización de la instancia.
+- *Actualizado el*: Fecha y hora de la última actualización de la instancia.
 - *Actualizado por*: Usuario que realizó la última actualización de la instancia.
 - *Completado*: Indica si la instancia del proceso ha sido completada.
 - *Completado en*: Fecha y hora de la finalización del proceso, si ha sido completado.
