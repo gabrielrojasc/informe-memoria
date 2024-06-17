@@ -3,7 +3,7 @@
 //// Justificación del diseño de la solución, y de los recursos usados
 //// No es apropiado incluir código más allá de pequeños ejemplos; si es necesario poner código en un apéndice
 //// Puede variar mucho dependiendo del tema
-//// Puede ser dividido en varios capítulos (p.ej., un capítulo de Front-end , un capítulo de Back -end , etc.)
+//// Puede ser dividido en varios capítulos (p. ej., un capítulo de Front-end, un capítulo de Back-end, etc.)
 
 #let screenshot_width = 60%
 
@@ -20,7 +20,6 @@ En cuanto al rendimiento, la elección de tecnologías robustas y bien probadas,
 La interoperabilidad entre las tecnologías utilizadas se ve respaldada por la compatibilidad inherente de Django con PostgreSQL y la elección de Typescript como lenguaje en el frontend. Además, se planea seguir estándares y prácticas documentadas para asegurar una integración fluida, aprovechando la documentación existente como guía.
 
 La elección de Django junto con HTML y CSS se justifica por la naturaleza estática de los datos, donde los cambios no son frecuentes. En este contexto, una biblioteca de frontend como React no aportaría un beneficio significativo, ya que la actualización dinámica de la interfaz de usuario no es una prioridad, lo que hace que la simplicidad y la eficiencia de HTML y CSS sean suficientes para cumplir con los requisitos del proyecto.
-
 
 == Django Project Template (DPT)
 
@@ -73,7 +72,6 @@ Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean con
 5. *PostgreSQL*: Maneja las consultas de la base de datos provenientes de Django y Celery.
 6. *Amazon S3*: Almacena archivos de medios y recursos estáticos, accesibles tanto por la aplicación Django como directamente por los usuarios.
 
-
 ==== Ventajas de esta Arquitectura
 
 - *Simplicidad*: Ejecutar todos los servicios en un solo Droplet simplifica la gestión y el despliegue.
@@ -82,7 +80,6 @@ Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean con
 - *Costo-eficiencia*: Mantener una infraestructura sencilla reduce los costos operativos y facilita el monitoreo y la administración.
 
 Esta configuración es ideal para aplicaciones con una carga de tráfico moderada, proporcionando un equilibrio entre simplicidad, eficiencia y escalabilidad.
-
 
 == Perfiles de usuario del sistema
 
@@ -140,9 +137,8 @@ Además, el registro de usuarios está estrictamente controlado. Solo los admini
 
 La vista del listado de usuarios proporciona una tabla con información detallada sobre cada usuario, incluyendo su nombre, dirección de correo electrónico, grupos y estado de la cuenta. Esta vista está diseñada para ser intuitiva y fácil de navegar, permitiendo a los administradores realizar varias acciones importantes:
 
-1. Visualización y Búsqueda: Los administradores pueden ver todos los usuarios registrados y utilizar la barra de búsqueda para encontrar rápidamente usuarios específicos.
-
-2. Botones de Creación, Edición, Detalle y Eliminación: La interfaz incluye botones que permiten a los administradores crear nuevos usuarios, editar la información de los existentes, ver detalles específicos de cada usuario y eliminar usuarios cuando sea necesario.
+- Visualización y Búsqueda: Los administradores pueden ver todos los usuarios registrados y utilizar la barra de búsqueda para encontrar rápidamente usuarios específicos.
+- Botones de Creación, Edición, Detalle y Eliminación: La interfaz incluye botones que permiten a los administradores crear nuevos usuarios, editar la información de los existentes, ver detalles específicos de cada usuario y eliminar usuarios cuando sea necesario.
 
 #figure(
     image("../imagenes/modulos/users/list.png", width: screenshot_width),
@@ -153,15 +149,15 @@ La vista del listado de usuarios proporciona una tabla con información detallad
 
 La vista de creación de usuarios permite a los administradores añadir nuevos usuarios al sistema. Esta interfaz incluye los siguientes campos y opciones:
 
-- *First name (optional)*: Ingrese el primer nombre del usuario.
-- *Last name (optional)*: Ingrese el apellido del usuario.
-- *Email address*: Ingrese la dirección de correo electrónico del usuario.
-- *Active*: Active o desactive la cuenta del usuario.
-- *Groups (optional)*: Asigne uno o más grupos al usuario.
+- *Nombre (opcional)*: Ingrese el primer nombre del usuario.
+- *Apellido (opcional)*: Ingrese el apellido del usuario.
+- *Correo electrónico*: Ingrese la dirección de correo electrónico del usuario.
+- *Activo*: Active o desactive la cuenta del usuario.
+- *Grupos (opcional)*: Asigne uno o más grupos al usuario.
 
 Botones de acción:
-- *Save*: Guarda el nuevo usuario.
-- *Cancel*: Cancela la creación y vuelve a la vista anterior.
+- *Guardar*: Guarda el nuevo usuario.
+- *Cancelar*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
     image("../imagenes/modulos/users/create.png", width: screenshot_width),
@@ -174,12 +170,13 @@ La vista de detalle de usuario permite a los administradores ver y gestionar inf
 
 - *Información personal*: Muestra el primer nombre, apellido, correo electrónico y estado de actividad del usuario.
 - *Grupos asignados*: Lista los grupos a los que pertenece el usuario, junto con el número de usuarios y permisos asociados a cada grupo.
+
 Además, la interfaz ofrece los siguientes botones de acción:
 
-- *Update user*: Permite editar la información del usuario.
-- *Delete user*: Permite eliminar al usuario de la aplicación.
-- *Update group*: Permite modificar los detalles del grupo asignado.
-- *Delete group*: Permite eliminar al usuario de un grupo específico.
+- *Actualizar usuario*: Permite editar la información del usuario.
+- *Eliminar usuario*: Permite eliminar al usuario de la aplicación.
+- *Actualizar grupo*: Permite modificar los detalles del grupo asignado.
+- *Eliminar grupo*: Permite eliminar al usuario de un grupo específico.
 
 #figure(
     image("../imagenes/modulos/users/detail.png", width: screenshot_width),
@@ -190,15 +187,15 @@ Además, la interfaz ofrece los siguientes botones de acción:
 
 La vista de actualización de usuario permite a los administradores editar la información de un usuario. Esta interfaz incluye:
 
-- *First name (optional)*: Editar el primer nombre del usuario.
-- *Last name (optional)*: Editar el apellido del usuario.
-- *Email address*: Editar la dirección de correo electrónico del usuario.
-- *Active*: Activar o desactivar la cuenta del usuario.
-- *Groups (optional)*: Asignar o cambiar los grupos del usuario.
+- *Nombre (opcional)*: Editar el primer nombre del usuario.
+- *Apellido (opcional)*: Editar el apellido del usuario.
+- *Correo electrónico*: Editar la dirección de correo electrónico del usuario.
+- *Activo*: Activar o desactivar la cuenta del usuario.
+- *Grupos (opcional)*: Asignar o cambiar los grupos del usuario.
 
 Botones de acción:
-- *Save*: Guarda los cambios.
-- *Cancel*: Cancela la edición y vuelve a la vista anterior.
+- *Guardar*: Guarda los cambios.
+- *Cancelar*: Cancela la edición y vuelve a la vista anterior.
 
 #figure(
     image("../imagenes/modulos/users/update.png", width: screenshot_width),
@@ -225,14 +222,14 @@ _Acciones disponibles:_
 
 La vista de listado de grupos permite a los administradores gestionar los grupos existentes en la aplicación. Esta vista incluye una tabla con la siguiente información:
 
-- *Name*: El nombre del grupo.
-- *Users*: El número de usuarios en el grupo.
-- *Permissions*: El número de permisos asociados al grupo.
+- *Nombre*: El nombre del grupo.
+- *Usuarios*: El número de usuarios en el grupo.
+- *Permisos*: El número de permisos asociados al grupo.
 
 La interfaz también proporciona botones de acción:
-- *Add group*: Permite crear un nuevo grupo.
-- *Update group*: Permite editar un grupo existente.
-- *Delete group*: Permite eliminar un grupo, con confirmación para evitar eliminaciones accidentales.
+- *Añadir grupo*: Permite crear un nuevo grupo.
+- *Actualizar grupo*: Permite editar un grupo existente.
+- *Eliminar grupo*: Permite eliminar un grupo, con confirmación para evitar eliminaciones accidentales.
 
 #figure(
     image("../imagenes/modulos/groups/list.png", width: screenshot_width),
@@ -243,13 +240,13 @@ La interfaz también proporciona botones de acción:
 
 La vista de creación de grupos permite a los administradores añadir nuevos grupos al sistema. Esta interfaz incluye los siguientes campos y opciones:
 
-- *Name*: Ingrese el nombre del grupo.
-- *Users (optional)*: Asigne uno o más usuarios al grupo.
-- *Permissions (optional)*: Asigne uno o más permisos al grupo.
+- *Nombre*: Ingrese el nombre del grupo.
+- *Usuarios (opcional)*: Asigne uno o más usuarios al grupo.
+- *Permisos (opcional)*: Asigne uno o más permisos al grupo.
 
 Botones de acción:
-- *Save*: Guarda el nuevo grupo.
-- *Cancel*: Cancela la creación y vuelve a la vista anterior.
+- *Guardar*: Guarda el nuevo grupo.
+- *Cancelar*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
     image("../imagenes/modulos/groups/create.png", width: screenshot_width),
@@ -260,12 +257,12 @@ Botones de acción:
 
 La vista de detalle de grupo muestra información detallada sobre un grupo específico. Incluye:
 
-- *Users*: Lista de usuarios que pertenecen al grupo, junto con su nombre y correo electrónico.
-- *Assigned permissions*: Una lista detallada de los permisos asignados al grupo, incluyendo el nombre del permiso, el nombre de código y la aplicación/modelo asociado.
+- *Usuarios*: Lista de usuarios que pertenecen al grupo, junto con su nombre y correo electrónico.
+- *Permisos asignados*: Una lista detallada de los permisos asignados al grupo, incluyendo el nombre del permiso, el nombre de código y la aplicación/modelo asociado.
 
 Botones de acción:
-- *Update group*: Permite editar la información del grupo.
-- *Delete group*: Permite eliminar el grupo, con confirmación para evitar eliminaciones accidentales.
+- *Actualizar grupo*: Permite editar la información del grupo.
+- *Eliminar grupo*: Permite eliminar el grupo, con confirmación para evitar eliminaciones accidentales.
 
 #figure(
     image("../imagenes/modulos/groups/detail.png", width: screenshot_width),
@@ -273,37 +270,36 @@ Botones de acción:
 )
 
 ==== Actualización de grupo
+
 La vista de actualización de grupo permite a los administradores editar la información de un grupo existente. Incluye los siguientes campos y opciones:
 
-- *Name*: Editar el nombre del grupo.
-- *Users (optional)*: Asignar o cambiar los usuarios que pertenecen al grupo.
-- *Permissions (optional)*: Asignar o cambiar los permisos del grupo.
+- *Nombre*: Editar el nombre del grupo.
+- *Ususarios (opcional)*: Asignar o cambiar los usuarios que pertenecen al grupo.
+- *Permisos (opcional)*: Asignar o cambiar los permisos del grupo.
 
 Botones de acción:
-- *Save*: Guarda los cambios realizados en el grupo.
-- *Cancel*: Cancela la operación y vuelve a la vista anterior sin guardar los cambios.
+- *Guardar*: Guarda los cambios realizados en el grupo.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin guardar los cambios.
 
 #figure(
     image("../imagenes/modulos/groups/update.png", width: screenshot_width),
     caption: [Vista de actualización de grupo],
 )
 
-== Eliminación de Grupos
+==== Eliminación de Grupos
 
 La vista de eliminación de grupos permite eliminar un grupo específico del sistema, garantizando que los usuarios y roles asociados se manejen adecuadamente antes de la eliminación final. Esta funcionalidad es esencial para mantener la estructura organizativa actualizada y precisa dentro del SGSI.
 
-- *Confirmación de Eliminación*: Se muestra un mensaje de confirmación para asegurar que la eliminación del grupo es intencional y evitar la eliminación accidental de datos importantes.
-- *Acciones Disponibles*:
-  - *Confirmar*: Permite proceder con la eliminación del grupo seleccionado.
-  - *Cancelar*: Permite cancelar el proceso de eliminación y regresar a la vista anterior sin realizar cambios.
+*Confirmación de Eliminación*: Se muestra un mensaje de confirmación para asegurar que la eliminación del grupo es intencional y evitar la eliminación accidental de datos importantes.
 
-Esta funcionalidad es fundamental para asegurar que los administradores puedan gestionar de manera efectiva los grupos de usuarios dentro del SGSI, manteniendo la coherencia y relevancia de la información almacenada.
+_Acciones disponibles:_
+- *Confirmar*: Permite proceder con la eliminación del grupo seleccionado.
+- *Cancelar*: Permite cancelar el proceso de eliminación y regresar a la vista anterior sin realizar cambios.
 
 #figure(
     image("../imagenes/modulos/groups/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de grupo],
 )
-
 
 == Módulo de Documentos
 
@@ -564,7 +560,7 @@ _Acciones disponibles:_
 
 La sección de versiones del documento proporciona información sobre cada versión, su estado de aprobación, y las fechas y usuarios de actualización.
 
-*Acciones en versiones:*
+_Acciones en versiones:_
 - *Actualizar Versión*: Editar la versión del documento.
 - *Aprobar Versión*: Aprobar la versión del documento.
 - *Eliminar Versión*: Eliminar la versión del documento.
@@ -749,7 +745,6 @@ _Acciones disponibles:_
     caption: [Vista de eliminación de tipos de documentos],
 )
 
-
 == Módulo de Activos
 
 El módulo de activos es donde se preserva un inventario con todos los activos de la empresa pertinentes a la seguridad de la información. Su principal componente son los activos y los tipos de activos.
@@ -877,10 +872,11 @@ La vista de listado de roles de activos permite visualizar y gestionar los difer
 
 - *Nombre*: Muestra el nombre del rol asignado al activo.
 - *Activo*: Indica el activo al que está asociado el rol.
-- *Acciones Disponibles*:
-  - *Agregar rol de activo*: Permite crear un nuevo rol y asignarlo a un activo.
-  - *Actualizar rol de activo*: Permite modificar la información de un rol existente.
-  - *Eliminar rol de activo*: Permite eliminar un rol asignado a un activo.
+
+_Acciones disponibles:_
+- *Agregar rol de activo*: Permite crear un nuevo rol y asignarlo a un activo.
+- *Actualizar rol de activo*: Permite modificar la información de un rol existente.
+- *Eliminar rol de activo*: Permite eliminar un rol asignado a un activo.
 
 #figure(
     image("../imagenes/modulos/asset-roles/list.png", width: screenshot_width),
@@ -951,7 +947,6 @@ _Acciones disponibles:_
     image("../imagenes/modulos/asset-roles/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de roles de activos],
 )
-
 
 ==== Creación de Activos
 
@@ -1030,7 +1025,6 @@ _Acciones disponibles:_
     image("../imagenes/modulos/assets/archive.png", width: screenshot_width),
     caption: [Vista de archivado de activos],
 )
-
 
 == Módulo de Riesgos
 
@@ -1143,7 +1137,6 @@ _Acciones disponibles:_
     image("../imagenes/modulos/risks/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de riesgos],
 )
-
 
 == Módulo de Procesos
 
