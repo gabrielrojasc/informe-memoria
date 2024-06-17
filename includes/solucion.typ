@@ -88,11 +88,13 @@ Esta configuración es ideal para aplicaciones con una carga de tráfico moderad
 
 === Colaborador
 
-El perfil de colaborador está diseñado para los empleados de la empresa que deben seguir las directrices del SGSI. Los colaboradores tienen acceso para ver toda la información relevante en la aplicación, pero sus permisos de edición están limitados a marcar como leída las versiones de los documentos. No pueden editar información ni gestionar los datos del sistema.
+El perfil de colaborador está diseñado para los empleados de la empresa que deben seguir las directrices del SGSI. Los colaboradores tienen acceso para ver toda la información relevante en la aplicación, pero sus permisos de edición están limitados a ciertas acciones específicas como marcar como leídas las versiones de los documentos y participar en los procesos asignados.
 
 1. *Acceso a la Información:* Los colaboradores pueden ver toda la información del SGSI, incluyendo documentos, activos, riesgos y procesos.
 2. *Lectura de Documentos:* Los colaboradores pueden acceder y leer los documentos del SGSI. Pueden marcar las versiones de documentos como leídas, registrando que han revisado la información necesaria.
 3. *Participación en Procesos:* Los colaboradores pueden participar en los procesos asignados, realizando las actividades correspondientes y generando evidencia según sea necesario.
+
+En resumen, los colaboradores juegan un papel crucial en el cumplimiento del SGSI al mantenerse informados y participar activamente en los procesos, aunque sin permisos para editar o gestionar información del sistema.
 
 === Administrador
 
@@ -105,6 +107,8 @@ El perfil de administrador está destinado a los encargados de implementar, mant
 5. *Definir y Supervisar Procesos:* Los administradores pueden crear y gestionar procesos, asignar actividades a los colaboradores y supervisar el cumplimiento de los procesos definidos.
 6. *Generación y Gestión de Evidencia:* Los administradores pueden crear, modificar y gestionar la evidencia necesaria para demostrar la implementación y efectividad de los controles de seguridad.
 7. *Auditoría y Cumplimiento:* Los administradores pueden revisar la evidencia generada, asegurar la conformidad con las políticas de seguridad y preparar el SGSI para auditorías internas y externas.
+
+En resumen, los administradores desempeñan un papel integral en la gestión del SGSI, asegurando que todos los aspectos del sistema sean implementados y mantenidos de acuerdo con los estándares de seguridad establecidos. Además de sus amplias capacidades de gestión, también participan activamente como colaboradores en los procesos definidos.
 
 == Módulo de Usuarios
 
@@ -201,18 +205,16 @@ Botones de acción:
     caption: [Vista de actualización de usuario],
 )
 
-==== Eliminación de usuarios
+==== Eliminación de Usuario
 
-La vista de eliminación de usuario permite a los administradores eliminar un usuario específico de la aplicación de forma segura y definitiva.
+La vista de eliminación de usuario permite a los administradores borrar una cuenta de usuario existente del sistema. Esta acción es crítica y debe realizarse con precaución, ya que la eliminación de un usuario no puede deshacerse.
 
-La pantalla incluye una confirmación clara para evitar eliminaciones accidentales:
+*Elementos de la vista:*
+- *Confirmación de Eliminación:* Un mensaje de advertencia que solicita confirmación para eliminar la cuenta de usuario seleccionada. Este paso es esencial para prevenir eliminaciones accidentales.
 
-- *Mensaje de confirmación*: Pregunta si realmente se desea eliminar el usuario especificado, mostrando su dirección de correo electrónico para asegurar que se está eliminando la cuenta correcta.
-- *Botones de acción*:
-  - *Confirm*: Elimina definitivamente al usuario de la aplicación.
-  - *Cancel*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
-
-Esta funcionalidad asegura que los administradores puedan gestionar y mantener la base de usuarios de manera efectiva, minimizando el riesgo de errores en el proceso de eliminación.
+_Acciones disponibles:_
+- *Confirmar:* Permite proceder con la eliminación del usuario.
+- *Cancelar:* Permite cancelar la operación de eliminación.
 
 #figure(
     image("../imagenes/modulos/users/delete.png", width: screenshot_width),
@@ -286,13 +288,16 @@ Botones de acción:
     caption: [Vista de actualización de grupo],
 )
 
-==== Eliminación de grupo
-La vista de eliminación de grupo permite a los administradores eliminar un grupo específico de la aplicación. Incluye una confirmación clara para evitar eliminaciones accidentales:
+== Eliminación de Grupos
 
-- *Mensaje de confirmación*: Pregunta si realmente se desea eliminar el grupo especificado, mostrando su nombre para asegurar que se está eliminando el grupo correcto.
-- *Botones de acción*:
-  - *Confirm*: Elimina definitivamente el grupo de la aplicación.
-  - *Cancel*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+La vista de eliminación de grupos permite eliminar un grupo específico del sistema, garantizando que los usuarios y roles asociados se manejen adecuadamente antes de la eliminación final. Esta funcionalidad es esencial para mantener la estructura organizativa actualizada y precisa dentro del SGSI.
+
+- *Confirmación de Eliminación*: Se muestra un mensaje de confirmación para asegurar que la eliminación del grupo es intencional y evitar la eliminación accidental de datos importantes.
+- *Acciones Disponibles*:
+  - *Confirmar*: Permite proceder con la eliminación del grupo seleccionado.
+  - *Cancelar*: Permite cancelar el proceso de eliminación y regresar a la vista anterior sin realizar cambios.
+
+Esta funcionalidad es fundamental para asegurar que los administradores puedan gestionar de manera efectiva los grupos de usuarios dentro del SGSI, manteniendo la coherencia y relevancia de la información almacenada.
 
 #figure(
     image("../imagenes/modulos/groups/delete.png", width: screenshot_width),
@@ -302,11 +307,11 @@ La vista de eliminación de grupo permite a los administradores eliminar un grup
 
 == Módulo de Documentos
 
-El módulo de documentos es donde se guarda toda la información que define al SGSI. La información se puede dividir en controles, categorías de controles, documentos y evidencia.
+El módulo de documentos es el repositorio central donde se guarda toda la información que define al SGSI. La información se puede dividir en controles, documentos y evidencia.
 
 === Controles
 
-Los controles de seguridad son medidas implementadas para proteger datos e infraestructuras importantes para una organización. Cualquier tipo de salvaguarda o contramedida utilizada para evitar, detectar, contrarrestar o minimizar los riesgos de seguridad se considera un control de seguridad. Estos pueden incluir medidas técnicas como firewalls y antivirus, así como procedimientos y políticas como la formación de empleados y la gestión de accesos.
+Los controles de seguridad son medidas implementadas para proteger datos e infraestructuras críticas para una organización. Cualquier tipo de salvaguarda o contramedida utilizada para evitar, detectar, contrarrestar o minimizar los riesgos de seguridad se considera un control de seguridad. Estos pueden incluir medidas técnicas como firewalls y antivirus, así como procedimientos y políticas como la formación de empleados y la gestión de accesos.
 
 === Categorías de Controles
 
@@ -316,10 +321,9 @@ Las categorías de controles son grupos de controles relacionados entre sí. Est
 
 Los documentos son información registrada que respalda la implementación y gestión del SGSI. Pueden incluir políticas de seguridad, procedimientos operativos, registros de auditoría, planes de continuidad del negocio y cualquier otra información necesaria para mantener y mejorar la seguridad de la información dentro de la organización. La correcta gestión de estos documentos es crucial para asegurar la conformidad con normas y regulaciones y para facilitar la revisión y mejora continua del SGSI.
 
-=== Tipos de documentos
+=== Tipos de Documentos
 
-Los tipos de documentos son categorías utilizadas para organizar la información dentro del SGSI. Cada tipo cumple un propósito específico, facilitando la gestión y asegurando la conformidad con los estándares de seguridad. La correcta clasificación y gestión de estos documentos es crucial para la eficacia del SGSI y la conformidad con normas y regulaciones.
-
+Los tipos de documentos son categorías utilizadas para organizar la información dentro del SGSI. Cada tipo cumple un propósito específico, facilitando la gestión y asegurando la conformidad con los estándares de seguridad. Ejemplos de tipos de documentos incluyen políticas, procedimientos, registros, informes y manuales. La correcta clasificación y gestión de estos documentos es crucial para la eficacia del SGSI y la conformidad con normas y regulaciones.
 
 === Evidencia
 
@@ -332,25 +336,32 @@ La evidencia se refiere a la documentación y pruebas tangibles que demuestran l
 3. Como administrador, quiero poder cargar todas las categorías y controles de ISO 27001 a partir de una plantilla, para tener una base al momento de implementar cada control.
 4. Como administrador, quiero poder subir documentos a cada control, para definir mi implementación de dicho control.
 5. Como administrador, quiero que los documentos queden versionados, para saber qué versiones han sido leídas por los usuarios y mantener un registro de modificaciones.
-6. Como comité, quiero poder aprobar documentos, para validar su contenido.
+6. Como administrador, quiero poder aprobar documentos, para validar su contenido.
 7. Como usuario, quiero poder ver el listado de controles.
 8. Como usuario, quiero poder ver el detalle de cada control.
 9. Como usuario, quiero poder ver el detalle de cada documento.
-10. Como administrador, quiero poder ver el listado de tipos de documentos.
-11. Como administrador, quiero poder crear nuevos tipos de documentos.
-12. Como administrador, quiero poder editar los tipos de documentos existentes.
-13. Como administrador, quiero poder eliminar tipos de documentos que ya no son necesarios.
+10. Como usuario, quiero poder marcar como leída una versión de un documento.
+11. Como administrador, necesito poder generar enlaces de solo lectura para las versiones de documentos utilizando el código del documento y su número de versión.
+12. Como usuario, quiero poder ver el listado de tipos de documentos.
+13. Como administrador, quiero poder crear nuevos tipos de documentos.
+14. Como administrador, quiero poder editar los tipos de documentos existentes.
+15. Como administrador, quiero poder eliminar tipos de documentos que ya no son necesarios.
 
 === Interfaz de Usuario
 
 ==== Listado de Controles
 
-La vista del listado de controles proporciona una tabla con información sobre cada control, incluyendo su nombre, categoría, fecha de actualización y el usuario que realizó la última actualización.
+La vista de listado de controles permite visualizar todos los controles de seguridad definidos en el SGSI. Esta vista es fundamental para mantener una organización clara y accesible de los controles, facilitando su gestión y revisión.
 
-*Acciones disponibles:*
-- *Añadir Control*: Permite a los administradores añadir nuevos controles.
-- *Actualizar Control*: Permite a los administradores editar la información de los controles existentes.
-- *Eliminar Control*: Permite a los administradores eliminar controles.
+- *Nombre*: Identifica el nombre del control.
+- *Categoría*: Indica la categoría a la que pertenece el control, permitiendo una mejor organización y agrupación de controles relacionados.
+- *Actualizado en*: Muestra la fecha y hora de la última actualización del control.
+- *Actualizado por*: Indica el nombre del usuario que realizó la última actualización.
+
+_Acciones disponibles:_
+- *Añadir Control*: Permite crear un nuevo control de seguridad.
+- *Actualizar Control*: Permite modificar la información de un control existente.
+- *Eliminar Control*: Permite eliminar un control de seguridad del sistema.
 
 #figure(
     image("../imagenes/modulos/controls/list.png", width: screenshot_width),
@@ -359,15 +370,15 @@ La vista del listado de controles proporciona una tabla con información sobre c
 
 ==== Creación de Controles
 
-La vista de creación de controles permite a los administradores añadir nuevos controles al sistema. Esta interfaz incluye:
+La vista de creación de controles permite definir nuevos controles de seguridad dentro del SGSI. Esta función es fundamental para asegurar que todas las medidas necesarias para proteger la información de la organización estén claramente documentadas y gestionadas.
 
-- *Categoría (opcional)*: Selección de la categoría a la que pertenece el control.
-- *Título*: Campo para ingresar el título del control.
-- *Descripción (opcional)*: Campo para agregar una descripción del control.
+- *Categoría (opcional)*: Selección de la categoría a la que pertenece el control, lo que facilita su organización y gestión.
+- *Título*: Nombre del control que identifica claramente su propósito.
+- *Descripción (opcional)*: Detalle adicional sobre el control, describiendo su función y relevancia.
 
-Botones de acción:
-- *Guardar*: Guarda el nuevo control.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+_Acciones disponibles:_
+- *Guardar*: Permite crear el control con la información proporcionada.
+- *Cancelar*: Permite cancelar la creación del control.
 
 #figure(
     image("../imagenes/modulos/controls/create.png", width: screenshot_width),
@@ -376,19 +387,25 @@ Botones de acción:
 
 ==== Detalle de Controles
 
-La vista de detalle de controles permite a los administradores ver y gestionar información específica de cada control. Los campos más relevantes incluyen:
+La vista de detalle de controles permite visualizar toda la información relevante sobre un control específico, incluyendo su categoría, título, descripción y su estado de creación y actualización. Esta vista es fundamental para entender el contexto y la aplicación de cada control dentro del SGSI.
 
-- *Categoría*: Categoría a la que pertenece el control.
-- *Título*: Título del control.
-- *Descripción*: Descripción del control.
+- *Categoría*: Muestra la categoría a la que pertenece el control, facilitando su clasificación y organización.
+- *Título*: Nombre del control que identifica su propósito específico.
+- *Descripción*: Proporciona detalles adicionales sobre el control, describiendo su función y relevancia.
+- *Creado el*: Fecha y hora en que el control fue creado.
 - *Creado por*: Usuario que creó el control.
-- *Actualizado por*: Usuario que realizó la última actualización.
+- *Actualizado el*: Fecha y hora de la última actualización del control.
+- *Actualizado por*: Usuario que realizó la última actualización del control.
 
-Además, la vista muestra información sobre los documentos en los que está documentado el control, los riesgos relacionados y las evidencias asociadas.
+_Acciones disponibles:_
+- *Actualizar control*: Permite modificar los detalles del control.
+- *Eliminar control*: Permite eliminar el control del sistema si ya no es necesario.
 
-Botones de acción:
-- *Actualizar Control*: Permite editar la información del control.
-- *Eliminar Control*: Permite eliminar el control.
+Adicionalmente, la vista de detalle de controles incluye secciones para mostrar los documentos, riesgos relacionados y evidencias asociadas al control:
+
+- *Documentado en*: Lista de documentos en los que se encuentra registrado el control, junto con la última versión aprobada y la fecha de actualización.
+- *Riesgos relacionados*: Muestra los riesgos asociados al control, proporcionando información sobre la actualización y el responsable.
+- *Evidencias*: Presenta las evidencias creadas que demuestran la implementación y efectividad del control.
 
 #figure(
     image("../imagenes/modulos/controls/detail.png", width: screenshot_width),
@@ -431,7 +448,7 @@ Botones de acción:
 
 La vista del listado de categorías de controles proporciona una tabla con información sobre cada categoría de control, incluyendo su nombre, fecha de actualización y el usuario que realizó la última actualización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Añadir Categoría de Control*: Permite a los administradores añadir nuevas categorías de control.
 - *Actualizar Categoría de Control*: Permite a los administradores editar la información de las categorías de control existentes.
 - *Eliminar Categoría de Control*: Permite a los administradores eliminar categorías de control.
@@ -509,7 +526,7 @@ Botones de acción:
 
 La vista del listado de documentos proporciona una tabla con información sobre cada documento, incluyendo su nombre, la última versión aprobada, la última versión, la fecha de actualización y el usuario que realizó la última actualización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Añadir Documento*: Permite a los administradores añadir nuevos documentos.
 - *Editar Documento*: Permite a los administradores editar la información de los documentos existentes.
 - *Eliminar Documento*: Permite a los administradores eliminar documentos.
@@ -541,7 +558,7 @@ Botones de acción:
 
 La vista de detalle de documentos permite a los administradores ver y gestionar información específica de cada documento, incluyendo su título, código, descripción, fechas de creación y actualización, y los usuarios responsables.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Actualizar Documento*: Permite editar la información del documento.
 - *Eliminar Documento*: Permite eliminar el documento.
 
@@ -662,7 +679,7 @@ La vista de listado de tipos de documentos muestra una tabla con los tipos de do
 - *Nombre*: El nombre del tipo de documento.
 - *Documentos relacionados*: La cantidad de documentos asociados a este tipo de documento.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Añadir Tipo de Documento*: Permite agregar un nuevo tipo de documento.
 - *Actualizar Tipo de Documento*: Permite editar la información de un tipo de documento existente.
 - *Eliminar Tipo de Documento*: Permite eliminar un tipo de documento existente.
@@ -678,7 +695,7 @@ La vista de creación de tipos de documentos permite agregar un nuevo tipo de do
 
 - *Nombre*: El nombre del tipo de documento.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite guardar el nuevo tipo de documento.
 - *Cancelar*: Permite cancelar la creación del tipo de documento.
 
@@ -693,7 +710,7 @@ La vista de detalle de un tipo de documento muestra información específica sob
 
 - *Nombre*: El nombre del tipo de documento.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Actualizar Tipo de Documento*: Permite editar la información del tipo de documento.
 - *Eliminar Tipo de Documento*: Permite eliminar el tipo de documento.
 
@@ -708,7 +725,7 @@ La vista de actualización de un tipo de documento permite editar la informació
 
 - *Nombre*: Permite modificar el nombre del tipo de documento.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite guardar los cambios realizados.
 - *Cancelar*: Permite cancelar la actualización y volver a la vista anterior sin guardar los cambios.
 
@@ -723,7 +740,7 @@ La vista de eliminación de un tipo de documento permite confirmar la eliminaci�
 
 - *Confirmación*: Se solicita la confirmación del usuario para eliminar el tipo de documento seleccionado.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Confirmar*: Permite confirmar la eliminación del tipo de documento.
 - *Cancelar*: Permite cancelar la eliminación y volver a la vista anterior sin realizar cambios.
 
@@ -745,6 +762,10 @@ Los tipos de activos son para poder clasificar a los activos por su tipo, por ej
 
 Los activos son cualquier recurso que sea valioso para la organización y que necesite protección. Pueden incluir hardware, software, datos, personas, instalaciones y cualquier otro elemento que pueda tener un impacto en la seguridad de la información.
 
+=== Roles de Activos
+
+Los roles de activos son asignaciones específicas que definen las responsabilidades y permisos de los usuarios en relación con un activo particular. Este concepto permite una gestión granular y detallada de quién puede acceder y manejar cada activo, asegurando que solo las personas autorizadas tengan los permisos necesarios para interactuar con ellos.
+
 === Historias de Usuario
 
 1. Como administrador, quiero poder registrar activos de la empresa, para luego definir su riesgo asociado.
@@ -757,7 +778,7 @@ Los activos son cualquier recurso que sea valioso para la organización y que ne
 
 La vista del listado de tipos de activos proporciona una tabla con información sobre cada tipo de activo, incluyendo su nombre, fecha de actualización y el usuario que realizó la última actualización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Añadir Tipo de Activo*: Permite a los administradores añadir nuevos tipos de activos.
 - *Actualizar Tipo de Activo*: Permite a los administradores editar la información de los tipos de activos existentes.
 - *Eliminar Tipo de Activo*: Permite a los administradores eliminar tipos de activos.
@@ -792,7 +813,7 @@ La vista de detalle de un tipo de activo muestra información específica sobre 
 - *Actualizado el*: La fecha y hora de la última actualización del tipo de activo.
 - *Actualizado por*: El usuario que realizó la última actualización del tipo de activo.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Actualizar Tipo de Activo*: Permite editar la información del tipo de activo.
 - *Eliminar Tipo de Activo*: Permite eliminar el tipo de activo.
 
@@ -807,7 +828,7 @@ La vista de modificación de un tipo de activo permite al usuario actualizar la 
 
 - *Nombre*: El nombre del tipo de activo.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Guarda los cambios realizados en el tipo de activo.
 - *Cancelar*: Cancela los cambios y regresa a la vista anterior.
 
@@ -846,9 +867,91 @@ La vista de listado de activos muestra todos los activos registrados en el siste
 Además, se proporcionan opciones para añadir un nuevo activo, actualizar un activo existente o archivar un activo.
 
 #figure(
-    image("../imagenes/modulos/asset-types/list.png", width: screenshot_width),
+    image("../imagenes/modulos/assets/list.png", width: screenshot_width),
     caption: [Vista de listado de activos],
 )
+
+==== Listado de Roles de Activos
+
+La vista de listado de roles de activos permite visualizar y gestionar los diferentes roles asignados a los activos dentro del sistema. Esta vista es crucial para administrar adecuadamente las responsabilidades y permisos relacionados con cada activo, asegurando que las tareas y accesos estén claramente definidos y organizados.
+
+- *Nombre*: Muestra el nombre del rol asignado al activo.
+- *Activo*: Indica el activo al que está asociado el rol.
+- *Acciones Disponibles*:
+  - *Agregar rol de activo*: Permite crear un nuevo rol y asignarlo a un activo.
+  - *Actualizar rol de activo*: Permite modificar la información de un rol existente.
+  - *Eliminar rol de activo*: Permite eliminar un rol asignado a un activo.
+
+#figure(
+    image("../imagenes/modulos/asset-roles/list.png", width: screenshot_width),
+    caption: [Vista de listado de roles de activos],
+)
+
+==== Creación de Roles de Activos
+
+La vista de creación de roles de activos permite definir y asignar roles específicos a los activos dentro del sistema. Esta funcionalidad es esencial para establecer las responsabilidades y permisos adecuados para cada activo, asegurando que solo los usuarios autorizados puedan gestionarlos.
+
+- *Activo*: Permite seleccionar el activo al cual se asignará el rol.
+- *Nombre*: Campo para ingresar el nombre del rol que se está creando.
+- *Grupos (opcional)*: Campo opcional para asignar grupos de usuarios que estarán relacionados con este rol.
+
+_Acciones disponibles:_
+- *Guardar*: Permite crear el rol de activo con la información proporcionada.
+- *Cancelar*: Permite cancelar la creación del rol de activo.
+
+#figure(
+    image("../imagenes/modulos/asset-roles/create.png", width: screenshot_width),
+    caption: [Vista de creación de roles de activos],
+)
+
+==== Detalle de Roles de Activos
+
+La vista de detalle de roles de activos proporciona información detallada sobre un rol específico asignado a un activo, incluyendo los usuarios que tienen asignado dicho rol. Esta vista es esencial para gestionar y verificar las responsabilidades y permisos relacionados con cada activo en el sistema.
+
+- *Activo*: Muestra el activo al cual está asignado el rol.
+- *Nombre*: Muestra el nombre del rol asignado.
+- *Usuarios*: Lista de usuarios que tienen asignado este rol, incluyendo sus nombres y correos electrónicos.
+
+_Acciones disponibles:_
+- *Actualizar Rol de Activo*: Permite modificar los detalles del rol de activo.
+- *Eliminar Rol de Activo*: Permite eliminar el rol de activo del sistema.
+
+#figure(
+    image("../imagenes/modulos/asset-roles/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de roles de activos],
+)
+
+==== Actualización de Roles de Activos
+
+La vista de actualización de roles de activos permite modificar la información y los usuarios asignados a un rol específico de un activo. Esta funcionalidad es crucial para mantener los permisos y responsabilidades actualizados en el sistema.
+
+- *Nombre*: Campo para modificar el nombre del rol de activo.
+- *Usuarios*: Lista de usuarios asignados al rol, permitiendo agregar o eliminar usuarios según sea necesario.
+
+_Acciones disponibles:_
+- *Guardar*: Permite guardar los cambios realizados en el rol de activo.
+- *Cancelar*: Permite cancelar la actualización y volver a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/asset-roles/update.png", width: screenshot_width),
+    caption: [Vista de actualización de roles de activos],
+)
+
+==== Eliminación de Roles de Activos
+
+La vista de eliminación de roles de activos permite eliminar un rol específico asignado a un activo. Esta funcionalidad es crucial para mantener la seguridad y la precisión en la asignación de responsabilidades dentro del sistema.
+
+- *Confirmación*: La vista solicita una confirmación para proceder con la eliminación del rol de activo, asegurando que no se realicen eliminaciones accidentales.
+
+_Acciones disponibles:_
+- *Confirmar*: Permite confirmar la eliminación del rol de activo.
+- *Cancelar*: Permite cancelar la eliminación y volver a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/asset-roles/delete.png", width: screenshot_width),
+    caption: [Vista de eliminación de roles de activos],
+)
+
 
 ==== Creación de Activos
 
@@ -862,7 +965,7 @@ La vista de creación de un activo permite ingresar la información necesaria pa
 - *Criticidad*: El nivel de criticidad del activo.
 - *Clasificación*: La clasificación del activo según su sensibilidad.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite guardar el nuevo activo en el sistema.
 - *Cancelar*: Permite cancelar la creación del activo y regresar a la vista anterior.
 
@@ -882,7 +985,7 @@ La vista de detalle de un activo muestra información específica sobre un activ
 - *Criticidad*: El nivel de criticidad del activo.
 - *Clasificación*: La clasificación del activo según su sensibilidad.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Archivar*: Permite archivar el activo.
 - *Actualizar Activo*: Permite editar la información del activo.
 
@@ -903,7 +1006,7 @@ La vista de modificación de un activo permite editar la información existente 
 - *Criticidad*: El nivel de criticidad del activo.
 - *Clasificación*: La clasificación del activo según su sensibilidad.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite guardar los cambios realizados en el activo.
 - *Cancelar*: Permite cancelar la edición y regresar a la vista anterior.
 
@@ -919,7 +1022,7 @@ La vista de archivado de un activo permite confirmar la acción de archivar un a
 - *Mensaje de confirmación*: Indica si el usuario está seguro de querer archivar el activo seleccionado.
 - *Nombre del Activo*: Se muestra el nombre del activo a archivar.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Archivar*: Confirma la acción de archivar el activo.
 - *Cancelar*: Cancela la acción de archivado y regresa a la vista anterior.
 
@@ -953,7 +1056,7 @@ La vista de listado de riesgos muestra una tabla con los riesgos existentes en e
 - *Actualizado el*: La fecha y hora de la última actualización del riesgo.
 - *Actualizado por*: El usuario que realizó la última actualización del riesgo.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Añadir Riesgo*: Permite agregar un nuevo riesgo al sistema.
 - *Actualizar Riesgo*: Permite editar la información de un riesgo existente.
 - *Eliminar Riesgo*: Permite eliminar un riesgo del sistema.
@@ -975,7 +1078,7 @@ La vista para crear un nuevo riesgo permite ingresar los detalles necesarios par
 - *Probabilidad*: Probabilidad de que ocurra el riesgo.
 - *Tratamiento*: Tratamiento asignado al riesgo.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite registrar el nuevo riesgo en el sistema.
 - *Cancelar*: Permite cancelar la creación del riesgo.
 
@@ -998,7 +1101,7 @@ La vista de detalle de un riesgo muestra información específica sobre un riesg
 
 Además, se listan los activos, controles y riesgos residuales relacionados con el riesgo.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Actualizar Riesgo*: Permite editar la información del riesgo.
 - *Eliminar Riesgo*: Permite eliminar el riesgo del sistema.
 
@@ -1019,7 +1122,7 @@ La vista para modificar un riesgo existente permite editar los detalles del ries
 - *Probabilidad*: Probabilidad de que ocurra el riesgo.
 - *Tratamiento*: Tratamiento asignado al riesgo.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite registrar los cambios realizados en el riesgo.
 - *Cancelar*: Permite cancelar la modificación del riesgo.
 
@@ -1032,7 +1135,7 @@ La vista para modificar un riesgo existente permite editar los detalles del ries
 
 La vista para eliminar un riesgo permite confirmar la eliminación de un riesgo específico del sistema. Esta vista muestra un mensaje de confirmación con el nombre del riesgo a eliminar.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Confirmar*: Permite proceder con la eliminación del riesgo.
 - *Cancelar*: Permite cancelar la eliminación del riesgo.
 
@@ -1073,7 +1176,7 @@ La vista de listado de procesos muestra una lista de todos los procesos existent
 - *Actualizado el*: La fecha y hora de la última actualización del proceso.
 - *Actualizado por*: El usuario que realizó la última actualización del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Iniciar Proceso*: Permite iniciar un nuevo proceso.
 - *Añadir Versión del Proceso*: Permite añadir una nueva versión del proceso.
 - *Actualizar Proceso*: Permite editar la información del proceso.
@@ -1090,7 +1193,7 @@ La vista de creación de un proceso permite a los usuarios añadir un nuevo proc
 
 - *Nombre*: El nombre del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite guardar el nuevo proceso.
 - *Cancelar*: Permite cancelar la creación del proceso.
 
@@ -1109,7 +1212,7 @@ La vista de detalle de un proceso muestra información específica sobre un proc
 - *Actualizado el*: La fecha y hora de la última actualización del proceso.
 - *Actualizado por*: El usuario que realizó la última actualización del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Iniciar Proceso*: Permite iniciar el proceso.
 - *Actualizar Proceso*: Permite editar la información del proceso.
 - *Eliminar Proceso*: Permite eliminar el proceso.
@@ -1125,7 +1228,7 @@ La vista de actualización de un proceso permite modificar la información exist
 
 - *Nombre*: Permite editar el nombre del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Guarda los cambios realizados en el proceso.
 - *Cancelar*: Cancela la actualización y vuelve a la vista anterior.
 
@@ -1140,7 +1243,7 @@ La vista de eliminación de un proceso permite confirmar la eliminación de un p
 
 - *Confirmación de eliminación*: Se muestra un mensaje de confirmación preguntando si realmente desea eliminar el proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Confirmar*: Confirma y procede con la eliminación del proceso.
 - *Cancelar*: Cancela la eliminación y vuelve a la vista anterior.
 
@@ -1159,7 +1262,7 @@ La vista de creación de una versión de proceso permite definir una nueva versi
 - *Recurrencia (opcional)*: Defina la recurrencia para la ejecución del proceso.
 - *Correo para notificación de finalización (opcional)*: Ingrese una dirección de correo electrónico para recibir notificaciones de finalización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Guarda la nueva versión del proceso.
 - *Cancelar*: Cancela la acción y vuelve a la vista anterior.
 
@@ -1182,7 +1285,7 @@ La vista de detalle de una versión de proceso muestra la información específi
 - *Actualizado el*: Fecha y hora de la última actualización.
 - *Actualizado por*: Usuario que realizó la última actualización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Publicar*: Permite publicar la versión del proceso.
 - *Agregar actividad del proceso*: Añadir nuevas actividades a esta versión del proceso.
 - *Actualizar versión del proceso*: Permite editar la información de esta versión del proceso.
@@ -1203,7 +1306,7 @@ La vista de actualización de una versión de proceso permite editar la informac
 - *Recurrencia (opcional)*: Frecuencia de ejecución del proceso.
 - *Correo para notificación de finalización (opcional)*: Dirección de correo para notificaciones de finalización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Guarda los cambios realizados en la versión del proceso.
 - *Cancelar*: Cancela la operación de actualización y vuelve a la vista anterior.
 
@@ -1216,7 +1319,7 @@ La vista de actualización de una versión de proceso permite editar la informac
 
 La vista de publicación de una versión de proceso permite confirmar la publicación de una versión específica de un proceso. Esta vista muestra un mensaje de confirmación para asegurar que realmente se desea publicar la versión del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Publicar*: Confirma la publicación de la versión del proceso.
 - *Cancelar*: Cancela la acción de publicación y vuelve a la vista de detalle de la versión del proceso.
 
@@ -1231,7 +1334,7 @@ La vista de eliminación de una versión de proceso permite confirmar la acción
 
 - *Mensaje de confirmación*: Pregunta si está seguro de que desea eliminar la versión seleccionada del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Confirmar*: Elimina definitivamente la versión del proceso.
 - *Cancelar*: Cancela la operación de eliminación y vuelve a la vista anterior.
 
@@ -1250,7 +1353,7 @@ La vista de creación de una actividad de versión de proceso permite definir un
 - *Grupos asignados*: Grupos responsables de la actividad.
 - *Correo electrónico para notificaciones (opcional)*: Correo electrónico para recibir notificaciones de finalización.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Guarda la nueva actividad de la versión del proceso.
 - *Cancelar*: Cancela la creación de la actividad y vuelve a la vista anterior.
 
@@ -1273,7 +1376,7 @@ La vista de detalle de una actividad de versión de proceso muestra la informaci
 - *Actualizado el*: Fecha y hora de la última actualización de la actividad.
 - *Actualizado por*: Usuario que realizó la última actualización de la actividad.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Actualizar actividad del proceso*: Permite editar la información de la actividad.
 - *Eliminar actividad del proceso*: Permite eliminar la actividad del proceso.
 
@@ -1292,7 +1395,7 @@ La vista de actualización de una actividad de versión de proceso permite edita
 - *Grupos asignados*: Grupos responsables de ejecutar la actividad.
 - *Correo electrónico para notificaciones*: Correo electrónico para recibir notificaciones de finalización de la actividad (opcional).
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Guarda los cambios realizados en la actividad.
 - *Cancelar*: Cancela la edición y vuelve a la vista de detalle de la actividad.
 
@@ -1305,7 +1408,7 @@ La vista de actualización de una actividad de versión de proceso permite edita
 
 La vista de eliminación de una actividad de versión de proceso permite confirmar la eliminación de una actividad específica dentro de una versión de un proceso. Esta vista muestra un mensaje de confirmación para asegurar que realmente se desea eliminar la actividad.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Confirmar*: Confirma la eliminación de la actividad.
 - *Cancelar*: Cancela la acción de eliminación y vuelve a la vista de detalle de la actividad.
 
@@ -1325,7 +1428,7 @@ La vista de listado de instancias de procesos muestra una tabla con las instanci
 - *Completado*: Indica si la instancia del proceso está completada.
 - *Completado el*: Fecha y hora en que se completó la instancia del proceso, si aplica.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Iniciar proceso*: Permite crear una nueva instancia de un proceso.
 - *Eliminar instancia de proceso*: Permite eliminar una instancia específica de un proceso.
 
@@ -1341,7 +1444,7 @@ La vista de creación de una instancia de proceso permite iniciar una nueva inst
 - *Proceso*: Selección del proceso del cual se va a crear una instancia.
 - *Comentario (opcional)*: Campo opcional para añadir comentarios relacionados con la instancia del proceso.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite crear la instancia de proceso con la información proporcionada.
 - *Cancelar*: Permite cancelar la creación de la instancia de proceso.
 
@@ -1369,7 +1472,7 @@ La vista de detalle de la instancia de un proceso muestra la información releva
   - *Completado*: Indica si la actividad ha sido completada.
   - *Completado en*: Fecha y hora de la finalización de la actividad, si ha sido completada.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Eliminar Instancia del Proceso*: Permite eliminar la instancia del proceso.
 - *Completar Actividad*: Permite marcar una actividad como completada.
 
@@ -1384,7 +1487,7 @@ La vista de eliminación de la instancia de un proceso permite al usuario confir
 
 - *Confirmación de Eliminación*: Mensaje de confirmación para asegurar que el usuario realmente desea eliminar la instancia del proceso seleccionada.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Confirmar*: Permite eliminar la instancia de proceso seleccionada.
 - *Cancelar*: Permite cancelar la eliminación de la instancia de proceso.
 
@@ -1405,7 +1508,7 @@ La vista de detalle de la actividad de una instancia de proceso muestra la infor
 - *Completado*: Estado de la actividad, indicando si está completada o no.
 - *Completado en*: Fecha y hora en que se completó la actividad (si está completada).
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Completar Actividad*: Permite marcar la actividad como completada.
 - *Eliminar Actividad*: Permite eliminar la actividad de la instancia de proceso.
 
@@ -1423,7 +1526,7 @@ La vista de finalización de la actividad de una instancia de proceso permite re
 - *Texto (opcional)*: Campo para ingresar un texto que sirva como evidencia de la finalización de la actividad.
 - *Correo electrónico para notificar (opcional)*: Permite ingresar un correo electrónico al cual se notificará una vez completada la actividad.
 
-*Acciones disponibles:*
+_Acciones disponibles:_
 - *Guardar*: Permite registrar la finalización de la actividad con la evidencia proporcionada.
 - *Cancelar*: Permite cancelar la operación de registro de finalización de la actividad.
 

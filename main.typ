@@ -1,7 +1,7 @@
 #import "conf.typ": conf, guia, pronombre
 #let mostrar_guias = false
 #show: conf.with(
-    titulo: "Desarrollo de una plataforma para auditoria de cumplimiento de Sistema General de Seguridad de Información (SGSI)",
+    titulo: "Desarrollo de una plataforma para auditoría de cumplimiento de Sistema General de Seguridad de Información (SGSI)",
     autor: (nombre: "Gabriel Rojas Chamorro", pronombre: pronombre.el),
     profesores: ((nombre: "Eduardo Godoy Vega", pronombre: pronombre.el),),
     supervisor: (nombre: "Mauricio Castro García", pronombre: pronombre.el),
