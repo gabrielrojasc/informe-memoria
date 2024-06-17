@@ -1,8 +1,12 @@
 = Introducción
-// // Dar una introducción al contexto del tema.
-// // Explicar, en términos generales, el problema abordado.
-// // Motivar la necesidad, la importancia y/o el valor, de tener una (mejor) solución.
-// // En el caso de la práctica extendida, incluir detalles de la organización, su quehacer, el equipo y el supervisor con los cuales se va a trabajar, la relevancia del problema a la organización, etc.
+// Motiva y resume el tema
+//// Contexto
+////// En el caso de una Práctica Extendida, describe la organización, equipo, rol del supervisor, formas de trabajar dentro de la organización, etc.
+//// Problema y Relevancia
+//// Objetivos
+//// Opcional: Descripción general de la solución
+//// Opcional: Resumen de los resultados
+//// Opcional: Estructura de la memoria
 
 == Contexto
 
@@ -11,6 +15,47 @@ En el vertiginoso panorama actual, caracterizado por la revolución digital y la
 Las organizaciones, en este desafío constante, se ven compelidas a garantizar que sus sistemas no solo cumplan con los estándares de seguridad, sino que también sigan las mejores prácticas establecidas. Es en este contexto que el Sistema de Gestión de Seguridad de la Información (SGSI), especialmente dentro del marco de la norma ISO 27001, emerge como una guía esencial para diseñar, implementar y mantener sistemas de seguridad robustos. La certificación ISO 27001, por ende, no solo proporciona un marco sólido para la gestión de la seguridad de la información, sino que también otorga a las empresas un distintivo reconocido internacionalmente, validando su compromiso inquebrantable con la seguridad.
 
 En el epicentro de este escenario complejo se halla la empresa Magnet, una entidad con una sólida trayectoria de más de una década en la provisión de soluciones tecnológicas a medida. Para Magnet, la necesidad imperante de asegurar la integridad y confidencialidad de su información y la de sus clientes, especialmente en el contexto de la certificación ISO 27001, adquiere una importancia estratégica.
+
+=== Magnet
+
+Magnet es una empresa con una fuerte presencia en el mercado de software y tecnología, ofreciendo una amplia gama de servicios y productos. Entre los principales se encuentran:
+
+- *Desarrollo a medida*: Magnet desarrolla código para brindar valor, simplificar procesos y establecer la trazabilidad de los proyectos.
+- *Proyectos del Estado*: Trabaja con instituciones del gobierno, con un Acuerdo Marco vigente, y una sólida experiencia en la colaboración con el Estado de Chile.
+- *Aumento de equipo en EE. UU.*: Proporciona desarrolladores y diseñadores para fortalecer los equipos de sus clientes.
+- *Transformación Digital*: Implementa, mantiene y mejora continuamente los servicios relacionados con la transformación digital.
+- *Integraciones*: Facilita la integración de Django con diversas aplicaciones y servicios en la nube para aumentar la eficiencia y productividad.
+- *Proceso UX*: Entrega soluciones innovadoras alineadas con los objetivos empresariales mediante un diseño centrado en el usuario.
+- *E-commerce*: Provee plataformas personalizadas para aplicaciones móviles de comercio electrónico.
+- *Infraestructura*: Ofrece servicios en la nube seguros, escalables y flexibles para optimizar el crecimiento empresarial.
+
+Magnet cuenta con un equipo compuesto por entre 30 y 40 empleados. El área de operaciones está estructurada en diversos roles y departamentos que incluyen Jefes de Proyectos (PM), Technical Leads (TL), desarrolladores frontend y backend, analistas TI, y diseñadores UX.
+
+=== Equipo de Proyecto
+
+Para este trabajo de título, el equipo involucrado se compone principalmente de tres personas:
+
+- *Gerente de Operaciones*: Mauricio Casto, quien toma un rol de apoyo técnico y supervisión, actuando como un Senior Advisor.
+- *Gerente General*: Ignacio Munizaga, desempeñando el rol de Product Owner, proporcionando orientación y visión para el proyecto.
+- *Jefe de Proyecto y Desarrollador*: El autor de este trabajo, responsable de la planificación, ejecución y desarrollo del proyecto.
+
+=== Rol del Supervisor
+
+El supervisor del autor, Mauricio Casto, es uno de los socios de Magnet y el Gerente de Operaciones. Su rol principal es estandarizar los procesos, herramientas y prácticas del área de Operaciones y coordinar los recursos entre proyectos. En el contexto de este trabajo de título, su responsabilidad principal ha sido asegurar que lo que se está desarrollando sea de utilidad para la empresa, proporcionando apoyo y supervisión técnica.
+
+La interacción con el supervisor ha sido positiva, especialmente al principio del proyecto, donde se recibió un considerable apoyo en la planificación de la idea principal. Posteriormente, el Gerente General también ha proporcionado apoyo significativo en el refinamiento de la plataforma.
+
+=== Formas de Trabajar en Magnet
+
+Magnet utiliza una metodología ágil basada en Scrum, adaptada a las siguientes consideraciones:
+
+- El producto se desarrolla fuera de la organización que será dueña del producto, usualmente con un Product Owner externo.
+- Los incentivos de la organización pueden ser, en algunos casos, opuestos a los de Magnet.
+- Existen contratos y compromisos de buen servicio que norman el proyecto más allá del óptimo para el desarrollo del producto.
+
+La gestión de proyectos y la comunicación dentro del equipo se realiza principalmente a través de Slack para la comunicación asíncrona, y mediante reuniones semanales (weeklys) y reuniones de avances. Los weeklys se enfocan en el desarrollo y en resolver trabas, mientras que las reuniones de avances se centran en mostrar avances concretos de la aplicación.
+
+Las herramientas utilizadas incluyen Jira para la gestión de proyectos, Google Workspace para videoconferencias y almacenamiento, y Slack para la comunicación. Magnet fomenta un ambiente de trabajo colaborativo y una cultura abierta, promoviendo la participación de todos en la toma de decisiones y manteniendo un flujo constante de feedback para mejorar continuamente.
 
 == Problema y Relevancia
 

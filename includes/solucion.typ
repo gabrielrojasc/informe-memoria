@@ -1,4 +1,4 @@
-#let screenshot_size = 50%
+#let screenshot_width = 60%
 
 = Solución
 
@@ -105,6 +105,8 @@ El perfil de administrador está destinado a los encargados de implementar, mant
 
 El módulo de usuarios es donde se guarda la información de los usuarios de la aplicación. Ya que el módulo de usuarios depende del módulo de autenticación proveído por Django, se agregan algunos modelos relacionados acá.
 
+Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte el #link(label("erd-users"))[modelo entidad-relación para los usuarios] en el anexo.
+
 === Historias de Usuario
 
 1. Como administrador, deseo tener la capacidad de asignar grupos a los usuarios y, de igual manera, asignar usuarios a grupos.
@@ -121,7 +123,7 @@ Sin embargo, la flexibilidad de la aplicación permite cambiar el método de aut
 Además, el registro de usuarios está estrictamente controlado. Solo los administradores de la aplicación pueden crear nuevas cuentas, lo que evita que usuarios externos se registren sin autorización. No obstante, el registro de usuarios externos también puede ser gestionado mediante variables de entorno, permitiendo configuraciones más abiertas si es necesario. Este enfoque garantiza un control preciso sobre quién puede acceder a la aplicación, mejorando la seguridad y la gestión de usuarios.
 
 #figure(
-    image("../imagenes/modulos/users/login.png", width: screenshot_size),
+    image("../imagenes/modulos/users/login.png", width: screenshot_width),
     caption: [Vista de inicio de sesión],
 )
 
@@ -134,26 +136,8 @@ La vista del listado de usuarios proporciona una tabla con información detallad
 2. Botones de Creación, Edición, Detalle y Eliminación: La interfaz incluye botones que permiten a los administradores crear nuevos usuarios, editar la información de los existentes, ver detalles específicos de cada usuario y eliminar usuarios cuando sea necesario.
 
 #figure(
-    image("../imagenes/modulos/users/list.png", width: screenshot_size),
+    image("../imagenes/modulos/users/list.png", width: screenshot_width),
     caption: [Vista de listado de usuarios],
-)
-
-==== Detalle de usuarios
-
-La vista de detalle de usuario permite a los administradores ver y gestionar información específica de cada usuario. Esta vista incluye:
-
-- *Información personal*: Muestra el primer nombre, apellido, correo electrónico y estado de actividad del usuario.
-- *Grupos asignados*: Lista los grupos a los que pertenece el usuario, junto con el número de usuarios y permisos asociados a cada grupo.
-Además, la interfaz ofrece los siguientes botones de acción:
-
-- *Update user*: Permite editar la información del usuario.
-- *Delete user*: Permite eliminar al usuario de la aplicación.
-- *Update group*: Permite modificar los detalles del grupo asignado.
-- *Delete group*: Permite eliminar al usuario de un grupo específico.
-
-#figure(
-    image("../imagenes/modulos/users/detail.png", width: screenshot_size),
-    caption: [Vista de detalle de usuario],
 )
 
 ==== Creación de usuarios
@@ -171,8 +155,26 @@ Botones de acción:
 - *Cancel*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/users/create.png", width: screenshot_size),
+    image("../imagenes/modulos/users/create.png", width: screenshot_width),
     caption: [Vista de creación de usuario],
+)
+
+==== Detalle de usuarios
+
+La vista de detalle de usuario permite a los administradores ver y gestionar información específica de cada usuario. Esta vista incluye:
+
+- *Información personal*: Muestra el primer nombre, apellido, correo electrónico y estado de actividad del usuario.
+- *Grupos asignados*: Lista los grupos a los que pertenece el usuario, junto con el número de usuarios y permisos asociados a cada grupo.
+Además, la interfaz ofrece los siguientes botones de acción:
+
+- *Update user*: Permite editar la información del usuario.
+- *Delete user*: Permite eliminar al usuario de la aplicación.
+- *Update group*: Permite modificar los detalles del grupo asignado.
+- *Delete group*: Permite eliminar al usuario de un grupo específico.
+
+#figure(
+    image("../imagenes/modulos/users/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de usuario],
 )
 
 ==== Actualización de usuarios
@@ -190,7 +192,7 @@ Botones de acción:
 - *Cancel*: Cancela la edición y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/users/update.png", width: screenshot_size),
+    image("../imagenes/modulos/users/update.png", width: screenshot_width),
     caption: [Vista de actualización de usuario],
 )
 
@@ -208,7 +210,7 @@ La pantalla incluye una confirmación clara para evitar eliminaciones accidental
 Esta funcionalidad asegura que los administradores puedan gestionar y mantener la base de usuarios de manera efectiva, minimizando el riesgo de errores en el proceso de eliminación.
 
 #figure(
-    image("../imagenes/modulos/users/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/users/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de usuario],
 )
 
@@ -226,24 +228,8 @@ La interfaz también proporciona botones de acción:
 - *Delete group*: Permite eliminar un grupo, con confirmación para evitar eliminaciones accidentales.
 
 #figure(
-    image("../imagenes/modulos/groups/list.png", width: screenshot_size),
+    image("../imagenes/modulos/groups/list.png", width: screenshot_width),
     caption: [Vista de listado de grupos],
-)
-
-==== Detalle de grupo
-
-La vista de detalle de grupo muestra información detallada sobre un grupo específico. Incluye:
-
-- *Users*: Lista de usuarios que pertenecen al grupo, junto con su nombre y correo electrónico.
-- *Assigned permissions*: Una lista detallada de los permisos asignados al grupo, incluyendo el nombre del permiso, el nombre de código y la aplicación/modelo asociado.
-
-Botones de acción:
-- *Update group*: Permite editar la información del grupo.
-- *Delete group*: Permite eliminar el grupo, con confirmación para evitar eliminaciones accidentales.
-
-#figure(
-    image("../imagenes/modulos/groups/detail.png", width: screenshot_size),
-    caption: [Vista de detalle de grupo],
 )
 
 ==== Creación de grupo
@@ -259,8 +245,24 @@ Botones de acción:
 - *Cancel*: Cancela la creación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/groups/create.png", width: screenshot_size),
+    image("../imagenes/modulos/groups/create.png", width: screenshot_width),
     caption: [Vista de creación de grupo],
+)
+
+==== Detalle de grupo
+
+La vista de detalle de grupo muestra información detallada sobre un grupo específico. Incluye:
+
+- *Users*: Lista de usuarios que pertenecen al grupo, junto con su nombre y correo electrónico.
+- *Assigned permissions*: Una lista detallada de los permisos asignados al grupo, incluyendo el nombre del permiso, el nombre de código y la aplicación/modelo asociado.
+
+Botones de acción:
+- *Update group*: Permite editar la información del grupo.
+- *Delete group*: Permite eliminar el grupo, con confirmación para evitar eliminaciones accidentales.
+
+#figure(
+    image("../imagenes/modulos/groups/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de grupo],
 )
 
 ==== Actualización de grupo
@@ -275,7 +277,7 @@ Botones de acción:
 - *Cancel*: Cancela la operación y vuelve a la vista anterior sin guardar los cambios.
 
 #figure(
-    image("../imagenes/modulos/groups/update.png", width: screenshot_size),
+    image("../imagenes/modulos/groups/update.png", width: screenshot_width),
     caption: [Vista de actualización de grupo],
 )
 
@@ -288,7 +290,7 @@ La vista de eliminación de grupo permite a los administradores eliminar un grup
   - *Cancel*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/groups/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/groups/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de grupo],
 )
 
@@ -346,8 +348,25 @@ La vista del listado de controles proporciona una tabla con información sobre c
 - *Eliminar Control*: Permite a los administradores eliminar controles.
 
 #figure(
-    image("../imagenes/modulos/controls/list.png", width: screenshot_size),
+    image("../imagenes/modulos/controls/list.png", width: screenshot_width),
     caption: [Vista de listado de controles],
+)
+
+==== Creación de Controles
+
+La vista de creación de controles permite a los administradores añadir nuevos controles al sistema. Esta interfaz incluye:
+
+- *Categoría (opcional)*: Selección de la categoría a la que pertenece el control.
+- *Título*: Campo para ingresar el título del control.
+- *Descripción (opcional)*: Campo para agregar una descripción del control.
+
+Botones de acción:
+- *Guardar*: Guarda el nuevo control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/controls/create.png", width: screenshot_width),
+    caption: [Vista de creación de controles],
 )
 
 ==== Detalle de Controles
@@ -367,25 +386,8 @@ Botones de acción:
 - *Eliminar Control*: Permite eliminar el control.
 
 #figure(
-    image("../imagenes/modulos/controls/detail.png", width: screenshot_size),
+    image("../imagenes/modulos/controls/detail.png", width: screenshot_width),
     caption: [Vista de detalle de controles],
-)
-
-==== Creación de Controles
-
-La vista de creación de controles permite a los administradores añadir nuevos controles al sistema. Esta interfaz incluye:
-
-- *Categoría (opcional)*: Selección de la categoría a la que pertenece el control.
-- *Título*: Campo para ingresar el título del control.
-- *Descripción (opcional)*: Campo para agregar una descripción del control.
-
-Botones de acción:
-- *Guardar*: Guarda el nuevo control.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
-
-#figure(
-    image("../imagenes/modulos/controls/create.png", width: screenshot_size),
-    caption: [Vista de creación de controles],
 )
 
 ==== Actualización de Controles
@@ -401,7 +403,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/controls/update.png", width: screenshot_size),
+    image("../imagenes/modulos/controls/update.png", width: screenshot_width),
     caption: [Vista de actualización de controles],
 )
 
@@ -416,7 +418,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/controls/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/controls/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de controles],
 )
 
@@ -430,8 +432,23 @@ La vista del listado de categorías de controles proporciona una tabla con infor
 - *Eliminar Categoría de Control*: Permite a los administradores eliminar categorías de control.
 
 #figure(
-    image("../imagenes/modulos/control-categories/list.png", width: screenshot_size),
+    image("../imagenes/modulos/control-categories/list.png", width: screenshot_width),
     caption: [Vista de listado de categorías de controles],
+)
+
+==== Creación de Categorías de Controles
+
+La vista de creación de categorías de controles permite a los administradores añadir nuevas categorías de control al sistema. Esta interfaz incluye:
+
+- *Nombre*: Campo para ingresar el nombre de la categoría de control.
+
+Botones de acción:
+- *Guardar*: Guarda la nueva categoría de control.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/control-categories/create.png", width: screenshot_width),
+    caption: [Vista de creación de categorías de controles],
 )
 
 ==== Detalle de Categorías de Controles
@@ -449,23 +466,8 @@ Botones de acción:
 - *Eliminar Categoría de Control*: Permite eliminar la categoría de control.
 
 #figure(
-    image("../imagenes/modulos/control-categories/detail.png", width: screenshot_size),
+    image("../imagenes/modulos/control-categories/detail.png", width: screenshot_width),
     caption: [Vista de detalle de categorías de controles],
-)
-
-==== Creación de Categorías de Controles
-
-La vista de creación de categorías de controles permite a los administradores añadir nuevas categorías de control al sistema. Esta interfaz incluye:
-
-- *Nombre*: Campo para ingresar el nombre de la categoría de control.
-
-Botones de acción:
-- *Guardar*: Guarda la nueva categoría de control.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
-
-#figure(
-    image("../imagenes/modulos/control-categories/create.png", width: screenshot_size),
-    caption: [Vista de creación de categorías de controles],
 )
 
 ==== Actualización de Categorías de Controles
@@ -479,7 +481,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/control-categories/update.png", width: screenshot_size),
+    image("../imagenes/modulos/control-categories/update.png", width: screenshot_width),
     caption: [Vista de actualización de categorías de controles],
 )
 
@@ -494,7 +496,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/control-categories/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/control-categories/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de categorías de controles],
 )
 
@@ -508,8 +510,26 @@ La vista del listado de documentos proporciona una tabla con información sobre 
 - *Eliminar Documento*: Permite a los administradores eliminar documentos.
 
 #figure(
-    image("../imagenes/modulos/documents/list.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/list.png", width: screenshot_width),
     caption: [Vista de listado de documentos],
+)
+
+==== Creación de Documentos
+
+La vista de creación de documentos permite a los administradores añadir nuevos documentos al sistema. Esta interfaz incluye los siguientes campos:
+
+- *Título*: El título del documento.
+- *Código*: El código del documento.
+- *Descripción (opcional)*: Una breve descripción del documento.
+- *Controles documentados (opcional)*: Los controles que están documentados en el documento.
+
+Botones de acción:
+- *Guardar*: Guarda el nuevo documento.
+- *Cancelar*: Cancela la creación y vuelve a la vista anterior.
+
+#figure(
+    image("../imagenes/modulos/documents/create.png", width: screenshot_width),
+    caption: [Vista de creación de documentos],
 )
 
 ==== Detalle de Documentos
@@ -528,26 +548,8 @@ La sección de versiones del documento proporciona información sobre cada versi
 - *Eliminar Versión*: Eliminar la versión del documento.
 
 #figure(
-    image("../imagenes/modulos/documents/detail.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/detail.png", width: screenshot_width),
     caption: [Vista de detalle de documentos],
-)
-
-==== Adición de Documentos
-
-La vista de creación de documentos permite a los administradores añadir nuevos documentos al sistema. Esta interfaz incluye los siguientes campos:
-
-- *Título*: El título del documento.
-- *Código*: El código del documento.
-- *Descripción (opcional)*: Una breve descripción del documento.
-- *Controles documentados (opcional)*: Los controles que están documentados en el documento.
-
-Botones de acción:
-- *Guardar*: Guarda el nuevo documento.
-- *Cancelar*: Cancela la creación y vuelve a la vista anterior.
-
-#figure(
-    image("../imagenes/modulos/documents/create.png", width: screenshot_size),
-    caption: [Vista de creación de documentos],
 )
 
 ==== Eliminación de Documentos
@@ -561,8 +563,24 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de documentos],
+)
+
+==== Creación de Versión de Documentos
+
+La vista de creación de versiones de documentos permite a los administradores añadir una nueva versión a un documento existente. Esta interfaz incluye:
+
+- *Archivo*: Campo para subir el archivo de la nueva versión.
+- *Comentario (opcional)*: Campo para agregar comentarios sobre la nueva versión.
+
+Botones de acción:
+- *Guardar*: Guarda la nueva versión del documento.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/documents/version_create.png", width: screenshot_width),
+    caption: [Vista de creación de versiones de documentos],
 )
 
 ==== Detalle de Versión de Documentos
@@ -580,24 +598,8 @@ Botones de acción:
 - *Marcar como leído*: Permite a los usuarios marcar la versión como leída.
 
 #figure(
-    image("../imagenes/modulos/documents/version_detail.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/version_detail.png", width: screenshot_width),
     caption: [Vista de detalle de versión de documentos],
-)
-
-==== Creación de Versión de Documentos
-
-La vista de creación de versiones de documentos permite a los administradores añadir una nueva versión a un documento existente. Esta interfaz incluye:
-
-- *Archivo*: Campo para subir el archivo de la nueva versión.
-- *Comentario (opcional)*: Campo para agregar comentarios sobre la nueva versión.
-
-Botones de acción:
-- *Guardar*: Guarda la nueva versión del documento.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
-
-#figure(
-    image("../imagenes/modulos/documents/version_create.png", width: screenshot_size),
-    caption: [Vista de creación de versiones de documentos],
 )
 
 ==== Aprobación de Versión de Documentos
@@ -612,7 +614,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_approve.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/version_approve.png", width: screenshot_width),
     caption: [Vista de aprobación de versiones de documentos],
 )
 
@@ -629,7 +631,7 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_update.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/version_update.png", width: screenshot_width),
     caption: [Vista de actualización de versiones de documentos],
 )
 
@@ -644,10 +646,9 @@ Botones de acción:
 - *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/documents/version_delete.png", width: screenshot_size),
+    image("../imagenes/modulos/documents/version_delete.png", width: screenshot_width),
     caption: [Vista de eliminación de versiones de documentos],
 )
-
 
 ==== Listado de Tipos de Documentos
 
@@ -662,23 +663,8 @@ La vista de listado de tipos de documentos muestra una tabla con los tipos de do
 - *Eliminar Tipo de Documento*: Permite eliminar un tipo de documento existente.
 
 #figure(
-    image("../imagenes/modulos/document-types/list.png", width: screenshot_size),
+    image("../imagenes/modulos/document-types/list.png", width: screenshot_width),
     caption: [Vista de listado de tipos de documentos],
-)
-
-==== Detalle de Tipos de Documentos
-
-La vista de detalle de un tipo de documento muestra información específica sobre un tipo de documento en particular. Esta vista incluye los campos más relevantes:
-
-- *Nombre*: El nombre del tipo de documento.
-
-*Acciones disponibles:*
-- *Actualizar Tipo de Documento*: Permite editar la información del tipo de documento.
-- *Eliminar Tipo de Documento*: Permite eliminar el tipo de documento.
-
-#figure(
-    image("../imagenes/modulos/document-types/detail.png", width: screenshot_size),
-    caption: [Vista de detalle de tipos de documentos],
 )
 
 ==== Creación de Tipos de Documentos
@@ -692,8 +678,23 @@ La vista de creación de tipos de documentos permite agregar un nuevo tipo de do
 - *Cancelar*: Permite cancelar la creación del tipo de documento.
 
 #figure(
-    image("../imagenes/modulos/document-types/create.png", width: screenshot_size),
+    image("../imagenes/modulos/document-types/create.png", width: screenshot_width),
     caption: [Vista de creación de tipos de documentos],
+)
+
+==== Detalle de Tipos de Documentos
+
+La vista de detalle de un tipo de documento muestra información específica sobre un tipo de documento en particular. Esta vista incluye los campos más relevantes:
+
+- *Nombre*: El nombre del tipo de documento.
+
+*Acciones disponibles:*
+- *Actualizar Tipo de Documento*: Permite editar la información del tipo de documento.
+- *Eliminar Tipo de Documento*: Permite eliminar el tipo de documento.
+
+#figure(
+    image("../imagenes/modulos/document-types/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de tipos de documentos],
 )
 
 ==== Actualización de Tipos de Documentos
@@ -707,7 +708,7 @@ La vista de actualización de un tipo de documento permite editar la informació
 - *Cancelar*: Permite cancelar la actualización y volver a la vista anterior sin guardar los cambios.
 
 #figure(
-    image("../imagenes/modulos/document-types/update.png", width: screenshot_size),
+    image("../imagenes/modulos/document-types/update.png", width: screenshot_width),
     caption: [Vista de actualización de tipos de documentos],
 )
 
@@ -722,7 +723,7 @@ La vista de eliminación de un tipo de documento permite confirmar la eliminaci�
 - *Cancelar*: Permite cancelar la eliminación y volver a la vista anterior sin realizar cambios.
 
 #figure(
-    image("../imagenes/modulos/document-types/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/document-types/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de tipos de documentos],
 )
 
@@ -757,8 +758,23 @@ La vista del listado de tipos de activos proporciona una tabla con información 
 - *Eliminar Tipo de Activo*: Permite a los administradores eliminar tipos de activos.
 
 #figure(
-    image("../imagenes/modulos/asset-types/list.png", width: screenshot_size),
+    image("../imagenes/modulos/asset-types/list.png", width: screenshot_width),
     caption: [Vista de listado de tipos de activos],
+)
+
+==== Creación de Tipos de Activos
+
+La vista de creación de tipos de activos permite a los administradores añadir nuevos tipos de activos al sistema. Esta interfaz incluye:
+
+- *Nombre*: Campo para ingresar el nombre del tipo de activo.
+
+Botones de acción:
+- *Guardar*: Guarda el nuevo tipo de activo.
+- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
+
+#figure(
+    image("../imagenes/modulos/asset-types/create.png", width: screenshot_width),
+    caption: [Vista de creación de tipos de activos],
 )
 
 ==== Detalle de Tipos de Activos
@@ -776,23 +792,8 @@ La vista de detalle de un tipo de activo muestra información específica sobre 
 - *Eliminar Tipo de Activo*: Permite eliminar el tipo de activo.
 
 #figure(
-    image("../imagenes/modulos/asset-types/detail.png", width: screenshot_size),
+    image("../imagenes/modulos/asset-types/detail.png", width: screenshot_width),
     caption: [Vista de detalle de tipos de activos],
-)
-
-==== Creación de Tipos de Activos
-
-La vista de creación de tipos de activos permite a los administradores añadir nuevos tipos de activos al sistema. Esta interfaz incluye:
-
-- *Nombre*: Campo para ingresar el nombre del tipo de activo.
-
-Botones de acción:
-- *Guardar*: Guarda el nuevo tipo de activo.
-- *Cancelar*: Cancela la operación y vuelve a la vista anterior sin realizar cambios.
-
-#figure(
-    image("../imagenes/modulos/asset-types/create.png", width: screenshot_size),
-    caption: [Vista de creación de tipos de activos],
 )
 
 ==== Modificación de Tipos de Activos
@@ -806,7 +807,7 @@ La vista de modificación de un tipo de activo permite al usuario actualizar la 
 - *Cancelar*: Cancela los cambios y regresa a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/asset-types/update.png", width: screenshot_size),
+    image("../imagenes/modulos/asset-types/update.png", width: screenshot_width),
     caption: [Vista de modificación de tipos de activos],
 )
 
@@ -819,7 +820,7 @@ La vista de eliminación de un tipo de activo confirma la eliminación del tipo 
 - *Botón Cancelar*: Cancela la acción de eliminación y regresa a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/asset-types/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/asset-types/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de tipos de activos],
 )
 
@@ -840,28 +841,8 @@ La vista de listado de activos muestra todos los activos registrados en el siste
 Además, se proporcionan opciones para añadir un nuevo activo, actualizar un activo existente o archivar un activo.
 
 #figure(
-    image("../imagenes/modulos/asset-types/list.png", width: screenshot_size),
+    image("../imagenes/modulos/asset-types/list.png", width: screenshot_width),
     caption: [Vista de listado de activos],
-)
-
-==== Detalle de Activos
-
-La vista de detalle de un activo muestra información específica sobre un activo en particular. Esta vista incluye los campos más relevantes:
-
-- *Código*: El identificador único del activo.
-- *Nombre*: El nombre del activo.
-- *Propietario*: El usuario responsable del activo.
-- *Tipo*: El tipo al que pertenece el activo.
-- *Criticidad*: El nivel de criticidad del activo.
-- *Clasificación*: La clasificación del activo según su sensibilidad.
-
-*Acciones disponibles:*
-- *Archivar*: Permite archivar el activo.
-- *Actualizar Activo*: Permite editar la información del activo.
-
-#figure(
-    image("../imagenes/modulos/assets/detail.png", width: screenshot_size),
-    caption: [Vista de detalle de activos],
 )
 
 ==== Creación de Activos
@@ -881,8 +862,28 @@ La vista de creación de un activo permite ingresar la información necesaria pa
 - *Cancelar*: Permite cancelar la creación del activo y regresar a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/assets/create.png", width: screenshot_size),
+    image("../imagenes/modulos/assets/create.png", width: screenshot_width),
     caption: [Vista de creación de activos],
+)
+
+==== Detalle de Activos
+
+La vista de detalle de un activo muestra información específica sobre un activo en particular. Esta vista incluye los campos más relevantes:
+
+- *Código*: El identificador único del activo.
+- *Nombre*: El nombre del activo.
+- *Propietario*: El usuario responsable del activo.
+- *Tipo*: El tipo al que pertenece el activo.
+- *Criticidad*: El nivel de criticidad del activo.
+- *Clasificación*: La clasificación del activo según su sensibilidad.
+
+*Acciones disponibles:*
+- *Archivar*: Permite archivar el activo.
+- *Actualizar Activo*: Permite editar la información del activo.
+
+#figure(
+    image("../imagenes/modulos/assets/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de activos],
 )
 
 ==== Modificación de Activos
@@ -902,7 +903,7 @@ La vista de modificación de un activo permite editar la información existente 
 - *Cancelar*: Permite cancelar la edición y regresar a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/assets/update.png", width: screenshot_size),
+    image("../imagenes/modulos/assets/update.png", width: screenshot_width),
     caption: [Vista de modificación de activos],
 )
 
@@ -918,7 +919,7 @@ La vista de archivado de un activo permite confirmar la acción de archivar un a
 - *Cancelar*: Cancela la acción de archivado y regresa a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/assets/archive.png", width: screenshot_size),
+    image("../imagenes/modulos/assets/archive.png", width: screenshot_width),
     caption: [Vista de archivado de activos],
 )
 
@@ -953,8 +954,29 @@ La vista de listado de riesgos muestra una tabla con los riesgos existentes en e
 - *Eliminar Riesgo*: Permite eliminar un riesgo del sistema.
 
 #figure(
-    image("../imagenes/modulos/risks/list.png", width: screenshot_size),
+    image("../imagenes/modulos/risks/list.png", width: screenshot_width),
     caption: [Vista de listado de riesgos],
+)
+
+==== Crear Riesgo
+
+La vista para crear un nuevo riesgo permite ingresar los detalles necesarios para registrar un riesgo en el sistema. Los campos más relevantes incluyen:
+
+- *Activo*: Selección del activo asociado al riesgo.
+- *Control*: Selección del control asociado al riesgo.
+- *Título*: Nombre del riesgo.
+- *Responsable*: Usuario responsable del riesgo.
+- *Severidad*: Nivel de severidad del riesgo.
+- *Probabilidad*: Probabilidad de que ocurra el riesgo.
+- *Tratamiento*: Tratamiento asignado al riesgo.
+
+*Acciones disponibles:*
+- *Guardar*: Permite registrar el nuevo riesgo en el sistema.
+- *Cancelar*: Permite cancelar la creación del riesgo.
+
+#figure(
+    image("../imagenes/modulos/risks/create.png", width: screenshot_width),
+    caption: [Vista de creación de riesgos],
 )
 
 ==== Detalle de Riesgos
@@ -976,29 +998,8 @@ Además, se listan los activos, controles y riesgos residuales relacionados con 
 - *Eliminar Riesgo*: Permite eliminar el riesgo del sistema.
 
 #figure(
-    image("../imagenes/modulos/risks/detail.png", width: screenshot_size),
+    image("../imagenes/modulos/risks/detail.png", width: screenshot_width),
     caption: [Vista de detalle de riesgos],
-)
-
-==== Crear Riesgo
-
-La vista para crear un nuevo riesgo permite ingresar los detalles necesarios para registrar un riesgo en el sistema. Los campos más relevantes incluyen:
-
-- *Activo*: Selección del activo asociado al riesgo.
-- *Control*: Selección del control asociado al riesgo.
-- *Título*: Nombre del riesgo.
-- *Responsable*: Usuario responsable del riesgo.
-- *Severidad*: Nivel de severidad del riesgo.
-- *Probabilidad*: Probabilidad de que ocurra el riesgo.
-- *Tratamiento*: Tratamiento asignado al riesgo.
-
-*Acciones disponibles:*
-- *Guardar*: Permite registrar el nuevo riesgo en el sistema.
-- *Cancelar*: Permite cancelar la creación del riesgo.
-
-#figure(
-    image("../imagenes/modulos/risks/create.png", width: screenshot_size),
-    caption: [Vista de creación de riesgos],
 )
 
 ==== Modificar Riesgo
@@ -1018,7 +1019,7 @@ La vista para modificar un riesgo existente permite editar los detalles del ries
 - *Cancelar*: Permite cancelar la modificación del riesgo.
 
 #figure(
-    image("../imagenes/modulos/risks/update.png", width: screenshot_size),
+    image("../imagenes/modulos/risks/update.png", width: screenshot_width),
     caption: [Vista de modificación de riesgos],
 )
 
@@ -1031,7 +1032,7 @@ La vista para eliminar un riesgo permite confirmar la eliminación de un riesgo 
 - *Cancelar*: Permite cancelar la eliminación del riesgo.
 
 #figure(
-    image("../imagenes/modulos/risks/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/risks/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de riesgos],
 )
 
@@ -1074,8 +1075,23 @@ La vista de listado de procesos muestra una lista de todos los procesos existent
 - *Eliminar Proceso*: Permite eliminar el proceso.
 
 #figure(
-    image("../imagenes/modulos/processes/list.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/list.png", width: screenshot_width),
     caption: [Vista de listado de procesos],
+)
+
+==== Crear Proceso
+
+La vista de creación de un proceso permite a los usuarios añadir un nuevo proceso al sistema. Esta vista incluye los siguientes campos:
+
+- *Nombre*: El nombre del proceso.
+
+*Acciones disponibles:*
+- *Guardar*: Permite guardar el nuevo proceso.
+- *Cancelar*: Permite cancelar la creación del proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/create.png", width: screenshot_width),
+    caption: [Vista de creación de proceso],
 )
 
 ==== Detalle de Proceso
@@ -1094,23 +1110,8 @@ La vista de detalle de un proceso muestra información específica sobre un proc
 - *Eliminar Proceso*: Permite eliminar el proceso.
 
 #figure(
-    image("../imagenes/modulos/processes/detail.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/detail.png", width: screenshot_width),
     caption: [Vista de detalle de proceso],
-)
-
-==== Crear Proceso
-
-La vista de creación de un proceso permite a los usuarios añadir un nuevo proceso al sistema. Esta vista incluye los siguientes campos:
-
-- *Nombre*: El nombre del proceso.
-
-*Acciones disponibles:*
-- *Guardar*: Permite guardar el nuevo proceso.
-- *Cancelar*: Permite cancelar la creación del proceso.
-
-#figure(
-    image("../imagenes/modulos/processes/create.png", width: screenshot_size),
-    caption: [Vista de creación de proceso],
 )
 
 ==== Actualización de Proceso
@@ -1124,7 +1125,7 @@ La vista de actualización de un proceso permite modificar la información exist
 - *Cancelar*: Cancela la actualización y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/processes/update.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/update.png", width: screenshot_width),
     caption: [Vista de actualización de proceso],
 )
 
@@ -1139,7 +1140,7 @@ La vista de eliminación de un proceso permite confirmar la eliminación de un p
 - *Cancelar*: Cancela la eliminación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/processes/delete.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/delete.png", width: screenshot_width),
     caption: [Vista de eliminación de proceso],
 )
 
@@ -1158,7 +1159,7 @@ La vista de creación de una versión de proceso permite definir una nueva versi
 - *Cancelar*: Cancela la acción y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/processes/version_create.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/version_create.png", width: screenshot_width),
     caption: [Vista de creación de versión de proceso],
 )
 
@@ -1183,7 +1184,7 @@ La vista de detalle de una versión de proceso muestra la información específi
 - *Eliminar versión del proceso*: Permite eliminar esta versión del proceso.
 
 #figure(
-    image("../imagenes/modulos/processes/version_detail.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/version_detail.png", width: screenshot_width),
     caption: [Vista de detalle de versión de proceso],
 )
 
@@ -1202,8 +1203,21 @@ La vista de actualización de una versión de proceso permite editar la informac
 - *Cancelar*: Cancela la operación de actualización y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/processes/version_update.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/version_update.png", width: screenshot_width),
     caption: [Vista de actualización de versión de proceso],
+)
+
+==== Publicación de una Versión de Proceso
+
+La vista de publicación de una versión de proceso permite confirmar la publicación de una versión específica de un proceso. Esta vista muestra un mensaje de confirmación para asegurar que realmente se desea publicar la versión del proceso.
+
+*Acciones disponibles:*
+- *Publicar*: Confirma la publicación de la versión del proceso.
+- *Cancelar*: Cancela la acción de publicación y vuelve a la vista de detalle de la versión del proceso.
+
+#figure(
+    image("../imagenes/modulos/processes/version_publish.png", width: screenshot_width),
+    caption: [Vista de publicación de versión de proceso],
 )
 
 ==== Eliminación de Versión de Proceso
@@ -1217,7 +1231,7 @@ La vista de eliminación de una versión de proceso permite confirmar la acción
 - *Cancelar*: Cancela la operación de eliminación y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/processes/version_delete.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/version_delete.png", width: screenshot_width),
     caption: [Vista de eliminación de versión de proceso],
 )
 
@@ -1236,7 +1250,7 @@ La vista de creación de una actividad de versión de proceso permite definir un
 - *Cancelar*: Cancela la creación de la actividad y vuelve a la vista anterior.
 
 #figure(
-    image("../imagenes/modulos/processes/activity_create.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/activity_create.png", width: screenshot_width),
     caption: [Vista de creación de actividad de versión de proceso],
 )
 
@@ -1259,7 +1273,7 @@ La vista de detalle de una actividad de versión de proceso muestra la informaci
 - *Eliminar actividad del proceso*: Permite eliminar la actividad del proceso.
 
 #figure(
-    image("../imagenes/modulos/processes/activity_detail.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/activity_detail.png", width: screenshot_width),
     caption: [Vista de detalle de actividad de versión de proceso],
 )
 
@@ -1278,7 +1292,7 @@ La vista de actualización de una actividad de versión de proceso permite edita
 - *Cancelar*: Cancela la edición y vuelve a la vista de detalle de la actividad.
 
 #figure(
-    image("../imagenes/modulos/processes/activity_update.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/activity_update.png", width: screenshot_width),
     caption: [Vista de actualización de actividad de versión de proceso],
 )
 
@@ -1291,6 +1305,124 @@ La vista de eliminación de una actividad de versión de proceso permite confirm
 - *Cancelar*: Cancela la acción de eliminación y vuelve a la vista de detalle de la actividad.
 
 #figure(
-    image("../imagenes/modulos/processes/activity_delete.png", width: screenshot_size),
+    image("../imagenes/modulos/processes/activity_delete.png", width: screenshot_width),
     caption: [Vista de eliminación de actividad de versión de proceso],
+)
+
+==== Listado de Instancias de Procesos
+
+La vista de listado de instancias de procesos muestra una tabla con las instancias de los procesos que han sido creadas. Los puntos más importantes de esta vista son:
+
+- *Nombre*: El nombre de la instancia del proceso.
+- *Comentario*: Comentarios opcionales sobre la instancia del proceso.
+- *Actualizado el*: Fecha y hora de la última actualización de la instancia del proceso.
+- *Actualizado por*: El usuario que realizó la última actualización.
+- *Completado*: Indica si la instancia del proceso está completada.
+- *Completado el*: Fecha y hora en que se completó la instancia del proceso, si aplica.
+
+*Acciones disponibles:*
+- *Iniciar proceso*: Permite crear una nueva instancia de un proceso.
+- *Eliminar instancia de proceso*: Permite eliminar una instancia específica de un proceso.
+
+#figure(
+    image("../imagenes/modulos/process-instances/list.png", width: screenshot_width),
+    caption: [Vista de listado de instancias de procesos],
+)
+
+==== Creación de Instancia de Proceso
+
+La vista de creación de una instancia de proceso permite iniciar una nueva instancia de un proceso existente. Los puntos más importantes de esta vista son:
+
+- *Proceso*: Selección del proceso del cual se va a crear una instancia.
+- *Comentario (opcional)*: Campo opcional para añadir comentarios relacionados con la instancia del proceso.
+
+*Acciones disponibles:*
+- *Guardar*: Permite crear la instancia de proceso con la información proporcionada.
+- *Cancelar*: Permite cancelar la creación de la instancia de proceso.
+
+#figure(
+    image("../imagenes/modulos/process-instances/create.png", width: screenshot_width),
+    caption: [Vista de creación de instancia de proceso],
+)
+
+==== Detalle de la Instancia de un Proceso
+
+La vista de detalle de la instancia de un proceso muestra la información relevante sobre una instancia específica de un proceso y sus actividades. Los puntos más importantes de esta vista son:
+
+- *Versión del Proceso*: Muestra la versión del proceso de la cual se ha creado la instancia.
+- *Comentario*: Comentario opcional añadido al crear la instancia.
+- *Creado en*: Fecha y hora de creación de la instancia.
+- *Creado por*: Usuario que creó la instancia.
+- *Actualizado en*: Fecha y hora de la última actualización de la instancia.
+- *Actualizado por*: Usuario que realizó la última actualización de la instancia.
+- *Completado*: Indica si la instancia del proceso ha sido completada.
+- *Completado en*: Fecha y hora de la finalización del proceso, si ha sido completado.
+- *Actividades*: Lista de actividades asociadas a la instancia del proceso, incluyendo:
+  - *Título*: Nombre de la actividad.
+  - *Descripción*: Descripción de la actividad.
+  - *Asignado a*: Usuario al que se le ha asignado la actividad.
+  - *Completado*: Indica si la actividad ha sido completada.
+  - *Completado en*: Fecha y hora de la finalización de la actividad, si ha sido completada.
+
+*Acciones disponibles:*
+- *Eliminar Instancia del Proceso*: Permite eliminar la instancia del proceso.
+- *Completar Actividad*: Permite marcar una actividad como completada.
+
+#figure(
+    image("../imagenes/modulos/process-instances/detail.png", width: screenshot_width),
+    caption: [Vista de detalle de instancia de proceso],
+)
+
+==== Eliminación de la Instancia de un Proceso
+
+La vista de eliminación de la instancia de un proceso permite al usuario confirmar la eliminación de una instancia específica de un proceso. Los puntos más importantes de esta vista son:
+
+- *Confirmación de Eliminación*: Mensaje de confirmación para asegurar que el usuario realmente desea eliminar la instancia del proceso seleccionada.
+
+*Acciones disponibles:*
+- *Confirmar*: Permite eliminar la instancia de proceso seleccionada.
+- *Cancelar*: Permite cancelar la eliminación de la instancia de proceso.
+
+#figure(
+    image("../imagenes/modulos/process-instances/delete.png", width: screenshot_width),
+    caption: [Vista de eliminación de instancia de proceso],
+)
+
+==== Detalle de la Actividad de una Instancia de Proceso
+
+La vista de detalle de la actividad de una instancia de proceso muestra la información relevante de una actividad específica dentro de una instancia de proceso. Los puntos más importantes de esta vista son:
+
+- *Proceso Instancia*: Muestra la instancia de proceso a la que pertenece la actividad.
+- *Actividad*: Nombre de la actividad.
+- *Responsable*: Persona asignada para realizar la actividad.
+- *Descripción*: Detalles y descripción de la actividad.
+- *Entregables*: Lista de entregables relacionados con la actividad (si los hay).
+- *Completado*: Estado de la actividad, indicando si está completada o no.
+- *Completado en*: Fecha y hora en que se completó la actividad (si está completada).
+
+*Acciones disponibles:*
+- *Completar Actividad*: Permite marcar la actividad como completada.
+- *Eliminar Actividad*: Permite eliminar la actividad de la instancia de proceso.
+
+#figure(
+    image("../imagenes/modulos/process-instances/activity_detail.png", width: screenshot_width),
+    caption: [Vista de detalle de la actividad de una instancia de proceso],
+)
+
+==== Finalización de Actividad de una Instancia de Proceso
+
+La vista de finalización de la actividad de una instancia de proceso permite registrar la evidencia de la finalización de una actividad específica. Los puntos más importantes de esta vista son:
+
+- *Archivo de evidencia (opcional)*: Permite subir un archivo como evidencia de la finalización de la actividad.
+- *URL de evidencia (opcional)*: Permite ingresar una URL que sirva como evidencia de la finalización de la actividad.
+- *Texto (opcional)*: Campo para ingresar un texto que sirva como evidencia de la finalización de la actividad.
+- *Correo electrónico para notificar (opcional)*: Permite ingresar un correo electrónico al cual se notificará una vez completada la actividad.
+
+*Acciones disponibles:*
+- *Guardar*: Permite registrar la finalización de la actividad con la evidencia proporcionada.
+- *Cancelar*: Permite cancelar la operación de registro de finalización de la actividad.
+
+#figure(
+    image("../imagenes/modulos/process-instances/activity_complete.png", width: screenshot_width),
+    caption: [Vista de finalización de actividad de una instancia de proceso],
 )

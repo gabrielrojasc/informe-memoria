@@ -9,6 +9,8 @@
     codigo: "CC6909", // CC6908 para malla v3, CC6907 para malla v5
 )
 
+#include "includes/resumen.typ"
+#pagebreak()
 #include "includes/introduccion.typ"
 #pagebreak()
 #include "includes/situacion_actual.typ"
