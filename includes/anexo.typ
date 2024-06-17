@@ -1,4 +1,3 @@
-= Anexo
 == Modelo de datos módulo de Usuarios <erd-users>
 
 1. *User*: guarda los datos de los usuarios registrados.

@@ -1,12 +1,12 @@
-= Introducción
-// Motiva y resume el tema
-//// Contexto
-////// En el caso de una Práctica Extendida, describe la organización, equipo, rol del supervisor, formas de trabajar dentro de la organización, etc.
-//// Problema y Relevancia
-//// Objetivos
-//// Opcional: Descripción general de la solución
-//// Opcional: Resumen de los resultados
-//// Opcional: Estructura de la memoria
+// Introducción
+//// Motiva y resume el tema
+////// Contexto
+//////// En el caso de una Práctica Extendida, describe la organización, equipo, rol del supervisor, formas de trabajar dentro de la organización, etc.
+////// Problema y Relevancia
+////// Objetivos
+////// Opcional: Descripción general de la solución
+////// Opcional: Resumen de los resultados
+////// Opcional: Estructura de la memoria
 
 == Contexto
 

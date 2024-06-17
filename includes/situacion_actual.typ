@@ -1,5 +1,19 @@
-= Situación Actual
-// Describe en más detalle la literatura, las técnicas, las soluciones existentes, etc., relacionadas con el tema del trabajo. Justificar por qué es necesario un trabajo novedoso.
+// Estado del Arte
+//// Conceptos involucrados
+////// Tecnologías consideradas
+////// Metodologías de desarrollo
+////// Algoritmos existentes
+////// Arquitecturas estándar
+////// Soluciones existentes (y sus limitaciones)
+//// Concentra la mayor parte de las citas
+//// Alguien que conoce del tema podría saltearse este capítulo e igual comprender la memoria
+//// Alguien que ha tomado todos los cursos obligatorios del DCC (como uds.) podría leer el capítulo y luego comprender la memoria
+//
+// Situación Actual
+//// Describe en más detalle el contexto del trabajo que se va a desarrollar para entender la situación antes de empezar a desarrollar la solución
+//// En comparación con el Estado del Arte, puede involucrar trabajo original para diagnosticar problemas, requisitos, etc., por ejemplo, usando encuestas con usuarios, ingeniería reversa para entender un sistema actual, etc.
+//// También puede hablar de posibles tecnologías aplicables, compararlas, etc.
+//// En casos donde, por ejemplo, no se necesitan técnicas de la literatura, etc., puede reemplazar el Estado del Arte.
 
 Hoy en día existen programas capaces de manejar la auditoría para SGSI, la mayoría de estos programas son soluciones de software como servicio (SaaS, por sus siglas en inglés), pero también existen algunas soluciones de código abierto. En esta sección hablaremos de principalmente 2 aplicaciones, MyLenio y Gapps, siendo respectivamente una solución de software y otra de código abierto.
 

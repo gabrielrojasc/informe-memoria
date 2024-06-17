@@ -1,6 +1,11 @@
-#let screenshot_width = 60%
+// Solución
+//// Descripción de la solución y cómo se espera que la solución vaya a resolver el problema planteado
+//// Justificación del diseño de la solución, y de los recursos usados
+//// No es apropiado incluir código más allá de pequeños ejemplos; si es necesario poner código en un apéndice
+//// Puede variar mucho dependiendo del tema
+//// Puede ser dividido en varios capítulos (p.ej., un capítulo de Front-end , un capítulo de Back -end , etc.)
 
-= Solución
+#let screenshot_width = 60%
 
 El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo los estándares de la norma ISO 27001. Para lograr esto, se han definido varios módulos, cada uno con su conjunto de funcionalidades específicas. A continuación, se detalla la funcionalidad, historias de usuario y modelo de datos utilizado para cada uno de estos módulos: documentos, activos, riesgos y procesos.
 
