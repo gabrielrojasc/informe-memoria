@@ -1195,18 +1195,21 @@ El módulo de procesos es donde se definen y gestionan los procesos. El principa
 
 === Procesos
 
-Los procesos son
+Los procesos son conjuntos de actividades que se deben realizar para cumplir con los controles del SGSI. Cada proceso puede tener varias versiones, y cada versión puede definir una serie de actividades específicas. Los procesos son fundamentales para estructurar y organizar el cumplimiento de los requisitos del SGSI.
 
 === Actividades
 
-Las actividades son
+Las actividades son acciones específicas que deben llevarse a cabo como parte de un proceso. Cada actividad tiene un objetivo claro y puede requerir la generación de entregables o evidencia de su cumplimiento. Las actividades están asignadas a grupos y sus instancias a usuarios específicos y pueden tener una recurrencia definida, es decir, pueden ser actividades recurrentes que se deben realizar periódicamente.
 
 === Historias de Usuario
 
-+ Como administrador, quiero poder definir procesos manuales para generar evidencia de cierto control.
-+ Como administrador, quiero poder definir procesos recurrentes para generar evidencia de cierto control de manera periódica.
-+ Como administrador, quiero poder asignar procesos a los usuarios directamente o indirectamente a través de grupos para generar evidencia de los controles.
-+ Como usuario, quiero ser notificado al tener un nuevo proceso asignado para poder completarlo rápidamente.
++ Como administrador, quiero poder definir procesos, para generar evidencia de cierto control.
++ Como administrador, necesito la capacidad de versionar los procesos y establecer un flujo de publicación para gestionar adecuadamente las actualizaciones y revisiones.
++ Como usuario, quiero poder crear instancias de procesos en los cuales alguno de mis grupos esta como asignado a la primera actividad.
++ Como usuario, quiero que se me notifique al tener una actividad de una instancia de un proceso asignado.
++ Como usuario, quiero que en la página principal se muestren los procesos en los cuales estoy asignado a la primera actividad.
++ Como usuario, quiero que en la página principal se muestren los procesos en los cuales alguno de mis grupos este asignado a la primera actividad.
++ Como usuario, deseo que en la página principal se muestren las instancias de proceso en las cuales estoy asignado a al menos una instancia de actividad.
 
 === Interfaz de usuario
 
@@ -1395,7 +1398,7 @@ La vista de creación de una actividad de versión de proceso permite definir un
 - *Descripción*: Una descripción detallada de la actividad.
 - *Entregables (opcional)*: Lista de entregables asociados a la actividad.
 - *Grupos asignados*: Grupos responsables de la actividad.
-- *Correo electrónico para notificaciones (opcional)*: Correo electrónico para recibir notificaciones de finalización.
+- *Correo electrónico para notificaciones (opcional)*: Correo electrónico para recibir notificaciones de inicio de la actividad.
 
 _Acciones disponibles:_
 - *Guardar*: Guarda la nueva actividad de la versión del proceso.
@@ -1414,7 +1417,7 @@ La vista de detalle de una actividad de versión de proceso muestra la informaci
 - *Descripción*: Una descripción detallada de la actividad.
 - *Entregables*: Elementos que deben ser entregados como resultado de la actividad.
 - *Grupos asignados*: Grupos responsables de ejecutar la actividad.
-- *Correo electrónico para notificaciones*: Correo electrónico para recibir notificaciones de finalización de la actividad.
+- *Correo electrónico para notificaciones*: Correo electrónico para recibir notificaciones del inicio de la actividad.
 - *Creado el*: Fecha y hora en que se creó la actividad.
 - *Creado por*: Usuario que creó la actividad.
 - *Actualizado el*: Fecha y hora de la última actualización de la actividad.
