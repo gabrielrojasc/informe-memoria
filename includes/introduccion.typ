@@ -80,28 +80,58 @@ En última instancia, este trabajo de título no se limita a resolver un problem
 
 == Descripción general de la solución
 
-La solución desarrollada para la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de Magnet se centra en la implementación de una plataforma integral que sigue los estándares de la norma ISO 27001. Esta plataforma está compuesta por varios módulos, cada uno encargado de un aspecto crucial del SGSI: documentos, activos, riesgos y procesos.
+El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo los estándares de la norma ISO 27001. La solución está estructurada en varios módulos, cada uno diseñado para cubrir aspectos específicos del SGSI: documentos, activos, riesgos y procesos. A continuación se presenta una descripción general de cada módulo y sus funcionalidades clave:
+
+=== Módulo de Documentos
+Este módulo centraliza la gestión de todos los documentos relevantes para el SGSI. Los documentos pueden ser políticas, procedimientos, registros y otros tipos de documentación necesarios para demostrar la conformidad con la norma ISO 27001. Las funcionalidades incluyen:
+- Creación, edición y eliminación de documentos.
+- Versionado de documentos para mantener un registro histórico.
+- Aprobación de versiones de documentos.
+- Vinculación de documentos con controles específicos del SGSI.
+- Gestión de la evidencia asociada a los documentos.
+
+=== Módulo de Activos
+Este módulo permite registrar y gestionar todos los activos de la empresa que son críticos para la seguridad de la información. Los activos pueden ser hardware, software, datos, personas, entre otros. Las funcionalidades incluyen:
+- Creación, edición y eliminación de activos.
+- Clasificación de activos por tipo.
+- Asignación de roles a los activos para definir responsabilidades.
+- Evaluación y actualización del estado de los activos.
+
+=== Módulo de Riesgos
+Este módulo está diseñado para identificar, evaluar y gestionar los riesgos asociados a los activos de la empresa. Cada riesgo está relacionado con un control específico del SGSI. Las funcionalidades incluyen:
+- Identificación y registro de riesgos.
+- Evaluación de la severidad y probabilidad de los riesgos.
+- Asignación de responsables y tratamientos para cada riesgo.
+- Monitoreo y actualización del estado de los riesgos.
+
+=== Módulo de Procesos
+Este módulo define y gestiona los procesos necesarios para cumplir con los controles del SGSI. Un proceso está compuesto por una serie de actividades que deben realizarse para generar evidencia de cumplimiento. Las funcionalidades incluyen:
+- Definición de procesos y sus versiones.
+- Asignación de actividades a grupos y usuarios.
+- Gestión de la recurrencia y notificaciones de actividades.
+- Monitoreo del cumplimiento de las actividades y generación de evidencia.
 
 === Tecnologías Utilizadas
+La solución utiliza una combinación de tecnologías robustas y escalables, incluyendo:
+- *Django*: Como framework principal para el desarrollo del backend.
+- *PostgreSQL*: Para la gestión de la base de datos.
+- *Docker*: Para la contenedorización y despliegue de la aplicación.
+- *TypeScript*: Para el desarrollo del frontend, mejorando la mantenibilidad del código.
+- *Redis y Celery*: Para la gestión de tareas en segundo plano.
+- *Nginx y Gunicorn*: Para el manejo eficiente de solicitudes web.
 
-Para abordar los desafíos de escalabilidad, rendimiento y seguridad, la plataforma se ha desarrollado utilizando tecnologías robustas y bien probadas, como Django, PostgreSQL, Docker y TypeScript. Estas tecnologías garantizan una integración fluida y un alto rendimiento, permitiendo que la solución se adapte a las necesidades cambiantes de la organización.
+=== Arquitectura de Despliegue
+El despliegue de la solución se realiza en contenedores Docker, lo que facilita su escalabilidad y mantenimiento. La infraestructura incluye:
+- *Nginx*: Para el manejo de solicitudes HTTP/HTTPS.
+- *Gunicorn*: Para servir la aplicación Django.
+- *Redis*: Para la caché y gestión de colas de tareas.
+- *PostgreSQL*: Para el almacenamiento de datos.
+- *Amazon S3*: Para el almacenamiento de archivos estáticos y de medios.
 
-=== Módulos del Sistema
+=== Escalabilidad y Rendimiento
+La solución está diseñada para ser escalable, permitiendo la replicación de contenedores detrás de un balanceador de carga según sea necesario. La base de datos PostgreSQL y su capacidad de escalabilidad vertical y uso de réplicas para lectura aseguran un rendimiento eficiente incluso con aumentos en la carga de datos.
 
-1. *Módulo de Documentos*: Facilita la gestión de la documentación necesaria para el SGSI, incluyendo la creación, actualización y versionado de documentos. También permite la aprobación de documentos y la generación de evidencia de su revisión y lectura.
+=== Seguridad y Cumplimiento
+La seguridad es una prioridad en el diseño de la solución, con medidas como la verificación SHA-256 para archivos y la gestión de permisos detallada para usuarios y roles. La solución facilita el cumplimiento con la norma ISO 27001, proporcionando las herramientas necesarias para la gestión de la seguridad de la información y la generación de evidencia para auditorías.
 
-2. *Módulo de Activos*: Permite llevar un inventario detallado de todos los activos de la empresa, clasificándolos por tipo y criticidad. Este módulo asegura que cada activo esté adecuadamente registrado y gestionado dentro del SGSI.
-
-3. *Módulo de Riesgos*: Ayuda en la identificación, evaluación y gestión de los riesgos asociados a los activos. Los riesgos se pueden clasificar y tratar según su severidad y probabilidad, asegurando un enfoque proactivo en la mitigación de amenazas.
-
-4. *Módulo de Procesos*: Define y gestiona los procesos necesarios para la implementación y mantenimiento del SGSI. Este módulo permite la asignación de actividades a los usuarios, garantizando que se sigan los procedimientos establecidos y se genere la evidencia necesaria para las auditorías.
-
-=== Infraestructura y Despliegue
-
-La plataforma se despliega en un entorno containerizado utilizando Docker, lo que facilita su replicación y escalabilidad. Los servicios se ejecutan en contenedores separados, gestionados por Docker Compose, y se pueden desplegar en servicios en la nube como DigitalOcean. La arquitectura incluye componentes como Nginx, Gunicorn y Redis, que aseguran un rendimiento óptimo y una gestión eficiente de las tareas en segundo plano.
-
-=== Beneficios
-
-La implementación de esta solución no solo asegura el cumplimiento de los requisitos de la ISO 27001, sino que también proporciona a Magnet una herramienta estratégica para la gestión continua de la seguridad de la información. La plataforma es escalable y adaptable, lo que permite su uso y personalización para otras organizaciones con necesidades similares, contribuyendo así al fortalecimiento de la seguridad informática en un entorno empresarial cada vez más digitalizado.
-
-Esta solución integral, basada en prácticas y tecnologías modernas, posiciona a Magnet a la vanguardia de la gestión de la seguridad de la información, asegurando la confidencialidad, integridad y disponibilidad de sus activos digitales.
+En resumen, la solución desarrollada proporciona una plataforma integral para la gestión del SGSI, alineada con los estándares de la norma ISO 27001, y ofrece a Magnet una herramienta estratégica para asegurar la conformidad y fortalecer su postura de seguridad informática.
