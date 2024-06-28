@@ -8,6 +8,8 @@
 ////// Opcional: Resumen de los resultados
 ////// Opcional: Estructura de la memoria
 
+En el mundo actual, donde la información se ha convertido en uno de los activos más valiosos para las organizaciones, la seguridad de la información es crucial para la continuidad y la confianza en las operaciones empresariales. La presente introducción abordará el contexto general del proyecto, el problema y su relevancia, los objetivos planteados, y finalmente, una descripción general de la solución implementada.
+
 == Contexto
 
 En el vertiginoso panorama actual, caracterizado por la revolución digital y la saturación de datos e información, la seguridad de la información emerge como un baluarte fundamental para asegurar la continuidad y la confianza en las operaciones empresariales. En este contexto, la constante evolución de las amenazas cibernéticas y la creciente interconexión de sistemas han convertido la salvaguarda de la confidencialidad, integridad y disponibilidad de la información en una prioridad crítica, desafiando a las organizaciones a mantenerse a la vanguardia de la seguridad informática.
@@ -59,11 +61,11 @@ Las herramientas utilizadas incluyen Jira para la gestión de proyectos, Google 
 
 == Problema y Relevancia
 
-La creciente sofisticación de las amenazas cibernéticas y la diversificación de los vectores de ataque subrayan la relevancia y la urgencia de contar con un sistema de gestión de seguridad de la información robusto para proteger los activos digitales y salvaguardar la reputación de la empresa en el escenario empresarial actual.
+La creciente sofisticación de las amenazas cibernéticas y la diversificación de los vectores de ataque subrayan la relevancia y la urgencia de contar con un sistema de gestión de seguridad de la información robusto para proteger los activos digitales y salvaguardar la reputación de la empresa u organización en el escenario empresarial y regulatorio actual.
 
 No obstante, en medio de esta búsqueda de seguridad, las organizaciones enfrentan limitaciones al depender de soluciones externas para manejar la implementación y el almacenamiento de evidencia, piezas cruciales al momento de ser auditados para obtener certificaciones o demostrar el cumplimiento de leyes. Es en este punto crítico que surge la motivación para el desarrollo de una solución interna y personalizada, impulsada por las tendencias actuales hacia la autonomía y la adaptabilidad en el dinámico panorama de la seguridad de la información.
 
-Las empresas, ahora más que nunca, buscan soluciones que no solo cumplan con los requisitos regulatorios, como la ISO 27001, sino que también ofrezcan flexibilidad y capacidad de adaptación a las cambiantes condiciones del entorno digital. La ausencia de un sistema interno eficiente para la gestión de SGSI puede resultar en desafíos operativos, costos adicionales y riesgos incrementados de no conformidad con las normas establecidas, lo que podría tener consecuencias significativas en términos de sanciones y pérdida de confianza de los clientes.
+Las empresas, ahora más que nunca, buscan soluciones que no solo cumplan con estándares reconocidos, como la ISO 27001, sino que también ofrezcan flexibilidad y capacidad de adaptación a las cambiantes condiciones del entorno digital. La ausencia de un sistema interno eficiente para la gestión de SGSI puede resultar en desafíos operativos, costos adicionales y riesgos incrementados de no conformidad con las normas establecidas, lo que podría tener consecuencias significativas en términos de sanciones y pérdida de confianza de los clientes.
 
 == Objetivos
 
@@ -80,7 +82,7 @@ En última instancia, este trabajo de título no se limita a resolver un problem
 
 == Descripción general de la solución
 
-El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo los estándares de la norma ISO 27001. La solución está estructurada en varios módulos, cada uno diseñado para cubrir aspectos específicos del SGSI: documentos, activos, riesgos y procesos. A continuación se presenta una descripción general de cada módulo y sus funcionalidades clave:
+El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo las buenas prácticas definidas en los controles que fija el estándar ISO 27001. La solución está estructurada en varios módulos, cada uno diseñado para cubrir aspectos específicos del SGSI: documentos, activos, riesgos y procesos. A continuación se presenta una descripción general de cada módulo y sus funcionalidades clave:
 
 === Módulo de Documentos
 Este módulo centraliza la gestión de todos los documentos relevantes para el SGSI. Los documentos pueden ser políticas, procedimientos, registros y otros tipos de documentación necesarios para demostrar la conformidad con la norma ISO 27001. Las funcionalidades incluyen:
@@ -113,20 +115,20 @@ Este módulo define y gestiona los procesos necesarios para cumplir con los cont
 
 === Tecnologías Utilizadas
 La solución utiliza una combinación de tecnologías robustas y escalables, incluyendo:
-- *Django*: Como framework principal para el desarrollo del backend.
-- *PostgreSQL*: Para la gestión de la base de datos.
-- *Docker*: Para la contenedorización y despliegue de la aplicación.
-- *TypeScript*: Para el desarrollo del frontend, mejorando la mantenibilidad del código.
-- *Redis y Celery*: Para la gestión de tareas en segundo plano.
-- *Nginx y Gunicorn*: Para el manejo eficiente de solicitudes web.
+- *Django*: Framework principal para el desarrollo del backend.
+- *PostgreSQL*: La gestión de la base de datos.
+- *Docker*: La contenedorización y despliegue de la aplicación.
+- *TypeScript*: El desarrollo del frontend, mejorando la mantenibilidad del código.
+- *Redis y Celery*: La gestión de tareas en segundo plano.
+- *Nginx y Gunicorn*: El manejo eficiente de solicitudes web.
 
 === Arquitectura de Despliegue
 El despliegue de la solución se realiza en contenedores Docker, lo que facilita su escalabilidad y mantenimiento. La infraestructura incluye:
-- *Nginx*: Para el manejo de solicitudes HTTP/HTTPS.
-- *Gunicorn*: Para servir la aplicación Django.
-- *Redis*: Para la caché y gestión de colas de tareas.
-- *PostgreSQL*: Para el almacenamiento de datos.
-- *Amazon S3*: Para el almacenamiento de archivos estáticos y de medios.
+- *Nginx*: El manejo de solicitudes HTTP/HTTPS.
+- *Gunicorn*: Servir la aplicación Django.
+- *Redis*: La caché y gestión de colas de tareas.
+- *PostgreSQL*: El almacenamiento de datos.
+- *Amazon S3*: El almacenamiento de archivos estáticos y de medios.
 
 === Escalabilidad y Rendimiento
 La solución está diseñada para ser escalable, permitiendo la replicación de contenedores detrás de un balanceador de carga según sea necesario. La base de datos PostgreSQL y su capacidad de escalabilidad vertical y uso de réplicas para lectura aseguran un rendimiento eficiente incluso con aumentos en la carga de datos.
