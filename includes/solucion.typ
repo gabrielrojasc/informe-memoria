@@ -7,7 +7,7 @@
 
 #let screenshot_width = 60%
 
-El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo las buenas prácticas definidas en los controles que fija el estándar ISO 27001. Para lograr esto, se han definido varios módulos, cada uno con su conjunto de funcionalidades específicas. A continuación, se detalla la funcionalidad, historias de usuario y modelo de datos utilizado para cada uno de estos módulos: documentos, activos, riesgos y procesos.
+El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa. Para lograr esto, se han definido varios módulos, cada uno con su conjunto de funcionalidades específicas.
 
 == Tecnologías escogidas
 
@@ -55,23 +55,14 @@ Estos componentes se comunican a través de una red configurada por Docker Compo
 
 La siguiente figura muestra un diagrama detallado de la arquitectura de despliegue utilizando Docker Compose. En ella se puede observar cómo interactúan entre sí los diferentes componentes, proporcionando una visión clara de cómo se gestionan las solicitudes y tareas dentro del sistema.
 
-#figure(image("../imagenes/dpt/compose.png", width: 80%), caption: "Diagrama de la arquitectura utilizando Docker Compose")
+#figure(image("../imagenes/dpt/compose.png", width: 100%), caption: "Diagrama de la arquitectura utilizando Docker Compose")
 
 ==== Despliegue
 
-Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean consiste en ejecutar todos los servicios en una sola instancia de Droplet. Esto incluye los siguientes elementos:
+Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean consiste en ejecutar todos los servicios en una sola instancia de Droplet. Además, de ser necesario se puede tener un servicio de almacenamiento de datos en la nube. En este caso se tienen los siguientes elementos:
 
 - *Droplet de DigitalOcean*: Una instancia en la nube donde se ejecutan todos los servicios containerizados (Nginx, Django, Redis, Celery, PostgreSQL).
 - *Amazon S3*: Utilizado para almacenar archivos estáticos y de medios, lo que facilita la gestión y el escalado del almacenamiento de archivos.
-
-==== Flujo de Trabajo del Despliegue
-
-+ *Usuario*: Los usuarios realizan solicitudes a la aplicación a través de HTTP/HTTPS.
-+ *Nginx*: Recibe las solicitudes y las redirige al servidor Django.
-+ *Django (Gunicorn)*: Procesa las solicitudes de la aplicación, interactuando con la base de datos PostgreSQL y utilizando Redis para el caché y la cola de tareas.
-+ *Celery*: Ejecuta tareas en segundo plano, comunicándose con Redis para gestionar las colas de tareas.
-+ *PostgreSQL*: Maneja las consultas de la base de datos provenientes de Django y Celery.
-+ *Amazon S3*: Almacena archivos de medios y recursos estáticos, accesibles tanto por la aplicación Django como directamente por los usuarios.
 
 ==== Ventajas de esta Arquitectura
 
@@ -111,9 +102,7 @@ En resumen, los administradores desempeñan un papel integral en la gestión del
 
 == Módulo de Usuarios
 
-El módulo de usuarios es donde se guarda la información de los usuarios de la aplicación. Ya que el módulo de usuarios depende del módulo de autenticación proveído por Django, se agregan algunos modelos relacionados acá.
-
-Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte la sección @erd-users del anexo.
+El módulo de usuarios es donde se guarda la información de los usuarios de la aplicación. Ya que el módulo de usuarios depende del módulo de autenticación proveído por Django, se agregan algunos modelos relacionados acá. Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte la @erd-users del anexo.
 
 === Historias de Usuario
 
@@ -170,7 +159,7 @@ Para más detalles sobre las demás vistas del módulo de usuarios consulte la @
 
 == Módulo de Documentos
 
-El módulo de documentos es el repositorio central donde se guarda toda la información que define al SGSI. La información se puede dividir en controles, documentos y evidencia.
+El módulo de documentos es el repositorio central donde se guarda toda la información que define al SGSI. La información se puede dividir en controles, documentos y evidencia. Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte la @erd-documents del anexo.
 
 === Controles
 
@@ -214,7 +203,7 @@ La evidencia se refiere a la documentación y pruebas tangibles que demuestran l
 + Como administrador, quiero poder eliminar tipos de documentos que ya no son necesarios.
 
 === Interfaz de Usuario
-El flujo típico de un usuario comienza con la vista de listado de controles, donde puede visualizar todos los controles de seguridad definidos en el SGSI. Esta vista es fundamental para mantener una organización clara y accesible de los controles, facilitando su gestión y revisión.
+El flujo típico de un usuario en el módulo de documentos comienza con la vista de listado de controles, donde puede visualizar todos los controles de seguridad definidos en el SGSI. Esta vista es fundamental para mantener una organización clara y accesible de los controles, facilitando su gestión y revisión.
 
 #figure(
     image("../imagenes/modulos/controls/list.png", width: screenshot_width),
@@ -326,13 +315,20 @@ Para editar un tipo de documento existente, el administrador puede utilizar la v
     caption: "Vista de actualización de tipos de documentos"
 )
 
+Finalmente, para gestionar la evidencia, los usuarios pueden acceder a la vista de detalle de evidencia, donde se muestra toda la información relevante de una evidencia.
+
+#figure(
+    image("../imagenes/modulos/evidence/detail.png", width: screenshot_width),
+    caption: "Vista de detalle de evidencia"
+)
+
 Este flujo de trabajo asegura que todos los documentos, controles y evidencias del SGSI estén organizados y gestionados de manera eficiente, facilitando la conformidad con las normas y regulaciones de seguridad de la información.
 
 Para más detalles sobre otras vistas del módulo de documentos consulte la @document-views del anexo.
 
 == Módulo de Activos
 
-El módulo de activos es donde se preserva un inventario con todos los activos de la empresa pertinentes a la seguridad de la información. Su principal componente son los activos y los roles de los activos.
+El módulo de activos es donde se preserva un inventario con todos los activos de la empresa pertinentes a la seguridad de la información. Su principal componente son los activos y los roles de los activos. Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte la @erd-assets del anexo.
 
 === Activos
 
@@ -459,7 +455,7 @@ Para más detalles sobre otras vistas del módulo de activos, consulte la @asset
 
 == Módulo de Riesgos
 
-El módulo de riesgos es donde se gestiona y asigna un riesgo a cada uno de los activos, evaluando su gravedad y probabilidad. Su único componente es el riesgo.
+El módulo de riesgos es donde se gestiona y asigna un riesgo a cada uno de los activos, evaluando su gravedad y probabilidad. Su único componente es el riesgo. Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte la @erd-risks del anexo.
 
 === Riesgos
 
@@ -512,7 +508,7 @@ Este flujo de trabajo asegura que todos los riesgos estén organizados y gestion
 
 == Módulo de Procesos
 
-El módulo de procesos es donde se definen y gestionan los procesos. El principal propósito de los procesos es generar evidencia de que los procesos definidos en los controles del SGSI se están cumpliendo y así poder cumplir con leyes u obtener certificaciones, al momento de ser auditados.
+El módulo de procesos es donde se definen y gestionan los procesos. El principal propósito de los procesos es generar evidencia de que los procesos definidos en los controles del SGSI se están cumpliendo y así poder cumplir con leyes u obtener certificaciones, al momento de ser auditados. Para más detalles sobre la estructura de la base de datos y la relación entre las entidades, consulte la @erd-processes del anexo.
 
 === Procesos
 

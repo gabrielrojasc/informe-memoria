@@ -14,7 +14,7 @@ En el mundo actual, donde la información se ha convertido en uno de los activos
 
 En el vertiginoso panorama actual, caracterizado por la revolución digital y la saturación de datos e información, la seguridad de la información emerge como un baluarte fundamental para asegurar la continuidad y la confianza en las operaciones empresariales. En este contexto, la constante evolución de las amenazas cibernéticas y la creciente interconexión de sistemas han convertido la salvaguarda de la confidencialidad, integridad y disponibilidad de la información en una prioridad crítica, desafiando a las organizaciones a mantenerse a la vanguardia de la seguridad informática.
 
-Las organizaciones, en este desafío constante, se ven compelidas a garantizar que sus sistemas no solo cumplan con los estándares de seguridad, sino que también sigan las mejores prácticas establecidas. Es en este contexto que el Sistema de Gestión de Seguridad de la Información (SGSI), especialmente dentro del marco de la norma ISO 27001, emerge como una guía esencial para diseñar, implementar y mantener sistemas de seguridad robustos. La certificación ISO 27001, por ende, no solo proporciona un marco sólido para la gestión de la seguridad de la información, sino que también otorga a las empresas un distintivo reconocido internacionalmente, validando su compromiso inquebrantable con la seguridad.
+Las organizaciones, en este desafío constante, se ven compelidas a garantizar que sus sistemas no solo cumplan con los estándares de seguridad, sino que también sigan las mejores prácticas establecidas. Es en este contexto que el Sistema de Gestión de Seguridad de la Información (SGSI), especialmente dentro del marco del estándar ISO 27001, emerge como una guía esencial para diseñar, implementar y mantener sistemas de seguridad robustos. La certificación ISO 27001, por ende, no solo proporciona un marco sólido para la gestión de la seguridad de la información, sino que también otorga a las empresas un distintivo reconocido internacionalmente, validando su compromiso inquebrantable con la seguridad.
 
 En el epicentro de este escenario complejo se halla la empresa Magnet, una entidad con una sólida trayectoria de más de una década en la provisión de soluciones tecnológicas a medida. Para Magnet, la necesidad imperante de asegurar la integridad y confidencialidad de su información y la de sus clientes, especialmente en el contexto de la certificación ISO 27001, adquiere una importancia estratégica.
 
@@ -52,7 +52,7 @@ La interacción con el supervisor ha sido positiva, especialmente al principio d
 Magnet utiliza una metodología ágil basada en Scrum, adaptada a las siguientes consideraciones:
 
 - El producto se desarrolla fuera de la organización que será dueña del producto, usualmente con un Product Owner externo.
-- Los incentivos de la organización pueden ser, en algunos casos, opuestos a los de Magnet.
+- Los incentivos de la organización pueden no estar siempre alineados con los de Magnet.
 - Existen contratos y compromisos de buen servicio que norman el proyecto más allá del óptimo para el desarrollo del producto.
 
 La gestión de proyectos y la comunicación dentro del equipo se realiza principalmente a través de Slack para la comunicación asíncrona, y mediante reuniones semanales (weeklys) y reuniones de avances. Los weeklys se enfocan en el desarrollo y en resolver trabas, mientras que las reuniones de avances se centran en mostrar avances concretos de la aplicación.
@@ -85,7 +85,7 @@ En última instancia, este trabajo de título no se limita a resolver un problem
 El sistema desarrollado tiene como objetivo principal facilitar la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) de una empresa, siguiendo las buenas prácticas definidas en los controles que fija el estándar ISO 27001. La solución está estructurada en varios módulos, cada uno diseñado para cubrir aspectos específicos del SGSI: documentos, activos, riesgos y procesos. A continuación se presenta una descripción general de cada módulo y sus funcionalidades clave:
 
 === Módulo de Documentos
-Este módulo centraliza la gestión de todos los documentos relevantes para el SGSI. Los documentos pueden ser políticas, procedimientos, registros y otros tipos de documentación necesarios para demostrar la conformidad con la norma ISO 27001. Las funcionalidades incluyen:
+Este módulo centraliza la gestión de todos los documentos relevantes para el SGSI. Los documentos pueden ser políticas, procedimientos, registros y otros tipos de documentación necesarios para demostrar la conformidad con el estándar ISO 27001. Las funcionalidades incluyen:
 - Creación, edición y eliminación de documentos.
 - Versionado de documentos para mantener un registro histórico.
 - Aprobación de versiones de documentos.
@@ -134,6 +134,6 @@ El despliegue de la solución se realiza en contenedores Docker, lo que facilita
 La solución está diseñada para ser escalable, permitiendo la replicación de contenedores detrás de un balanceador de carga según sea necesario. La base de datos PostgreSQL y su capacidad de escalabilidad vertical y uso de réplicas para lectura aseguran un rendimiento eficiente incluso con aumentos en la carga de datos.
 
 === Seguridad y Cumplimiento
-La seguridad es una prioridad en el diseño de la solución, con medidas como la verificación SHA-256 para archivos y la gestión de permisos detallada para usuarios y roles. La solución facilita el cumplimiento con la norma ISO 27001, proporcionando las herramientas necesarias para la gestión de la seguridad de la información y la generación de evidencia para auditorías.
+La seguridad es una prioridad en el diseño de la solución, con medidas como la verificación SHA-256 para archivos y la gestión de permisos detallada para usuarios y roles. La solución facilita el cumplimiento con el estándar ISO 27001, proporcionando las herramientas necesarias para la gestión de la seguridad de la información y la generación de evidencia para auditorías.
 
-En resumen, la solución desarrollada proporciona una plataforma integral para la gestión del SGSI, alineada con los estándares de la norma ISO 27001, y ofrece a Magnet una herramienta estratégica para asegurar la conformidad y fortalecer su postura de seguridad informática.
+En resumen, la solución desarrollada proporciona una plataforma integral para la gestión del SGSI, alineada con el estándar ISO 27001, y ofrece a Magnet una herramienta estratégica para asegurar la conformidad y fortalecer su postura de seguridad informática.

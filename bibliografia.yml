@@ -50,3 +50,11 @@ django-content-type:
     url:
         value: https://docs.djangoproject.com/en/4.2/ref/contrib/contenttypes/
         date: 2024-05-27
+
+usability-geek:
+    type: web
+    title: "How To Use The System Usability Scale (SUS) To Evaluate The Usability Of Your Website - Usability Geek"
+    author: Nathan Thomas
+    url:
+        value: "https://usabilitygeek.com/how-to-use-the-system-usability-scale-sus-to-evaluate-the-usability-of-your-website/"
+        date: 2024-07-01

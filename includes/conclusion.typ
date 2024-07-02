@@ -7,7 +7,7 @@
 //// Posibles trabajos futuros que podrían hacerse a partir de la memoria para mejorar aún más la solución y/o resolver el problema de otra forma
 == Resumen del Trabajo Realizado
 
-Este trabajo se centró en el desarrollo e implementación de una plataforma para la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) en Magnet, conforme a los estándares de la norma ISO 27001. La solución propuesta abarcó la gestión de documentos, activos, riesgos y procesos, utilizando tecnologías como Django, PostgreSQL, Docker y TypeScript.
+Este trabajo se centró en el desarrollo e implementación de una plataforma para la gestión del Sistema de Gestión de Seguridad de la Información (SGSI) en Magnet, conforme al estándar ISO 27001. La solución propuesta abarcó la gestión de documentos, activos, riesgos y procesos, utilizando tecnologías como Django, PostgreSQL, Docker y TypeScript.
 
 == Objetivos Alcanzados y No Alcanzados
 
@@ -35,7 +35,6 @@ La implementación de esta plataforma tiene un impacto significativo en la capac
 Durante el desarrollo del proyecto, se aprendieron varias lecciones importantes:
 
 - *Importancia de la Usabilidad*: Una interfaz intuitiva y bien diseñada es crucial para la aceptación del sistema por parte de los usuarios.
-- *Escalabilidad*: La implementación de contenedores Docker y el uso de PostgreSQL como base de datos facilitó la escalabilidad y el mantenimiento del sistema.
 - *Interacción con los Usuarios*: La retroalimentación constante de los usuarios finales es vital para el éxito de cualquier proyecto de software.
 
 == Trabajo Futuro
