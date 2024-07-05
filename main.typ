@@ -6,9 +6,8 @@
     profesores: ((nombre: "EDUARDO GODOY VEGA", pronombre: pronombre.el),),
     supervisor: (nombre: "MAURICIO CASTRO GARCÍA", pronombre: pronombre.el),
     comision: (
-        "NOMBRE APELLIDO I",
-        "NOMBRE APELLIDO II",
-        "NOMBRE APELLIDO III",
+        "ALEJANDRO HEVIA A.",
+        "CAMILO GÓMEZ",
     ),
     anno: 2024,
 )

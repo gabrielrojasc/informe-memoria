@@ -28,28 +28,28 @@ Django Project Template™ (DPT) está diseñado para ser un punto de partida ef
 
 Django Project Template™ incorpora una variedad de tecnologías para garantizar un desarrollo eficiente y un despliegue robusto. A continuación se describen algunas de las tecnologías clave:
 
-- *Django*: El marco principal para el desarrollo de aplicaciones web. Ofrece una arquitectura robusta y escalable para el backend.
-- *Python*: Lenguaje de programación utilizado para desarrollar aplicaciones Django.
-- *Docker*: Plataforma para desarrollar, enviar y ejecutar aplicaciones dentro de contenedores, facilitando la gestión y la escalabilidad.
-- *Docker Compose*: Herramienta para definir y ejecutar aplicaciones Docker multicontenedor, simplificando la configuración y el despliegue.
-- *Nginx*: Servidor web y proxy inverso utilizado para manejar y redirigir las solicitudes HTTP/HTTPS.
-- *Gunicorn*: Servidor WSGI que se utiliza para servir aplicaciones Django.
-- *Redis*: Almacenamiento en memoria utilizado para la caché y como broker de mensajes para Celery.
-- *Celery*: Librería de Python para ejecutar tareas en segundo plano y programadas.
-- *PostgreSQL*: Sistema de gestión de bases de datos relacional utilizado para almacenar datos de la aplicación.
-- *Amazon S3*: Servicio de almacenamiento en la nube utilizado para almacenar archivos estáticos y de medios.
-- *TypeScript*: Un superconjunto de JavaScript que se utiliza para escribir código frontend más robusto y mantenible.
-- *Bootstrap*: Framework de diseño frontend utilizado para crear interfaces de usuario responsivas y modernas.
+- _Django_: El marco principal para el desarrollo de aplicaciones web. Ofrece una arquitectura robusta y escalable para el backend.
+- _Python_: Lenguaje de programación utilizado para desarrollar aplicaciones Django.
+- _Docker_: Plataforma para desarrollar, enviar y ejecutar aplicaciones dentro de contenedores, facilitando la gestión y la escalabilidad.
+- _Docker Compose_: Herramienta para definir y ejecutar aplicaciones Docker multicontenedor, simplificando la configuración y el despliegue.
+- _Nginx_: Servidor web y proxy inverso utilizado para manejar y redirigir las solicitudes HTTP/HTTPS.
+- _Gunicorn_: Servidor WSGI que se utiliza para servir aplicaciones Django.
+- _Redis_: Almacenamiento en memoria utilizado para la caché y como broker de mensajes para Celery.
+- _Celery_: Librería de Python para ejecutar tareas en segundo plano y programadas.
+- _PostgreSQL_: Sistema de gestión de bases de datos relacional utilizado para almacenar datos de la aplicación.
+- _Amazon S3_: Servicio de almacenamiento en la nube utilizado para almacenar archivos estáticos y de medios.
+- _TypeScript_: Un superconjunto de JavaScript que se utiliza para escribir código frontend más robusto y mantenible.
+- _Bootstrap_: Framework de diseño frontend utilizado para crear interfaces de usuario responsivas y modernas.
 
 === Arquitectura de Infraestructura
 
 La infraestructura de despliegue de DPT se basa en varios componentes containerizados que dependen entre sí. Esto facilita la escalabilidad, la mantenibilidad y el despliegue en entornos de nube. Los componentes principales son:
 
-+ *Nginx*: Actúa como servidor web y proxy inverso, manejando las solicitudes del usuario y redirigiéndolas a la aplicación Django.
-+ *Django*: Ejecuta la aplicación web a través del servidor WSGI de Gunicorn.
-+ *Redis*: Proporciona servicios de caché y broker de mensajes.
-+ *Celery*: Ejecuta tareas en segundo plano y programadas.
-+ *PostgreSQL*: Servidor de base de datos.
++ _Nginx_: Actúa como servidor web y proxy inverso, manejando las solicitudes del usuario y redirigiéndolas a la aplicación Django.
++ _Django_: Ejecuta la aplicación web a través del servidor WSGI de Gunicorn.
++ _Redis_: Proporciona servicios de caché y broker de mensajes.
++ _Celery_: Ejecuta tareas en segundo plano y programadas.
++ _PostgreSQL_: Servidor de base de datos.
 
 Estos componentes se comunican a través de una red configurada por Docker Compose, lo que permite una configuración coherente y un despliegue sencillo.
 
@@ -61,15 +61,15 @@ La siguiente figura muestra un diagrama detallado de la arquitectura de desplieg
 
 Para proyectos basados en DPT, la arquitectura de despliegue en DigitalOcean consiste en ejecutar todos los servicios en una sola instancia de Droplet. Además, de ser necesario se puede tener un servicio de almacenamiento de datos en la nube. En este caso se tienen los siguientes elementos:
 
-- *Droplet de DigitalOcean*: Una instancia en la nube donde se ejecutan todos los servicios containerizados (Nginx, Django, Redis, Celery, PostgreSQL).
-- *Amazon S3*: Utilizado para almacenar archivos estáticos y de medios, lo que facilita la gestión y el escalado del almacenamiento de archivos.
+- _Droplet de DigitalOcean_: Una instancia en la nube donde se ejecutan todos los servicios containerizados (Nginx, Django, Redis, Celery, PostgreSQL).
+- _Amazon S3_: Utilizado para almacenar archivos estáticos y de medios, lo que facilita la gestión y el escalado del almacenamiento de archivos.
 
 ==== Ventajas de esta Arquitectura
 
-- *Simplicidad*: Ejecutar todos los servicios en un solo Droplet simplifica la gestión y el despliegue.
-- *Escalabilidad*: Almacenar archivos en Amazon S3 permite escalar el almacenamiento independientemente de la capacidad del Droplet.
-- *Mantenibilidad*: Utilizar Docker Compose facilita la configuración y la actualización de los servicios.
-- *Costo-eficiencia*: Mantener una infraestructura sencilla reduce los costos operativos y facilita el monitoreo y la administración.
+- _Simplicidad_: Ejecutar todos los servicios en un solo Droplet simplifica la gestión y el despliegue.
+- _Escalabilidad_: Almacenar archivos en Amazon S3 permite escalar el almacenamiento independientemente de la capacidad del Droplet.
+- _Mantenibilidad_: Utilizar Docker Compose facilita la configuración y la actualización de los servicios.
+- _Costo-eficiencia_: Mantener una infraestructura sencilla reduce los costos operativos y facilita el monitoreo y la administración.
 
 Esta configuración es ideal para aplicaciones con una carga de tráfico moderada, proporcionando un equilibrio entre simplicidad, eficiencia y escalabilidad.
 
@@ -80,9 +80,9 @@ La plataforma desarrollada para la gestión del Sistema de Gestión de Seguridad
 
 El perfil de colaborador está diseñado para los empleados de la empresa que deben seguir las directrices del SGSI. Los colaboradores tienen acceso para ver toda la información relevante en la aplicación, pero sus permisos de edición están limitados a ciertas acciones específicas como marcar como leídas las versiones de los documentos y participar en los procesos asignados.
 
-+ *Acceso a la Información:* Los colaboradores pueden ver toda la información del SGSI, incluyendo documentos, activos, riesgos y procesos.
-+ *Lectura de Documentos:* Los colaboradores pueden acceder y leer los documentos del SGSI. Pueden marcar las versiones de documentos como leídas, registrando que han revisado la información necesaria.
-+ *Participación en Procesos:* Los colaboradores pueden participar en los procesos asignados, realizando las actividades correspondientes y generando evidencia según sea necesario.
++ _Acceso a la Información:_ Los colaboradores pueden ver toda la información del SGSI, incluyendo documentos, activos, riesgos y procesos.
++ _Lectura de Documentos:_ Los colaboradores pueden acceder y leer los documentos del SGSI. Pueden marcar las versiones de documentos como leídas, registrando que han revisado la información necesaria.
++ _Participación en Procesos:_ Los colaboradores pueden participar en los procesos asignados, realizando las actividades correspondientes y generando evidencia según sea necesario.
 
 En resumen, los colaboradores juegan un papel crucial en el cumplimiento del SGSI al mantenerse informados y participar activamente en los procesos, aunque sin permisos para editar o gestionar información del sistema.
 
@@ -90,13 +90,13 @@ En resumen, los colaboradores juegan un papel crucial en el cumplimiento del SGS
 
 El perfil de administrador está destinado a los encargados de implementar, mantener y gestionar el SGSI. Los administradores tienen permisos completos dentro del sistema, lo que incluye la creación y edición de documentos, la gestión de activos y riesgos, y la generación de evidencia. Además, los administradores también actúan como colaboradores, siguiendo las mismas directrices y participando en los procesos necesarios.
 
-+ *Gestión de Controles y Categorías:* Los administradores pueden crear y organizar controles de seguridad y sus respectivas categorías.
-+ *Subir y Versionar Documentos:* Los administradores pueden subir nuevos documentos, versionar documentos existentes y mantener un registro de las modificaciones.
-+ *Aprobar Documentos:* Los administradores tienen la capacidad de aprobar documentos, asegurando su validez y conformidad con los estándares del SGSI.
-+ *Gestión de Activos y Riesgos:* Los administradores pueden registrar y clasificar activos, asignar riesgos y definir los controles necesarios para mitigarlos.
-+ *Definir y Supervisar Procesos:* Los administradores pueden crear y gestionar procesos, asignar actividades a los colaboradores y supervisar el cumplimiento de los procesos definidos.
-+ *Generación y Gestión de Evidencia:* Los administradores pueden crear, modificar y gestionar la evidencia necesaria para demostrar la implementación y efectividad de los controles de seguridad.
-+ *Auditoría y Cumplimiento:* Los administradores pueden revisar la evidencia generada, asegurar la conformidad con las políticas de seguridad y preparar el SGSI para auditorías internas y externas.
++ _Gestión de Controles y Categorías:_ Los administradores pueden crear y organizar controles de seguridad y sus respectivas categorías.
++ _Subir y Versionar Documentos:_ Los administradores pueden subir nuevos documentos, versionar documentos existentes y mantener un registro de las modificaciones.
++ _Aprobar Documentos:_ Los administradores tienen la capacidad de aprobar documentos, asegurando su validez y conformidad con los estándares del SGSI.
++ _Gestión de Activos y Riesgos:_ Los administradores pueden registrar y clasificar activos, asignar riesgos y definir los controles necesarios para mitigarlos.
++ _Definir y Supervisar Procesos:_ Los administradores pueden crear y gestionar procesos, asignar actividades a los colaboradores y supervisar el cumplimiento de los procesos definidos.
++ _Generación y Gestión de Evidencia:_ Los administradores pueden crear, modificar y gestionar la evidencia necesaria para demostrar la implementación y efectividad de los controles de seguridad.
++ _Auditoría y Cumplimiento:_ Los administradores pueden revisar la evidencia generada, asegurar la conformidad con las políticas de seguridad y preparar el SGSI para auditorías internas y externas.
 
 En resumen, los administradores desempeñan un papel integral en la gestión del SGSI, asegurando que todos los aspectos del sistema sean implementados y mantenidos de acuerdo con los estándares de seguridad establecidos. Además de sus amplias capacidades de gestión, también participan activamente como colaboradores en los procesos definidos.
 

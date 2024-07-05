@@ -13,10 +13,10 @@ Este trabajo se centró en el desarrollo e implementación de una plataforma par
 
 === Objetivos Alcanzados
 
-- *Centralización de Documentos*: Se logró centralizar la gestión de documentos y asegurar su versionado y conformidad.
-- *Gestión de Activos*: Se implementó una eficiente clasificación y seguimiento de activos críticos.
-- *Evaluación de Riesgos*: La plataforma permitió una identificación y evaluación sistemática de riesgos.
-- *Gestión de Procesos*: Se definieron y gestionaron procesos que generan evidencia de conformidad con los controles del SGSI.
+- _Centralización de Documentos_: Se logró centralizar la gestión de documentos y asegurar su versionado y conformidad.
+- _Gestión de Activos_: Se implementó una eficiente clasificación y seguimiento de activos críticos.
+- _Evaluación de Riesgos_: La plataforma permitió una identificación y evaluación sistemática de riesgos.
+- _Gestión de Procesos_: Se definieron y gestionaron procesos que generan evidencia de conformidad con los controles del SGSI.
 
 === Objetivos No Alcanzados
 
@@ -34,16 +34,16 @@ La implementación de esta plataforma tiene un impacto significativo en la capac
 
 Durante el desarrollo del proyecto, se aprendieron varias lecciones importantes:
 
-- *Importancia de la Usabilidad*: Una interfaz intuitiva y bien diseñada es crucial para la aceptación del sistema por parte de los usuarios.
-- *Interacción con los Usuarios*: La retroalimentación constante de los usuarios finales es vital para el éxito de cualquier proyecto de software.
+- _Importancia de la Usabilidad_: Una interfaz intuitiva y bien diseñada es crucial para la aceptación del sistema por parte de los usuarios.
+- _Interacción con los Usuarios_: La retroalimentación constante de los usuarios finales es vital para el éxito de cualquier proyecto de software.
 
 == Trabajo Futuro
 
 Para mejorar aún más la solución y abordar las áreas de mejora identificadas, se proponen los siguientes trabajos futuros:
 
-- *Integración con Más Sistemas*: Ampliar la integración con otros sistemas y servicios utilizados por Magnet y otras organizaciones.
-- *Automatización Avanzada*: Implementar características avanzadas de automatización para reducir aún más la carga de trabajo manual en la gestión del SGSI.
-- *Análisis de Datos*: Desarrollar módulos de análisis de datos para proporcionar informes y estadísticas más detalladas sobre la gestión de la seguridad de la información.
-- *Expansión de Funcionalidades*: Añadir nuevas funcionalidades basadas en las necesidades emergentes de la empresa y las tendencias en seguridad de la información.
+- _Integración con Más Sistemas_: Ampliar la integración con otros sistemas y servicios utilizados por Magnet y otras organizaciones.
+- _Automatización Avanzada_: Implementar características avanzadas de automatización para reducir aún más la carga de trabajo manual en la gestión del SGSI.
+- _Análisis de Datos_: Desarrollar módulos de análisis de datos para proporcionar informes y estadísticas más detalladas sobre la gestión de la seguridad de la información.
+- _Expansión de Funcionalidades_: Añadir nuevas funcionalidades basadas en las necesidades emergentes de la empresa y las tendencias en seguridad de la información.
 
 En conclusión, la plataforma desarrollada no solo cumple con los objetivos establecidos, sino que también abre nuevas oportunidades para la mejora continua y la expansión, beneficiando tanto a Magnet como a otras organizaciones en su gestión de la seguridad de la información.

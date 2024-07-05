@@ -22,14 +22,14 @@ En el epicentro de este escenario complejo se halla la empresa Magnet, una entid
 
 Magnet es una empresa con una fuerte presencia en el mercado de software y tecnología, ofreciendo una amplia gama de servicios y productos. Entre los principales se encuentran:
 
-- *Desarrollo a medida*: Magnet desarrolla código para brindar valor, simplificar procesos y establecer la trazabilidad de los proyectos.
-- *Proyectos del Estado*: Trabaja con instituciones del gobierno, con un Acuerdo Marco vigente, y una sólida experiencia en la colaboración con el Estado de Chile.
-- *Aumento de equipo en EE. UU.*: Proporciona desarrolladores y diseñadores para fortalecer los equipos de sus clientes.
-- *Transformación Digital*: Implementa, mantiene y mejora continuamente los servicios relacionados con la transformación digital.
-- *Integraciones*: Facilita la integración de Django con diversas aplicaciones y servicios en la nube para aumentar la eficiencia y productividad.
-- *Proceso UX*: Entrega soluciones innovadoras alineadas con los objetivos empresariales mediante un diseño centrado en el usuario.
-- *E-commerce*: Provee plataformas personalizadas para aplicaciones móviles de comercio electrónico.
-- *Infraestructura*: Ofrece servicios en la nube seguros, escalables y flexibles para optimizar el crecimiento empresarial.
+- _Desarrollo a medida_: Magnet desarrolla código para brindar valor, simplificar procesos y establecer la trazabilidad de los proyectos.
+- _Proyectos del Estado_: Trabaja con instituciones del gobierno, con un Acuerdo Marco vigente, y una sólida experiencia en la colaboración con el Estado de Chile.
+- _Aumento de equipo en EE. UU._: Proporciona desarrolladores y diseñadores para fortalecer los equipos de sus clientes.
+- _Transformación Digital_: Implementa, mantiene y mejora continuamente los servicios relacionados con la transformación digital.
+- _Integraciones_: Facilita la integración de Django con diversas aplicaciones y servicios en la nube para aumentar la eficiencia y productividad.
+- _Proceso UX_: Entrega soluciones innovadoras alineadas con los objetivos empresariales mediante un diseño centrado en el usuario.
+- _E-commerce_: Provee plataformas personalizadas para aplicaciones móviles de comercio electrónico.
+- _Infraestructura_: Ofrece servicios en la nube seguros, escalables y flexibles para optimizar el crecimiento empresarial.
 
 Magnet cuenta con un equipo compuesto por entre 30 y 40 empleados. El área de operaciones está estructurada en diversos roles y departamentos que incluyen Jefes de Proyectos (PM), Technical Leads (TL), desarrolladores frontend y backend, analistas TI, y diseñadores UX.
 
@@ -37,9 +37,9 @@ Magnet cuenta con un equipo compuesto por entre 30 y 40 empleados. El área de o
 
 Para este trabajo de título, el equipo involucrado se compone principalmente de tres personas:
 
-- *Gerente de Operaciones*: Mauricio Casto, quien toma un rol de apoyo técnico y supervisión, actuando como un Senior Advisor.
-- *Gerente General*: Ignacio Munizaga, desempeñando el rol de Product Owner, proporcionando orientación y visión para el proyecto.
-- *Jefe de Proyecto y Desarrollador*: El autor de este trabajo, responsable de la planificación, ejecución y desarrollo del proyecto.
+- _Gerente de Operaciones_: Mauricio Casto, quien toma un rol de apoyo técnico y supervisión, actuando como un Senior Advisor.
+- _Gerente General_: Ignacio Munizaga, desempeñando el rol de Product Owner, proporcionando orientación y visión para el proyecto.
+- _Jefe de Proyecto y Desarrollador_: El autor de este trabajo, responsable de la planificación, ejecución y desarrollo del proyecto.
 
 === Rol del Supervisor
 
@@ -73,10 +73,10 @@ En respuesta a este desafío, el proyecto propuesto tiene como objetivo la creac
 
 Los objetivos específicos del proyecto incluyen:
 
-- *Desarrollar una plataforma que permita la gestión eficiente de documentos, activos, riesgos y procesos asociados a los controles de ISO 27001*: Esto incluye la implementación de módulos especializados para cada uno de estos aspectos, asegurando una integración fluida y una fácil usabilidad.
-- *Garantizar la escalabilidad y la adaptabilidad de la solución*: Utilizando tecnologías robustas como Django, PostgreSQL y TypeScript, se busca crear una base sólida que permita la evolución de la plataforma a medida que cambian las necesidades y los desafíos de seguridad.
-- *Facilitar la certificación ISO 27001 para Magnet y otras organizaciones*: Proporcionando una herramienta que simplifica la gestión de la seguridad de la información y el cumplimiento normativo, se busca reducir los costos y el tiempo asociados con estos procesos.
-- *Contribuir al fortalecimiento de la postura de seguridad informática de Magnet*: Al desarrollar una solución interna que se adapta específicamente a las necesidades de la empresa, se busca mejorar la protección de los activos digitales y la resiliencia ante amenazas cibernéticas.
+- _Desarrollar una plataforma que permita la gestión eficiente de documentos, activos, riesgos y procesos asociados a los controles de ISO 27001_: Esto incluye la implementación de módulos especializados para cada uno de estos aspectos, asegurando una integración fluida y una fácil usabilidad.
+- _Garantizar la escalabilidad y la adaptabilidad de la solución_: Utilizando tecnologías robustas como Django, PostgreSQL y TypeScript, se busca crear una base sólida que permita la evolución de la plataforma a medida que cambian las necesidades y los desafíos de seguridad.
+- _Facilitar la certificación ISO 27001 para Magnet y otras organizaciones_: Proporcionando una herramienta que simplifica la gestión de la seguridad de la información y el cumplimiento normativo, se busca reducir los costos y el tiempo asociados con estos procesos.
+- _Contribuir al fortalecimiento de la postura de seguridad informática de Magnet_: Al desarrollar una solución interna que se adapta específicamente a las necesidades de la empresa, se busca mejorar la protección de los activos digitales y la resiliencia ante amenazas cibernéticas.
 
 En última instancia, este trabajo de título no se limita a resolver un problema específico de auditoría de cumplimiento del SGSI para Magnet; va más allá al buscar contribuir al panorama más amplio de la seguridad de la información. La plataforma propuesta no solo será una herramienta para alcanzar la certificación; será un activo estratégico que impulsa la seguridad, la adaptabilidad y la autonomía en un entorno empresarial digital en constante evolución. A medida que el proyecto avance, se espera que sus resultados no solo beneficien a Magnet, sino que también sirvan como un referente valioso para otras organizaciones que buscan fortalecer su postura en seguridad informática en un mundo cada vez más interconectado.
 
@@ -115,20 +115,20 @@ Este módulo define y gestiona los procesos necesarios para cumplir con los cont
 
 === Tecnologías Utilizadas
 La solución utiliza una combinación de tecnologías robustas y escalables, incluyendo:
-- *Django*: Framework principal para el desarrollo del backend.
-- *PostgreSQL*: La gestión de la base de datos.
-- *Docker*: La contenedorización y despliegue de la aplicación.
-- *TypeScript*: El desarrollo del frontend, mejorando la mantenibilidad del código.
-- *Redis y Celery*: La gestión de tareas en segundo plano.
-- *Nginx y Gunicorn*: El manejo eficiente de solicitudes web.
+- _Django_: Framework principal para el desarrollo del backend.
+- _PostgreSQL_: La gestión de la base de datos.
+- _Docker_: La contenedorización y despliegue de la aplicación.
+- _TypeScript_: El desarrollo del frontend, mejorando la mantenibilidad del código.
+- _Redis y Celery_: La gestión de tareas en segundo plano.
+- _Nginx y Gunicorn_: El manejo eficiente de solicitudes web.
 
 === Arquitectura de Despliegue
 El despliegue de la solución se realiza en contenedores Docker, lo que facilita su escalabilidad y mantenimiento. La infraestructura incluye:
-- *Nginx*: El manejo de solicitudes HTTP/HTTPS.
-- *Gunicorn*: Servir la aplicación Django.
-- *Redis*: La caché y gestión de colas de tareas.
-- *PostgreSQL*: El almacenamiento de datos.
-- *Amazon S3*: El almacenamiento de archivos estáticos y de medios.
+- _Nginx_: El manejo de solicitudes HTTP/HTTPS.
+- _Gunicorn_: Servir la aplicación Django.
+- _Redis_: La caché y gestión de colas de tareas.
+- _PostgreSQL_: El almacenamiento de datos.
+- _Amazon S3_: El almacenamiento de archivos estáticos y de medios.
 
 === Escalabilidad y Rendimiento
 La solución está diseñada para ser escalable, permitiendo la replicación de contenedores detrás de un balanceador de carga según sea necesario. La base de datos PostgreSQL y su capacidad de escalabilidad vertical y uso de réplicas para lectura aseguran un rendimiento eficiente incluso con aumentos en la carga de datos.

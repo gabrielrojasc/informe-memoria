@@ -6,7 +6,7 @@
 //// Encuestar a usuarios finales
 //// Etc.
 // Puede ser una sección al final del capítulo de solución o un capítulo independiente
-La evaluación de la solución desarrollada se ha llevado a cabo mediante la aplicación en un contexto real dentro de la empresa Magnet y mediante una encuesta de usabilidad dirigida a los usuarios finales, utilizando la System Usability Scale (SUS)#footnote("https://en.wikipedia.org/wiki/System_usability_scale"). El objetivo de esta evaluación es demostrar cuán eficaz es la solución propuesta para resolver los problemas planteados y cumplir con los objetivos establecidos.
+La evaluación de la solución desarrollada se ha llevado a cabo mediante la aplicación en un contexto real dentro de la empresa Magnet y mediante una encuesta de usabilidad dirigida a los usuarios finales, utilizando la System Usability Scale (SUS) #footnote["https://en.wikipedia.org/wiki/System_usability_scale"]. El objetivo de esta evaluación es demostrar cuán eficaz es la solución propuesta para resolver los problemas planteados y cumplir con los objetivos establecidos.
 
 == Uso en un Contexto Real
 
@@ -14,10 +14,10 @@ La plataforma fue implementada y utilizada en Magnet para la gestión del Sistem
 
 === Resultados del Uso Real
 
-- *Gestión de Documentos*: Se logró centralizar y versionar la documentación relevante, facilitando el acceso y asegurando la conformidad con las políticas de la empresa.
-- *Gestión de Activos*: La clasificación y seguimiento de activos mejoró la visibilidad y control sobre los recursos críticos de la empresa.
-- *Gestión de Riesgos*: La identificación y evaluación de riesgos permitió una respuesta más ágil y eficiente ante posibles amenazas.
-- *Gestión de Procesos*: La definición y seguimiento de procesos aseguró la generación de evidencia necesaria para auditorías, cumpliendo con los requisitos de ISO 27001.
+- _Gestión de Documentos_: Se logró centralizar y versionar la documentación relevante, facilitando el acceso y asegurando la conformidad con las políticas de la empresa.
+- _Gestión de Activos_: La clasificación y seguimiento de activos mejoró la visibilidad y control sobre los recursos críticos de la empresa.
+- _Gestión de Riesgos_: La identificación y evaluación de riesgos permitió una respuesta más ágil y eficiente ante posibles amenazas.
+- _Gestión de Procesos_: La definición y seguimiento de procesos aseguró la generación de evidencia necesaria para auditorías, cumpliendo con los requisitos de ISO 27001.
 
 == Encuesta de Usabilidad
 
@@ -33,7 +33,7 @@ Los resultados individuales y el puntaje promedio se muestran a continuación:
 
 #table(
   columns: 4,
-  table.header[*Pregunta*][*Respuesta Usuario 1*][*Respuesta Usuario 2*][*Promedio*],
+  table.header[_Pregunta_][_Respuesta Usuario 1_][_Respuesta Usuario 2_][_Promedio_],
   [Me gustaría usar este sistema frecuentemente], [3], [5], [4],
   [Encontré el sistema innecesariamente complejo], [1], [2], [1.5],
   [Pensé que el sistema era fácil de usar], [5], [4], [4.5],
