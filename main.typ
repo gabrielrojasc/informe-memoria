@@ -57,7 +57,7 @@
     [
         #v(0.3fr, weak: true)
         #align(right)[
-            _Dedicatoria_
+            _Dedicado a aquellos que no tuvieron la oportunidad de terminar este camino con nosotros._
         ]
         #v(0.7fr, weak: true)
     ]

@@ -1,0 +1,1 @@
+Agradecimientos especiales a Nicolás Alexandroff, Luis Reyes, Gilberto Salazar, Nicolás Santibáñez, Nicolás Zúñiga, familia Zúñiga Ostermann, mis padres, Edgardo Rojas e Ingrid Chamorro y mis hermanos, Maximiliano Rojas y Josefina Rojas, por siempre apoyarme en este camino y por compartir esos conocimientos que no son enseñadas en salas de clases.
