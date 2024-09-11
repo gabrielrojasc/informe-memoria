@@ -2,12 +2,12 @@
 #let mostrar_guias = false
 #show: conf.with(
     titulo: "DESARROLLO DE UNA PLATAFORMA PARA AUDITORÍA DE CUMPLIMIENTO DE SISTEMA GENERAL DE SEGURIDAD DE INFORMACIÓN (SGSI)",
-    autor: (nombre: "GABRIEL ROJAS CHAMORRO", pronombre: pronombre.el),
+    autor: (nombre: "GABRIEL HERNÁN ROJAS CHAMORRO", pronombre: pronombre.el),
     profesores: ((nombre: "EDUARDO GODOY VEGA", pronombre: pronombre.el),),
     supervisor: (nombre: "MAURICIO CASTRO GARCÍA", pronombre: pronombre.el),
     comision: (
-        "ALEJANDRO HEVIA A.",
-        "CAMILO GÓMEZ",
+        "ALEJANDRO HEVIA ANGULO",
+        "CAMILO GÓMEZ NÚÑEZ",
     ),
     anno: 2024,
 )
@@ -116,6 +116,6 @@
 ]
 
 
-= Anexo <anexo>
+#pagebreak()
 
 #include "includes/anexo.typ"

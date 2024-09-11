@@ -1,4 +1,30 @@
 #let screenshot_width = 60%
+#set heading(numbering: "A.1")
+#show heading: it => {
+    if it.level == 1 {
+        set text(24pt)
+        v(3em)
+        block(it.body)
+        linebreak()
+    } else if it.level == 2 {
+        [
+            #v(1em)
+            #set text(18pt)
+            #block([Anexo #counter(heading).display() #it.body])
+            #v(0.5em)
+            #h(15pt)
+        ]
+    } else {
+        v(0.5em)
+        it
+        h(15pt) // Arreglín para tener indentación en este nivel
+    }
+}
+#set heading(numbering: none)
+#counter(heading).update(1)
+= Anexo
+#set heading(numbering: "A.1")
+#counter(heading).update(1)
 
 == Modelo de datos módulo de Usuarios <erd-users>
 
