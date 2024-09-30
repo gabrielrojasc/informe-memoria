@@ -4,7 +4,7 @@
     titulo: "DESARROLLO DE UNA PLATAFORMA PARA AUDITORÍA DE CUMPLIMIENTO DE SISTEMA GENERAL DE SEGURIDAD DE INFORMACIÓN (SGSI)",
     autor: (nombre: "GABRIEL HERNÁN ROJAS CHAMORRO", pronombre: pronombre.el),
     profesores: ((nombre: "EDUARDO GODOY VEGA", pronombre: pronombre.el),),
-    supervisor: (nombre: "MAURICIO CASTRO GARCÍA", pronombre: pronombre.el),
+    // supervisor: (nombre: "MAURICIO CASTRO GARCÍA", pronombre: pronombre.el),
     comision: (
         "ALEJANDRO HEVIA ANGULO",
         "CAMILO GÓMEZ NÚÑEZ",
